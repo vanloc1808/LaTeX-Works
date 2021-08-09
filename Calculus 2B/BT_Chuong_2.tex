@@ -1,0 +1,352 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cases} 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagestyle{empty}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Nguyễn Văn Lộc}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\begin{document}
+\fancyhf{}
+\lhead{}
+\chead{}
+\rhead{}
+\cfoot{}
+\rfoot{\thepage}
+\lfoot{}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\begin{flushleft}
+\begin{mybox}
+\textbf{Họ và tên:} Nguyễn Văn Lộc\\
+\textbf{MSSV:} 20120131\\ 
+\textbf{Lớp:} 20CTT1TN\\
+\textbf{Ca:} Ca 1 sáng thứ 4
+\end{mybox}
+\end{flushleft}
+\begin{center}
+\textbf{BÀI TẬP THỰC HÀNH VI TÍCH PHÂN 2B}\\
+\textbf{CHƯƠNG 2: VI PHÂN CỦA HÀM NHIỀU BIẾN}
+\end{center}
+\textbf{Trang 21.}\\
+\textbf{Bài 33.} 
+\begin{mybox}
+Tính \(f_x, f_y\) tại \(\left( {0, 0} \right),\) biết
+\[f\left( {x,y} \right) = \left\{ \begin{gathered}
+  \frac{{xy}}{{\sqrt {{x^2} + {y^2}} }},\left( {x,y} \right) \ne \left( {0,0} \right) \hfill \\
+  0,\left( {x,y} \right) = \left( {0,0} \right) \hfill \\ 
+\end{gathered}  \right..\]
+\end{mybox}
+\[\mathop {\lim }\limits_{h \to 0} \frac{{f\left( {0 + h,0} \right) - f\left( {0,0} \right)}}{h} = \mathop {\lim }\limits_{h \to 0} \frac{{f\left( {h,0} \right) - f\left( {0,0} \right)}}{h} = \mathop {\lim }\limits_{h \to 0} \frac{{\frac{0}{{\sqrt {{h^2}} }} - 0}}{h} = 0\]
+\[ \Rightarrow {f_x}\left( {0,0} \right) = 0.\]
+Tương tự: \({f_y}\left( {0,0} \right) = 0.\)\\
+\textbf{Bài 41.} \[W\left( {T,v} \right) = 13.12 + 0.6215T - 11.37{v^{0.16}} + 0.3965T{v^{0.16}}\]
+\[ \Rightarrow \left\{ \begin{gathered}
+  {W_T}\left( {T,v} \right) = 0.6215 + 0.3965{v^{0.16}} \hfill \\
+  {W_v}\left( {T,v} \right) =  - 1.8192{v^{ - 0.84}} + 0.06344T{v^{ - 0.84}} \hfill \\ 
+\end{gathered}  \right.\]
+\begin{itemize}
+\item \({W_T}\left( { - 15,30} \right) = 1.305 \Rightarrow \) khi giảm nhiệt độ xuống \(1 ^\circ C\) thì \(W\) giảm \(1.305.\)
+\item \({W_v}\left( { - 15,30} \right) =  - 0.049 \Rightarrow \) khi tăng tốc độ gió lên \(1\) km/h thì \(W\) giảm \(0.049.\)
+\end{itemize}
+\textbf{Trang 24.}\\
+\textbf{Bài 23.}
+\begin{mybox}
+\[f\left( {x,y} \right) = \left\{ \begin{gathered}
+  \frac{{{x^2}y - x{y^2}}}{{\sqrt {{x^2} + {y^2}} }},\left( {x,y} \right) \ne \left( {0,0} \right) \hfill \\
+  0,\left( {x,y} \right) = \left( {0,0} \right) \hfill \\ 
+\end{gathered}  \right..\]
+\end{mybox}
+(a). Với \(\left( {x,y} \right) \ne \left( {0,0} \right)\)
+\[{f_x}\left( {x,y} \right) = \frac{{\left( {2xy - {y^2}} \right)\sqrt {{x^2} + {y^2}}  - \frac{x}{{\sqrt {{x^2} + {y^2}} }}\left( {{x^2}y - x{y^2}} \right)}}{{{x^2} + {y^2}}} = \frac{{{x^3}y + 2x{y^3} - {y^4}}}{{\left( {{x^2} + {y^2}} \right)\sqrt {{x^2} + {y^2}} }}.\]
+\[{f_y}\left( {x,y} \right) = \frac{{\left( {{x^2} - 2xy} \right)\sqrt {{x^2} + {y^2}}  - \frac{y}{{\sqrt {{x^2} + {y^2}} }}\left( {{x^2}y - x{y^2}} \right)}}{{{x^2} + {y^2}}} = \frac{{{x^4} - 2{x^3}y - x{y^3}}}{{\left( {{x^2} + {y^2}} \right)\sqrt {{x^2} + {y^2}} }}.\]
+(b). \(\mathop {\lim }\limits_{h \to 0} \frac{{f\left( {0 + h,0} \right) - f\left( {0,0} \right)}}{h} = \mathop {\lim }\limits_{h \to 0} \frac{0}{h} = 0 \Rightarrow {f_x}\left( {0,0} \right) = 0.\)\\
+Tương tự: \({f_y}\left( {0,0} \right).\)\\
+(c). Xét giới hạn sau:
+\[\mathop {\lim }\limits_{h \to 0} \frac{{{f_x}\left( {0,h} \right) - {f_x}\left( {0,0} \right)}}{h} = \mathop {\lim }\limits_{h \to 0} \frac{{ - \frac{{{h^4}}}{{{h^2}\sqrt {{h^2}} }} - 0}}{h} = \mathop {\lim }\limits_{h \to 0} \left( { - \frac{h}{{\left| h \right|}}} \right)\]
+Giới hạn này không tồn tại nên \({f_{xy}}\left( {0,0} \right)\) không tồn tại. Tương tự, \({f_{yx}}\left( {0,0} \right)\) cũng không tồn tại.\\
+(d). Điều này không mâu thuẫn với định lí Clairaut vì \({f_{xy}}\left( {0,0} \right)\) và \({f_{yx}}\left( {0,0} \right)\) không tồn tại.\\
+\textbf{Trang 27}\\
+\textbf{Bài 31.}
+Đặt \(x = {R_1},y = {R_2},z = {R_3}.\)
+\[ \Rightarrow \frac{1}{R} = \frac{1}{x} + \frac{1}{y} + \frac{1}{z} = \frac{{xy + yz + zx}}{{xyz}}\]
+\[ \Rightarrow R\left( {x,y,z} \right) = \frac{{xyz}}{{xy + yz + zx}}\]
+\[{R_x}\left( {x,y,z} \right) = \frac{{yz\left( {xy + yz + zx} \right) - xyz\left( {y + yz + z} \right)}}{{{{\left( {xy + yz + zx} \right)}^2}}} = \frac{{{y^2}{z^2}\left( {1 - x} \right)}}{{{{\left( {xy + yz + zx} \right)}^2}}}.\]
+Tương tự:
+\[{R_y}\left( {x,y,z} \right) = \frac{{{x^2}{z^2}\left( {1 - y} \right)}}{{{{\left( {xy + yz + zx} \right)}^2}}}\]
+\[{R_z}\left( {x,y,z} \right) = \frac{{{x^2}{y^2}\left( {1 - z} \right)}}{{{{\left( {xy + yz + zx} \right)}^2}}}\]
+\[dx = 0.5\%  \cdot 25 = 0.125\]
+\[dy = 0.5\%  \cdot 40 = 0.2\]
+\[dz = 0.5\%  \cdot 50 = 0.25\]
+\[{R_x}\left( {25,40,50} \right) =  - \frac{{1536}}{{289}},{R_y}\left( {25,40,50} \right) =  - \frac{{975}}{{289}},{R_z}\left( {25,40,50} \right) =  - \frac{{784}}{{289}}.\]
+\[ \Rightarrow \Delta R \approx {R_x}\left( {25,40,50} \right) \cdot dx + {R_y}\left( {25,40,50} \right) \cdot dy + {R_z}\left( {25,40,50} \right) \cdot dz \approx  - 2.019\left( \Omega  \right)\]
+\textbf{Bài 33.}
+\[S\left( {w,h} \right) = 0.109 \cdot {w^{0.425}} \cdot {h^{0.725}}\]
+\[{S_w}\left( {w,h} \right) = \frac{{1853}}{{40000}} \cdot {w^{ - 0.575}} \cdot {h^{0.725}}\]
+\[{S_h}\left( {w,h} \right) = \frac{{3161}}{{40000}} \cdot {w^{0.425}} \cdot {h^{ - 0.275}}\]
+\[S\left( {a,b} \right) = 0.109 \cdot {a^{0.425}} \cdot {b^{0.725}}\]
+\[{S_w}\left( {a,b} \right) = \frac{{1853}}{{40000}} \cdot {a^{ - 0.575}} \cdot {b^{0.725}}\]
+\[{S_h}\left( {a,b} \right) = \frac{{3161}}{{40000}} \cdot {a^{0.425}} \cdot {b^{ - 0.275}}\]
+\[dw = 0.02a,dh = 0.02b\]
+\[\Delta S \approx {S_w}\left( {a,b} \right) \cdot dw + {S_h}\left( {a,b} \right) \cdot dh\]
+\[ = \frac{{1853}}{{40000}} \cdot {a^{ - 0.575}} \cdot {b^{0.725}} \cdot 0.02a + \frac{{3161}}{{40000}} \cdot {a^{0.425}} \cdot {b^{ - 0.275}} \cdot 0.02b\]
+\[ = 2.507 \cdot {10^{ - 3}} \cdot {a^{0.425}} \cdot {b^{0.725}}\]
+\[ \Rightarrow \frac{{\Delta S}}{S} \approx \frac{{2.507 \cdot {{10}^{ - 3}} \cdot {a^{0.425}} \cdot {b^{0.725}}}}{{0.109 \cdot {a^{0.425}} \cdot {b^{0.725}}}} \approx 2.3\% .\]
+\textbf{Trang 30.}\\
+\textbf{Bài 33.}
+\[\frac{{dx}}{{dt}} = \frac{1}{{2\sqrt {1 + t} }} \Rightarrow {\left. {\frac{{dx}}{{dt}}} \right|_{t = 3}} = \frac{1}{4};x\left( 3 \right) = 2.\]
+\[\frac{{dy}}{{dt}} = \frac{1}{3} \Rightarrow {\left. {\frac{{dy}}{{dt}}} \right|_{t = 3}} = \frac{1}{3};y\left( 3 \right) = 3.\]
+\[{\left. { \Rightarrow \frac{{dT}}{{dt}}} \right|_{t = 3}} = {T_x}\left( {2,3} \right) \cdot {\left. {\frac{{dx}}{{dt}}} \right|_{t = 3}} + {T_y}\left( {2,3} \right) \cdot {\left. {\frac{{dy}}{{dt}}} \right|_{t = 3}} = 4 \cdot \frac{1}{4} + 3 \cdot \frac{1}{3} = 2.\]
+Vậy tại thời điểm \(t = 3,\) tốc độ tăng nhiệt là \(2 ^ \circ C /\)giây.\\
+\textbf{Bài 34.}\\
+(a). \(\frac{{\partial W}}{{\partial T}} =  - 2 \Rightarrow \) khi \(T\) tăng lên \(1\) đơn vị thì \(W\) giảm \(2\) đơn vị.\\
+\(\frac{{\partial W}}{{\partial R}} = 8 \Rightarrow \) khi \(R\) tăng lên \(1\) đơn vị thì \(W\) tăng \(8\) đơn vị.\\
+(b). \[\frac{{dW}}{{dt}} = \frac{{\partial W}}{{\partial T}} \cdot \frac{{dT}}{{dt}} + \frac{{\partial W}}{{\partial R}} \cdot \frac{{dR}}{{dt}} =  - 2 \cdot 0.15 + 8 \cdot \left( { - 0.1} \right) =  - 1.1\]
+\( \Rightarrow \) \(W\) đang giảm với tốc độ \(1.1\) đơn vị\(/\)năm.\\
+\textbf{Trang 31.}\\
+\textbf{Bài 38.}
+\[V\left( {I,R} \right) = IR\]
+\[ \Rightarrow \frac{{\partial V}}{{\partial I}} = R,\frac{{\partial V}}{{\partial R}} = I.\]
+\[\frac{{dV}}{{dt}} = \frac{{\partial V}}{{\partial I}} \cdot \frac{{dI}}{{dt}} + \frac{{\partial V}}{{\partial R}} \cdot \frac{{dR}}{{dt}} = R \cdot \frac{{dI}}{{dt}} + I \cdot \frac{{dR}}{{dt}}\]
+\[ \Rightarrow  - 0.01 = 400 \cdot \frac{{dI}}{{dt}} + 0.08 \cdot 0.03 \Rightarrow \frac{{dI}}{{dt}} =  - 3.1 \cdot {10^{ - 5}}.\]
+Vậy dòng điện \(I\) đang giảm với tốc độ \(3.1 \cdot {10^{ - 5}}\) \(\left( {{I \mathord{\left/
+ {\vphantom {I s}} \right.
+ \kern-\nulldelimiterspace} s}} \right.)\)\\
+\textbf{Bài 39.} 
+\[PV = 8.31 \cdot T \Rightarrow V\left( {P,T} \right) = \frac{{8.31T}}{P}\]
+\[ \Rightarrow \frac{{\partial V}}{{\partial T}} = \frac{{8.31}}{P},\frac{{\partial V}}{{\partial P}} =  - \frac{{8.31T}}{{{P^2}}}.\]
+\[ \Rightarrow \frac{{dV}}{{dt}} = \frac{{\partial V}}{{\partial T}} \cdot \frac{{dT}}{{dt}} + \frac{{\partial V}}{{\partial P}} \cdot \frac{{dP}}{{dt}} = \frac{{8.31}}{P} \cdot 0 + \left( { - \frac{{8.31T}}{{{P^2}}}} \right) \cdot 0.15 =  - \frac{{8.31 \cdot 320}}{{{{20}^2}}} \cdot 0.15 =  - 0.9972.\] 
+Vậy \(V\) đang giảm với tốc độ \(-0.9972\) \(\left( dvtt / s \right).\)\\
+\textbf{Bài 46.} 
+\begin{mybox}
+Nếu \(z = f\left( {x,y} \right),\) trong đó \(x = s + t\) và \(y = s - t,\) chứng minh rằng
+\[{\left( {\frac{{\partial z}}{{\partial x}}} \right)^2} - {\left( {\frac{{\partial z}}{{\partial y}}} \right)^2} = \frac{{\partial z}}{{\partial s}} \cdot \frac{{\partial z}}{{\partial t}}.\]
+\end{mybox}
+\[\left\{ \begin{gathered}
+  \frac{{\partial x}}{{\partial s}} = 1,\frac{{\partial x}}{{\partial t}} = 1 \hfill \\
+  \frac{{\partial y}}{{\partial s}} = 1,\frac{{\partial y}}{{\partial t}} =  - 1 \hfill \\ 
+\end{gathered}  \right..\]
+\[\frac{{\partial z}}{{\partial s}} \cdot \frac{{\partial z}}{{\partial t}} = \left( {\frac{{\partial z}}{{\partial x}} \cdot \frac{{\partial x}}{{\partial s}} + \frac{{\partial z}}{{\partial y}} \cdot \frac{{\partial y}}{{\partial s}}} \right)\left( {\frac{{\partial z}}{{\partial x}} \cdot \frac{{\partial x}}{{\partial t}} + \frac{{\partial z}}{{\partial y}} \cdot \frac{{\partial y}}{{\partial t}}} \right)\]
+\[ = \left( {\frac{{\partial z}}{{\partial x}} + \frac{{\partial z}}{{\partial y}}} \right)\left( {\frac{{\partial z}}{{\partial x}} - \frac{{\partial z}}{{\partial y}}} \right) = {\left( {\frac{{\partial z}}{{\partial x}}} \right)^2} - {\left( {\frac{{\partial z}}{{\partial y}}} \right)^2}.\]
+\textbf{Trang 35}\\
+\textbf{Bài 7.}
+\begin{mybox}
+\(f\left( {x,y} \right) = \frac{{{y^2}}}{2},\) \(P\left( {1,2} \right),\) \(\overrightarrow u  = \frac{1}{3}\left( {2\overrightarrow i  + \sqrt 5 \overrightarrow j } \right).\)
+\end{mybox}
+\begin{mybox}
+(a). Tìm vector gradient của \(f.\)
+\end{mybox}
+\[{f_x}\left( {x,y} \right) = 0,{f_y}\left( {x,y} \right) = y.\]
+\[\nabla f\left( {x,y} \right) = \left\langle {{f_x}\left( {x,y} \right),{f_y}\left( {x,y} \right)} \right\rangle  = \left\langle {0,y} \right\rangle .\]
+\begin{mybox}
+Tính gradient của \(f\) tại \(P.\)
+\end{mybox}
+\[\nabla f\left( {1,2} \right) = \left\langle {0,2} \right\rangle .\]
+\begin{mybox}
+Tìm tốc độ biến thiên của \(f\) tại \(P\) theo hướng của vector \(\overrightarrow u \)
+\end{mybox}
+\[\overrightarrow u  = \frac{1}{3}\left( {2\overrightarrow i  + \sqrt 5 \overrightarrow j } \right) = \frac{2}{3}\overrightarrow i  + \frac{{\sqrt 5 }}{3}\overrightarrow j  = \left\langle {\frac{2}{3},\frac{{\sqrt 5 }}{3}} \right\rangle .\]
+\[{D_{\overrightarrow u }}f\left( {1,2} \right) = \nabla f\left( {1,2} \right) \cdot \frac{{\overrightarrow u }}{{\left| {\overrightarrow u } \right|}} = \frac{{\left\langle {0,2} \right\rangle  \cdot \left\langle {\frac{2}{3},\frac{{\sqrt 5 }}{3}} \right\rangle }}{{\sqrt {{{\left( {\frac{2}{3}} \right)}^2} + {{\left( {\frac{{\sqrt 5 }}{3}} \right)}^2}} }} = \frac{{2\sqrt 5 }}{3}.\]
+\textbf{Bài 18.}
+\begin{mybox}
+Tìm đạo hàm của hàm số \(f\left( {x,y} \right) = \sqrt {xy} \) tại \(P\left( {2,8} \right)\) theo hướng đến \(Q\left( {5,4} \right).\)
+\end{mybox} 
+\[\overrightarrow {PQ}  = \left\langle {3, - 4} \right\rangle  \Rightarrow \overrightarrow u  = \frac{{\overrightarrow {PQ} }}{{\left| {\overrightarrow {PQ} } \right|}} = \frac{{\left\langle {3, - 4} \right\rangle }}{5} = \left\langle {\frac{3}{5}, - \frac{4}{5}} \right\rangle .\]
+\[{f_x}\left( {x,y} \right) = \frac{y}{{2\sqrt {xy} }} \Rightarrow {f_x}\left( {2,8} \right) = \frac{8}{{2\sqrt {2 \cdot 8} }} = 1.\]
+\[{f_y}\left( {x,y} \right) = \frac{x}{{2\sqrt {xy} }} \Rightarrow {f_y}\left( {2,8} \right) = \frac{2}{{2\sqrt {2 \cdot 8} }} = \frac{1}{4}.\]
+\[ \Rightarrow \nabla f\left( {2,8} \right) = \left\langle {1,\frac{1}{4}} \right\rangle .\]
+\[{D_{\overrightarrow u }}f\left( {2,8} \right) = \nabla f\left( {2,8} \right) \cdot \overrightarrow u  = \left\langle {1,\frac{1}{4}} \right\rangle  \cdot \left\langle {\frac{3}{5}, - \frac{4}{5}} \right\rangle  = \frac{2}{5}.\]
+\textbf{Trang 36}\\
+\textbf{Bài 5.}
+\begin{mybox}
+Tìm tốc độ biến thiên lớn nhất của \(f\) định bởi \(f\left( {x,y,z} \right) = \sqrt {{x^2} + {y^2} + {z^2}} \) tại điểm \(\left( {3,6, - 2} \right),\) và tìm hướng mà theo đó tốc độ biến thiên này đạt được.
+\end{mybox}
+\[{f_x}\left( {x,y,z} \right) = \frac{x}{{\sqrt {{x^2} + {y^2} + {z^2}} }} \Rightarrow {f_x}\left( {3,6, - 2} \right) = \frac{3}{7}.\]
+Tương tự: \({f_y}\left( {3,6, - 2} \right) = \frac{6}{7}\) và \({f_z}\left( {3,6, - 2} \right) =  - \frac{2}{7}.\)
+\[ \Rightarrow \nabla f\left( {3,6, - 2} \right) = \left\langle {\frac{3}{7},\frac{6}{7}, - \frac{2}{7}} \right\rangle .\]
+\( \Rightarrow \) Giá trị lớn nhất của \({D_{\overrightarrow u }}f\left( {3,6, - 2} \right)\) là \(\left| {\nabla f\left( {3,6, - 2} \right)} \right| = 1\) đạt khi
+\[\overrightarrow u  = \frac{1}{{\left| {\nabla f\left( {3,6, - 2} \right)} \right|}} \cdot \nabla f\left( {3,6, - 2} \right) = \left\langle {\frac{3}{7},\frac{6}{7}, - \frac{2}{7}} \right\rangle .\]
+\textbf{Bài 7.}
+\begin{mybox}
+Tìm hướng theo đó hàm \(f\) định bởi \(f\left( {x,y} \right) = {x^4}y - {x^2}{y^3}\) giảm nhanh nhất tại điểm \(\left( {2, - 3} \right).\)
+\end{mybox}
+\[{f_x}\left( {x,y} \right) = 4{x^3}y - 2x{y^3} \Rightarrow {f_x}\left( {2, - 3} \right) = 12.\]
+\[{f_y}\left( {x,y} \right) = {x^4} - 3{x^2}{y^2} \Rightarrow {f_y}\left( {2, - 3} \right) =  - 92.\]
+\[ \Rightarrow \nabla f\left( {2, - 3} \right) = \left\langle {12, - 92} \right\rangle  \Rightarrow \left| {\nabla f\left( {2, - 3} \right)} \right| = 4\sqrt {538} .\]
+Tại điểm \(\left( {2, - 3} \right),\) hàm số \(f\) giảm nhanh nhất theo hướng của \(\overrightarrow u \) ngược hướng với \(\nabla f\left( {2, - 3} \right),\) nghĩa là
+\[\overrightarrow u  =  - \frac{1}{{\left| {\nabla f\left( {2, - 3} \right)} \right|}} \cdot \nabla f\left( {2, - 3} \right) =  - \frac{1}{{4\sqrt {538} }}\left\langle {12, - 92} \right\rangle  = \left\langle { - \frac{{3\sqrt {538} }}{{538}},\frac{{23\sqrt {538} }}{{538}}} \right\rangle .\]
+\textbf{Trang 37}\\
+\textbf{Bài 12.}
+\begin{mybox}
+\[T\left( {x,y,z} \right) = 2000{e^{ - {x^2} - 3{y^2} - 9{z^2}}}\]
+\[P\left( {2, - 1,2} \right)\]
+\[Q\left( {2,1,3} \right)\]
+\end{mybox}
+(a). \[\overrightarrow {PQ}  = \left\langle {0,2,1} \right\rangle  \Rightarrow \overrightarrow u  = \frac{{\overrightarrow {PQ} }}{{\left| {\overrightarrow {PQ} } \right|}} = \frac{{\left\langle {0,2,1} \right\rangle }}{{\sqrt 5 }} = \left\langle {0,\frac{2}{{\sqrt 5 }},\frac{1}{{\sqrt 5 }}} \right\rangle .\]
+\[{T_x}\left( {x,y,z} \right) = 2000\left( { - 2x} \right){e^{ - {x^2} - 3{y^2} - 9{z^2}}} =  - 4000x{e^{ - {x^2} - 3{y^2} - 9{z^2}}}\]
+\[ \Rightarrow {T_x}\left( {2, - 1,2} \right) =  - 8000{e^{ - 43}}.\]
+Tương tự: \({T_y}\left( {2, - 1,2} \right) = 12000{e^{ - 43}}\) và \({T_z}\left( {2, - 1,2} \right) =  - 72000{e^{ - 43}}.\)\\
+\[ \Rightarrow \nabla f\left( {2, - 1,2} \right) = \left\langle { - 8000{e^{ - 43}},12000{e^{ - 43}}, - 72000{e^{ - 43}}} \right\rangle \]
+\[{D_{\overrightarrow u }}f\left( {2, - 1,2} \right) = \nabla f\left( {2, - 1,2} \right) \cdot \overrightarrow u  =  - 9600{e^{ - 43}}\sqrt 5 .\]
+(b), (c). \(\max {D_{\overrightarrow u }}f\left( {2, - 1,2} \right) = \left| {\nabla f\left( {2, - 1,2} \right)} \right| = 4000{e^{ - 43}}\sqrt {337} \) đạt khi 
+\[\overrightarrow u  = \frac{{\nabla f\left( {2, - 1,2} \right)}}{{\left| {\nabla f\left( {2, - 1,2} \right)} \right|}} = \frac{{\left\langle { - 8000{e^{ - 43}},12000{e^{ - 43}}, - 72000{e^{ - 43}}} \right\rangle }}{{4000{e^{ - 43}}\sqrt {337} }}\]
+\[ = \left\langle { - \frac{2}{{\sqrt {337} }},\frac{3}{{\sqrt {337} }}, - \frac{{18}}{{\sqrt {337} }}} \right\rangle .\]
+\textbf{Trang 39}\\
+\textbf{Bài 7.}
+\begin{mybox}
+Nếu \(f\left( {x,y} \right) = xy,\) tìm vector gradient \(\nabla f\left( {3,2} \right)\) và sử dụng nó để tìm tiếp tuyến với đường cong \(f\left( {x,y} \right) = 6\) tại điểm \(\left( {3,2} \right).\) Vẽ phác họa đường cong, tiếp tuyến và vector gradient.
+\end{mybox}
+\[{f_x}\left( {x,y} \right) = y \Rightarrow {f_x}\left( {3,2} \right) = 2.\]
+\[{f_y}\left( {x,y} \right) = x \Rightarrow {f_y}\left( {3,2} \right) = 3.\]
+\[ \Rightarrow \nabla f\left( {3,2} \right) = \left\langle {2,3} \right\rangle .\]
+Tiếp tuyến với đường cong \(f\left( {xy} \right) = 6\) tại điểm \(\left( {3,2} \right)\) có phương trình là 
+\[\left( t \right):{f_x}\left( {3,2} \right)\left( {x - 3} \right) + {f_y}\left( {3,2} \right)\left( {y - 2} \right) = 0\]
+\[ \Leftrightarrow 2\left( {x - 3} \right) + 3\left( {y - 2} \right) = 0\]
+Vẽ phác họa đường cong, tiếp tuyến và vector gradient:
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-4.1104,-4.0041) rectangle (6.05006,8.50836);
+\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=-4.110400000000007:-1.50060000000002] plot(\x,{6/(\x)});
+\draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=0.05:6.050060000000002] plot(\x,{6/(\x)});
+\draw [line width=2pt,domain=-4.1104:6.05006] plot(\x,{(--12-2*\x)/3});
+\draw [->,line width=2pt] (3,2) -- (5,5);
+\draw [->, line width=2pt] (-4.110400000000007,0) -- (6.050060000000002,0);
+\draw [->, line width=2pt] (0,-4.0041) -- (0,8.50836);
+\begin{scriptsize}
+\draw[color=qqwuqq] (-13.87082,-0.50251) node {$f$};
+\draw[color=black] (-4.20776,7.27053) node {$t$};
+\draw [fill=uuuuuu] (3,2) circle (2pt);
+\draw[color=black] (3.9912,3.88979) node {$u$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\textbf{Bài 8.}
+\begin{mybox}
+Nếu \(g\left( {x,y} \right) = x^2 + y^2 - 4x,\) tìm vector gradient \(\nabla g\left( {1,2} \right)\) và sử dụng nó để tìm tiếp tuyến với đường cong \(g\left( {x,y} \right) = 1\) tại điểm \(\left( {1,2} \right).\) Vẽ phác họa đường cong, tiếp tuyến và vector gradient.
+\end{mybox}
+\[{g_x}\left( {x,y} \right) = 2x - 4 \Rightarrow {g_x}\left( {1,2} \right) =  - 2.\]
+\[{g_y}\left( {x,y} \right) = 2y \Rightarrow {g_x}\left( {1,2} \right) = 4.\]
+\[ \Rightarrow \nabla g\left( {1,2} \right) = \left\langle { - 2,4} \right\rangle .\]
+Tiếp tuyến của đường cong \(g\left( {x,y} \right) = 1\) tại điểm \(\left( {1,2} \right)\) có phương trình là
+\[\left( t \right):{g_x}\left( {1,2} \right)\left( {x - 1} \right) + {g_x}\left( {1,2} \right)\left( {y - 2} \right) = 0\]
+\[ \Leftrightarrow  - 2\left( {x - 1} \right) + 4\left( {y - 2} \right) = 0.\]
+Vẽ phác họa đường cong, tiếp tuyến và vector gradient:
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-4.1104,-4.0041) rectangle (6.05006,8.50836);
+\draw [line width=2pt] (2,0) circle (2.23606797749979cm);
+\draw [line width=2pt,domain=-4.1104:6.05006] plot(\x,{(--6--2*\x)/4});
+\draw [->,line width=2pt] (1,2) -- (-1,6);
+\draw [->, line width=2pt] (-4.110400000000007,0) -- (6.050060000000002,0);
+\draw [->, line width=2pt] (0,-4.0041) -- (0,8.50836);
+\begin{scriptsize}
+\draw [fill=uuuuuu] (1,2) circle (2pt);
+\draw[color=uuuuuu] (1.22272,2.53217) node {$A$};
+\draw[color=black] (-13.65786,-4.86819) node {$eq2$};
+\draw[color=black] (-0.0018,4.26247) node {$u$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\textbf{Trang 43}\\
+\textbf{Bài 12.}
+\begin{mybox}
+Tìm giá trị cực đại và cực tiểu địa phương và các điểm yên ngựa của hàm số \(f \left( {x, y} \right) = xy + \frac{1}{x} + \frac{1}{y}.\)
+\end{mybox}
+\[{f_x}\left( {x,y} \right) = y - \frac{1}{{{x^2}}}.\]
+\[{f_y}\left( {x,y} \right) = x - \frac{1}{{{y^2}}}.\]
+\[{f_{xx}}\left( {x,y} \right) = \frac{\partial }{{\partial x}}\left( {y - \frac{1}{{{x^2}}}} \right) = \frac{2}{{{x^3}}}.\]
+\[{f_{yy}}\left( {x,y} \right) = \frac{\partial }{{\partial y}}\left( {x - \frac{1}{{{y^2}}}} \right) = \frac{2}{{{y^3}}}.\]
+\[{f_{xy}}\left( {x,y} \right) = \frac{\partial }{{\partial y}}\left( {y - \frac{1}{{{x^2}}}} \right) = 1.\]
+\[D\left( {x,y} \right) = {f_{xx}}\left( {x,y} \right) \cdot {f_{yy}}\left( {x,y} \right) - {\left[ {{f_{xy}}\left( {x,y} \right)} \right]^2}\]
+\[ \Rightarrow D\left( {x,y} \right) = \frac{4}{{{x^3}{y^3}}} - 1.\]
+Xét hệ phương trình
+\[\left\{ \begin{gathered}
+  {f_x}\left( {x,y} \right) = 0 \hfill \\
+  {f_y}\left( {x,y} \right) = 0 \hfill \\ 
+\end{gathered}  \right.\]
+\[ \Leftrightarrow \left\{ \begin{gathered}
+  y - \frac{1}{{{x^2}}} = 0 \hfill \\
+  x - \frac{1}{{{y^2}}} = 0 \hfill \\ 
+\end{gathered}  \right. \Leftrightarrow \left( {x,y} \right) = \left( {1,1} \right).\]
+\(D\left( {1,1} \right) = 3 > 0\) và \({f_{xx}}\left( {1,1} \right) = 2 > 0\) \( \Rightarrow \left( {1,1} \right)\) là cực tiểu địa phương của hàm \(f.\)\\ 
+Giá trị cực tiểu của \(f\) là \(f\left( {1,1} \right) = 3.\)\\
+\(f\) không có điểm cực đại và điểm yên ngựa.\\
+\textbf{Bài 19.}
+\begin{mybox}
+Chứng minh rằng \(f\left( {x,y} \right) = {x^2} + 4{y^2} - 4xy + 2\) có vô hạn điểm dừng và \(D = 0\) tại mỗi điểm. Tiếp đó, chứng minh \(f\) đạt cực tiểu tại mỗi điểm dừng.
+\end{mybox}
+\[{f_x}\left( {x,y} \right) = 2x - 4y\]
+\[{f_y}\left( {x,y} \right) = 8y - 4x\]
+Điểm dừng \(\left( {a,b} \right)\) của \(f\) thỏa mãn hệ phương trình
+\[\left\{ \begin{gathered}
+  {f_x}\left( {a,b} \right) = 0 \hfill \\
+  {f_y}\left( {a,b} \right) = 0 \hfill \\ 
+\end{gathered}  \right.\]
+\[ \Leftrightarrow \left\{ \begin{gathered}
+  2a - 4b = 0 \hfill \\
+  8b - 4a = 0 \hfill \\ 
+\end{gathered}  \right. \Leftrightarrow a = 2b.\]
+Hệ phương trình có vô số nghiệm thỏa mãn \(a = 2b\) nên hàm \(f\) có vô số điểm dừng.
+\[{f_{xx}}\left( {x,y} \right) = \frac{\partial }{{\partial x}}\left( {2x - 4y} \right) = 2.\]
+\[{f_{yy}}\left( {x,y} \right) = \frac{\partial }{{\partial y}}\left( {8y - 4x} \right) = 8.\]
+\[{f_{xy}}\left( {x,y} \right) = \frac{\partial }{{\partial y}}\left( {2x - 4y} \right) =  - 4.\]
+\[D\left( {a,b} \right) = {f_{xx}}\left( {a,b} \right) \cdot {f_{yy}}\left( {a,b} \right) - {\left[ {{f_{xy}}\left( {a,b} \right)} \right]^2} = 2 \cdot 8 - {\left( { - 4} \right)^2} = 0.\]
+Do đó, tại mỗi điểm dừng, \(D = 0.\)\\
+\[f\left( {x,y} \right) = {x^2} + 4{y^2} - 4xy + 2 = {\left( {x - 2y} \right)^2} + 2 \geqslant 2,\forall \left( {x,y} \right) \in {\mathbb{R}^2}.\]
+\[f\left( {a,b} \right) = {\left( {a - 2b} \right)^2} + 2 = 2 = \min f\]
+\( \Rightarrow \) Mỗi điểm dừng là một cực tiểu địa phương.\\
+\textbf{Trang 44}\\
+\textbf{Bài 5.} 
+\begin{mybox}
+Tìm giá trị cực đại và cực tiểu tuyệt đối của \(f\) định bởi \(f\left( {x,y} \right) = x{y^2}\) trên tập \(D = \left\{ {\left. {\left( {x,y} \right)} \right|x,y \geqslant 0;{x^2} + {y^2} \leqslant 3} \right\}.\)
+\end{mybox}
+\[{f_x}\left( {x,y} \right) = {y^2}\]
+\[{f_y}\left( {x,y} \right) = 2xy\]
+\(\left( {a,b} \right)\) là điểm dừng của hàm \(f\)
+\[ \Leftrightarrow \left\{ \begin{gathered}
+  {f_x}\left( {a,b} \right) = 0 \hfill \\
+  {f_y}\left( {a,b} \right) = 0 \hfill \\ 
+\end{gathered}  \right.\]
+\[ \Leftrightarrow \left\{ \begin{gathered}
+  {b^2} = 0 \hfill \\
+  2ab = 0 \hfill \\ 
+\end{gathered}  \right. \Leftrightarrow \left\{ \begin{gathered}
+  a = t \hfill \\
+  b = 0 \hfill \\ 
+\end{gathered}  \right.,\begin{array}{*{20}{c}}
+  {}&{\left( {t \in \mathbb{R}} \right)} 
+\end{array}.\]
+\[f\left( {a,b} \right) = f\left( {t,0} \right) = 0.\]
+\[\left[ \begin{gathered}
+  x = 0 \hfill \\
+  y = 0 \hfill \\ 
+\end{gathered}  \right. \Rightarrow f\left( {x,y} \right) = 0.\]
+\[0 \leqslant {x^2} \leqslant 3 \Rightarrow 0 \leqslant x \leqslant \sqrt 3 \]
+Xét \({x^2} + {y^2} = 3\) 
+\[\Leftrightarrow {y^2} = 3 - {x^2}\]
+Khi đó: \(f\left( {x,y} \right) = x\left( {3 - {x^2}} \right) = 3x - {x^3} = g\left( x \right).\)
+\[g'\left( x \right) = 3 - 3{x^2} = 3\left( {1 - {x^2}} \right).\]
+\[g'\left( x \right) = 0 \Leftrightarrow x = 1\begin{array}{*{20}{c}}
+  {}&{\left( {0 \leqslant x \leqslant \sqrt 3 } \right)} 
+\end{array}.\]
+\[g\left( 0 \right) = 0,g\left( 1 \right) = 2,g\left( {\sqrt 3 } \right) = 0.\]
+Vậy trên tập \(D,\) cực đại tuyệt đối của \(f\) là \(2,\) cực tiểu tuyệt đối của \(f\) là \(0.\)
+\end{document}
