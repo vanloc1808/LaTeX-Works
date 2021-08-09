@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Nguyễn Văn Lộc - 20120131}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\begin{document}
+\begin{mybox}
+\textbf{Họ và tên:} Nguyễn Văn Lộc\\
+\textbf{MSSV:} 20120131\\
+\textbf{STT:} 99b\\
+\textbf{Lớp:} 20CTT1
+\end{mybox}
+\begin{center}
+\textbf{BÀI TẬP ĐIỂM CỘNG CUỐI KÌ TUẦN 12}
+\end{center}
+\textbf{Bài toán 1.}
+\begin{mybox}
+Cho đường cong \(C\) với tham số hóa (đơn, chính qui) \(r:\left[ {a,b} \right] \to {\mathbb{R}^2}\) và hàm \(f\) liên tục trên \(C.\) Đặt \(m = \mathop {\min }\limits_C f\) và \(M = \mathop {\max }\limits_C f.\) Chứng minh 
+\[m \leqslant \frac{1}{{{L_C}}}\int_C {fds}  \leqslant M,\]
+trong đó \(L_C\) là độ dài đường cong \(C.\)
+\end{mybox}
+\textbf{Lời giải.}\\
+Theo công thức tính tích phân đường loại \(1,\)
+\[\int_C {fds}  = \int\limits_a^b {f\left( {\overrightarrow r \left( t \right)} \right)\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|dt} .\]
+Độ dài \(L_C\) của đường cong \(C\) được tính theo công thức:
+\[{L_C} = \int_C {1ds}  = \int\limits_a^b {\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|dt} .\]
+Do \(m = \mathop {\min }\limits_C f\) và \(M = \mathop {\max }\limits_C f\) nên
+\begin{equation}
+m \leqslant f\left( {\overrightarrow r \left( t \right)} \right) \leqslant M,\forall t \in \left[ {a,b} \right].
+\label{eq1}
+\end{equation}
+Do \(r\) là tham số hóa chính qui nên \(\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right| > 0,\forall t \in \left[ {a,b} \right].\) Vì vậy, từ (\ref{eq1}) ta suy ra
+\begin{equation}
+m\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right| \leqslant f\left( {\overrightarrow r \left( t \right)} \right)\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right| \leqslant M\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|,\forall t \in \left[ {a,b} \right].
+\label{eq2}
+\end{equation}
+Từ (\ref{eq2}), theo bất đẳng thức tích phân
+\[\int\limits_a^b {m\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|dt}  \leqslant \int\limits_a^b {f\left( {\overrightarrow r \left( t \right)} \right)\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|} dt \leqslant \int\limits_a^b {M\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|dt} .\]
+\[ \Rightarrow m\int\limits_a^b {\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|dt}  \leqslant \int\limits_a^b {f\left( {\overrightarrow r \left( t \right)} \right)\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|} dt \leqslant M\int\limits_a^b {\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|dt} .\]
+\[ \Rightarrow m \leqslant \frac{{\int\limits_a^b {f\left( {\overrightarrow r \left( t \right)} \right)\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|} dt}}{{\int\limits_a^b {\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|dt} }} \leqslant M,\left( {\int\limits_a^b {\left| {{{\overrightarrow r }^\prime }\left( t \right)} \right|dt} = L_C  > 0} \right).\]
+\[ \Rightarrow m \leqslant \frac{{\int_C {fds} }}{{{L_c}}} \leqslant M.\]
+Vậy ta có điều phải chứng minh.\\
+\textbf{Bài toán 2.}
+\begin{mybox}
+\textbf{a.} Chứng minh rằng với mỗi bộ số \(\left( {x,y} \right) \in {\mathbb{R}^2},\) tồn tại duy nhất số thực \(z\) thỏa mãn phương trình \(\frac{{5{z^3}}}{4} + \left( {2{x^2} + 1} \right)z + {x^2} + {y^2} - y - 2 = 0.\) Từ đó, hãy chứng minh tồn tại hàm \(f:{\mathbb{R}^2} \to \mathbb{R}\) sao cho
+\[\frac{{5{z^3}}}{4} + \left( {2{x^2} + 1} \right)z + {x^2} + {y^2} - y - 2 = 0 \Leftrightarrow z = f\left( {x,y} \right).\]
+Điều này có nghĩa rằng mặt cong \(\left( S \right):\frac{{5{z^3}}}{4} + \left( {2{x^2} + 1} \right)z + {x^2} + {y^2} - y - 2 = 0\) chính là đồ thị hàm \(f.\)\\
+\textbf{b.} Xét hàm \(G:{\mathbb{R}^3} \to \mathbb{R}\) xác định bởi \(,G\left( {x,y,z} \right) = \frac{{5{z^3}}}{4} + \left( {2{x^2} + 1} \right)z + {x^2} + {y^2} - y - 2.\) Chứng minh rằng
+\[G\left( {x,y,f\left( {x,y} \right)} \right) = 0,\forall \left( {x,y} \right) \in {\mathbb{R}^2}.\]
+\textbf{c.} Tìm \(f\left( {0,2} \right).\)\\
+\textbf{d.} Viết phương trình mặt tiếp xúc với \(\left( S \right)\) tại \(\left( {0,2,f\left( {0,2} \right)} \right).\)\\
+\textbf{e.} Tìm \({f_x}\left( {0,2} \right)\) và \({f_y}\left( {0,2} \right).\)\\
+\textbf{f.} Tìm xấp xỉ cho giá trị \(f\left( {0.03,1.99} \right).\)\\
+\textbf{g.} Xét hàm \(g\left( {x,y} \right) = f\left( {{x^2} - y,{y^2} + x} \right).\) Tìm \({g_x}\left( {1,1} \right)\) và \({g_y}\left( {1,1} \right).\)\\
+\textbf{h.} Tìm cực trị hàm \(f.\) 
+\end{mybox}
+\textbf{Lời giải.}\\
+\textbf{h.} Với \(z = f \left( {x, y} \right),\) ta có
+\begin{equation}
+\frac{{5{z^3}}}{4} + \left( {2{x^2} + 1} \right)z + {x^2} + {y^2} - y - 2 = 0.
+\label{eq3}
+\end{equation}
+Ta có các đạo hàm riêng của \(G\) như sau:
+\[\left\{ \begin{gathered}
+  {G_x}\left( {x,y,z} \right) = 4xz + 2x \hfill \\
+  {G_y}\left( {x,y,z} \right) = 2y - 1 \hfill \\
+  {G_z}\left( {x,y,z} \right) = \frac{{15{z^2}}}{4} + 2{x^2} + 1 \hfill \\ 
+\end{gathered}  \right..\]
+Vì vậy \(G_x, G_y, G_z\) xác định và liên tục trên \(\mathbb{R}^3.\)\\
+Do \({G_z}\left( {x,y,z} \right) = \frac{{15{z^2}}}{4} + 2{x^2} + 1 > 0,\forall \left( {x,y,z} \right) \in {\mathbb{R}^3}\) nên theo định lí hàm ẩn
+\[\left\{ \begin{gathered}
+  {f_x}\left( {x,y} \right) =  - \frac{{{G_x}\left( {x,y,z} \right)}}{{{G_z}\left( {x,y,z} \right)}} \hfill \\
+  {f_y}\left( {x,y} \right) =  - \frac{{{G_y}\left( {x,y,z} \right)}}{{{G_z}\left( {x,y,z} \right)}} \hfill \\ 
+\end{gathered}  \right..\]
+Điểm dừng của \(f\) thỏa mãn hệ phương trình sau
+\begin{equation}
+\left\{ \begin{gathered}
+  {f_x}\left( {x,y} \right) = 0 \hfill \\
+  {f_y}\left( {x,y} \right) = 0 \hfill \\ 
+\end{gathered}  \right..
+\label{hpt3}
+\end{equation}
+Hệ phương trình (\ref{hpt3}) tương đương với
+\[\left\{ \begin{gathered}
+  {G_x}\left( {x,y,z} \right) = 0 \hfill \\
+  {G_y}\left( {x,y,z} \right) = 0 \hfill \\ 
+\end{gathered}  \right.\]
+\[ \Leftrightarrow \left\{ \begin{gathered}
+  4xz + 2x = 0 \hfill \\
+  2y - 1 = 0 \hfill \\ 
+\end{gathered}  \right. \Leftrightarrow \left\{ \begin{gathered}
+  2x\left( {2z + 1} \right) = 0 \hfill \\
+  2y - 1 = 0 \hfill \\ 
+\end{gathered}  \right.\]
+\[ \Leftrightarrow \left\{ \begin{gathered}
+  \left[ \begin{gathered}
+  x = 0 \hfill \\
+  z =  - \frac{1}{2} \hfill \\ 
+\end{gathered}  \right. \hfill \\
+  y = \frac{1}{2} \hfill \\ 
+\end{gathered}  \right. \Leftrightarrow \left[ \begin{gathered}
+  \left\{ \begin{gathered}
+  x = 0 \hfill \\
+  y = \frac{1}{2} \hfill \\ 
+\end{gathered}  \right. \hfill \\
+  \left\{ \begin{gathered}
+  y = \frac{1}{2} \hfill \\
+  z =  - \frac{1}{2} \hfill \\ 
+\end{gathered}  \right. \hfill \\ 
+\end{gathered}  \right..\]
+Thay \(y = \frac{1}{2}, z = -\frac{1}{2}\) vào (\ref{eq3}), ta được
+\[ - \frac{5}{{32}} - {x^2} - \frac{1}{2} + {x^2} + \frac{1}{4} - \frac{1}{2} - 2 = 0 \Leftrightarrow x \in \varnothing .\]
+Vậy \(f\) có một điểm dừng là \(\left( {0,\frac{1}{2}} \right).\)\\
+Thay \(\left( {x,y} \right) = \left( {0,\frac{1}{2}} \right)\) vào (\ref{eq3}), ta được
+\[\frac{{5{z^3}}}{4} + z - \frac{9}{4} = 0 \Leftrightarrow z = 1.\]
+Ta sẽ đi tìm các đạo hàm riêng cấp \(2\) của \(f.\)\\
+Một vài đạo hàm riêng cấp \(2\) của \(G\) như sau:
+\[\left\{ \begin{gathered}
+  {G_{xx}}\left( {x,y,z} \right) = \frac{\partial }{{\partial x}}\left( {{G_x}\left( {x,y,z} \right)} \right) = 4z + 4x{f_x}\left( {x,y} \right) + 2 \hfill \\
+  {G_{zx}}\left( {x,y,z} \right) = \frac{\partial }{{\partial x}}\left( {{G_z}\left( {x,y,z} \right)} \right) = \frac{{15}}{2}z{f_x}\left( {x,y} \right) + 4x \hfill \\
+  {G_{yy}}\left( {x,y,z} \right) = \frac{\partial }{{\partial y}}\left( {{G_y}\left( {x,y,z} \right)} \right) = 2 \hfill \\
+  {G_{zy}}\left( {x,y,z} \right) = \frac{\partial }{{\partial y}}\left( {{G_z}\left( {x,y,z} \right)} \right) = \frac{{15}}{2}z{f_y}\left( {x,y} \right) \hfill \\
+  {G_{xy}}\left( {x,y,z} \right) = \frac{\partial }{{\partial y}}\left( {{G_x}\left( {x,y,z} \right)} \right) = 4xz{f_y}\left( {x,y} \right) \hfill \\ 
+\end{gathered}  \right..\]
+Thay \(\left( {x,y,z} \right) = \left( {0,\frac{1}{2},1} \right),{f_x}\left( {0,\frac{1}{2}} \right) = {f_y}\left( {0,\frac{1}{2}} \right) = 0,\) ta được
+\[\left\{ \begin{gathered}
+  {G_{xx}}\left( {0,\frac{1}{2},1} \right) = 6 \hfill \\
+  {G_{zx}}\left( {0,\frac{1}{2},1} \right) = 0 \hfill \\
+  {G_{yy}}\left( {0,\frac{1}{2},1} \right) = 2 \hfill \\
+  {G_{zy}}\left( {0,\frac{1}{2},1} \right) = 0 \hfill \\
+  {G_{xy}}\left( {0,\frac{1}{2},1} \right) = 0 \hfill \\
+  {G_x}\left( {0,\frac{1}{2},1} \right) = 0 \hfill \\
+  {G_y}\left( {0,\frac{1}{2},1} \right) = 0 \hfill \\
+  {G_z}\left( {0,\frac{1}{2},1} \right) = \frac{{19}}{4} \hfill \\ 
+\end{gathered}  \right..\]
+Từ đó,
+\[{f_{xx}}\left( {x,y} \right) = \frac{\partial }{{\partial x}}\left( {{f_x}\left( {x,y} \right)} \right) = \frac{\partial }{{\partial x}}\left( { - \frac{{{G_x}\left( {x,y,z} \right)}}{{{G_z}\left( {x,y,z} \right)}}} \right)\]
+\[ \Rightarrow {f_{xx}}\left( {x,y} \right) =  - \frac{{\frac{\partial }{{\partial x}}\left( {{G_x}\left( {x,y,z} \right)} \right){G_z}\left( {x,y,z} \right) - \frac{\partial }{{\partial x}}\left( {{G_z}\left( {x,y,z} \right)} \right){G_x}\left( {x,y,z} \right)}}{{{{\left( {{G_z}\left( {x,y,z} \right)} \right)}^2}}}\]
+\[ \Rightarrow {f_{xx}}\left( {x,y} \right) =  - \frac{{{G_{xx}}\left( {x,y,z} \right){G_z}\left( {x,y,z} \right) - {G_{zx}}\left( {x,y,z} \right){G_x}\left( {x,y,z} \right)}}{{{{\left( {{G_z}\left( {x,y,z} \right)} \right)}^2}}}.\]
+\[ \Rightarrow {f_{xx}}\left( {0,\frac{1}{2}} \right) =  - \frac{{6 \cdot \frac{{19}}{4}}}{{{{\left( {\frac{{19}}{4}} \right)}^2}}} =  - \frac{{24}}{{19}}.\]
+\[{f_{yy}}\left( {x,y} \right) = \frac{\partial }{{\partial y}}\left( {{f_y}\left( {x,y} \right)} \right) = \frac{\partial }{{\partial y}}\left( { - \frac{{{G_y}\left( {x,y,z} \right)}}{{{G_z}\left( {x,y,z} \right)}}} \right)\]
+\[ \Rightarrow {f_{yy}}\left( {x,y} \right) =  - \frac{{\frac{\partial }{{\partial y}}\left( {{G_y}\left( {x,y,z} \right)} \right){G_z}\left( {x,y,z} \right) - \frac{\partial }{{\partial y}}\left( {{G_z}\left( {x,y,z} \right)} \right){G_y}\left( {x,y,z} \right)}}{{{{\left( {{G_z}\left( {x,y,z} \right)} \right)}^2}}}\]
+\[ \Rightarrow {f_{yy}}\left( {x,y} \right) =  - \frac{{{G_{yy}}\left( {x,y,z} \right){G_z}\left( {x,y,z} \right) - {G_{zy}}\left( {x,y,z} \right){G_y}\left( {x,y,z} \right)}}{{\left( {{G_z}} \right){{\left( {x,y,z} \right)}^2}}}.\]
+\[ \Rightarrow {f_{yy}}\left( {0,\frac{1}{2}} \right) =  - \frac{{2 \cdot \frac{{19}}{4}}}{{{{\left( {\frac{{19}}{4}} \right)}^2}}} =  - \frac{8}{{19}}.\]
+\[{f_{xy}}\left( {x,y} \right) = \frac{\partial }{{\partial y}}\left( {{f_x}\left( {x,y} \right)} \right) = \frac{\partial }{{\partial y}}\left( { - \frac{{{G_x}\left( {x,y,z} \right)}}{{{G_z}\left( {x,y,z} \right)}}} \right)\]
+\[ \Rightarrow {f_{xy}}\left( {x,y} \right) =  - \frac{{\frac{\partial }{{\partial y}}\left( {{G_x}\left( {x,y,z} \right)} \right){G_z}\left( {x,y,z} \right) - \frac{\partial }{{\partial y}}\left( {{G_z}\left( {x,y,z} \right)} \right){G_x}\left( {x,y,z} \right)}}{{{{\left( {{G_z}\left( {x,y,z} \right)} \right)}^2}}}\]
+\[ \Rightarrow {f_{xy}}\left( {x,y} \right) =  - \frac{{{G_{xy}}\left( {x,y,z} \right){G_z}\left( {x,y,z} \right) - {G_{zy}}\left( {x,y,z} \right){G_y}\left( {x,y,z} \right)}}{{{{\left( {{G_z}\left( {x,y,z} \right)} \right)}^2}}}.\]
+\[ \Rightarrow {f_{xy}}\left( {0,\frac{1}{2}} \right) = 0.\]
+Ta có \(D\left( {0,\frac{1}{2}} \right) = {f_{xx}}\left( {0,\frac{1}{2}} \right){f_{yy}}\left( {0,\frac{1}{2}} \right) - {\left[ {{f_{xy}}\left( {0,\frac{1}{2}} \right)} \right]^2} = \frac{{192}}{{361}} > 0.\) \\
+Mà \({f_{xx}}\left( {0,\frac{1}{2}} \right) =  - \frac{{24}}{{19}} < 0\) nên điểm \(\left( {0,\frac{1}{2}} \right)\) là cực đại của \(f.\)\\
+Vậy \(f\) có một điểm cực đại là \(\left( {0,\frac{1}{2}} \right).\)
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Nguyễn Văn Lộc - 20120131}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\begin{document}
+\begin{mybox}
+\textbf{Họ và tên:} Nguyễn Văn Lộc\\
+\textbf{MSSV:} 20120131\\
+\textbf{STT:} 99b\\
+\textbf{Lớp:} 20CTT1
+\end{mybox}
+\begin{center}
+\textbf{BÀI TẬP ĐIỂM CỘNG CUỐI KÌ TUẦN 14}
+\end{center}
+\textbf{Bài toán.}
+\begin{mybox}
+Cho \(D\) là một miền con của \(\mathbb{R}^2\) và \(\vec F: D \to {\mathbb{R}^2}\) là trường trơn và bảo toàn trên \(\mathbb{R}^2.\) Cho \(f\) và \(g\) là các hàm thế của \(\vec F.\)\\
+a. Khi \(D = \mathbb{R}^2,\) chứng minh rằng \(f - g\) là hàm hằng.\\
+b. Với tập \(D\) như thế nào thì kết luận ở câu a. vẫn còn đúng?
+\end{mybox}
+\textbf{Lời giải.}\\
+a. Theo đề bài, ta có
+\begin{center}
+\(f\) và \(g\) đều là hàm thế của \(\vec F\) trên \(\mathbb{R}^2\)
+\end{center}
+\[ \Rightarrow \nabla f = \vec F = \nabla g.\]
+\[ \Rightarrow \nabla f = \nabla g.\]
+\begin{equation}
+ \Rightarrow \left\{ \begin{gathered}
+  {f_x}\left( {x,y} \right) = {g_x}\left( {x,y} \right) \hfill \\
+  {f_y}\left( {x,y} \right) = {g_y}\left( {x,y} \right) \hfill \\ 
+\end{gathered}  \right., \forall \left( {x,y} \right) \in \mathbb{R}^2.
+\label{eq1}
+\end{equation}
+Từ phương trình đầu tiên của hệ (\ref{eq1}), ta được
+\[\int {{f_x}\left( {x,y} \right)dx}  = \int {{g_x}\left( {x,y} \right)dx}, \forall \left( {x,y} \right) \in \mathbb{R}^2 \]
+\[ \Rightarrow f\left( {x,y} \right) = g\left( {x,y} \right) + D\left( y \right), \forall \left( {x,y} \right) \in \mathbb{R}^2.\]
+\[ \Rightarrow \frac{\partial }{{\partial y}}\left( {f\left( {x,y} \right)} \right) = \frac{\partial }{{\partial y}}\left( {g\left( {x,y} \right) + D\left( y \right)} \right), \forall \left( {x,y} \right) \in \mathbb{R}^2\]
+\[ \Rightarrow {f_y}\left( {x,y} \right) = {g_y}\left( {x,y} \right) + D'\left( y \right), \forall \left( {x,y} \right) \in \mathbb{R}^2.\]
+Từ phương trình thứ hai của hệ (\ref{eq1}), ta suy ra 
+\[D'\left( y \right) = 0 \Rightarrow D\left( y \right) = C, \forall \left( {x,y} \right) \in \mathbb{R}^2.\]
+\[ \Rightarrow f\left( {x,y} \right) - g\left( {x,y} \right) = C, \forall \left( {x,y} \right) \in \mathbb{R}^2.\]
+Vậy ta có điều phải chứng minh.\\
+b. Để kết luận ở câu a. vẫn còn đúng, \(D\) phải là miền mở, hình sao.\\
+Tức là, tồn tại điểm \(P_0 \in D\) sao cho với mọi \(P \in D\) thì đoạn nối \(P_0\) và \(P\) nằm trong \(D.\)
+\end{document}
