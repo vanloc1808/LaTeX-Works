@@ -1,0 +1,389 @@
+\chapter{Không gian vector}
+\section{Không gian vector}
+Cho $V$ là một tập hợp với phép toán cộng $\mathbf{+}$ và phép nhân vô hướng $\mathbf{\cdot}$ của $\mathbb{R}$ với $V.$ Khi đó $V$ được gọi là \textit{không gian vector} trên $\mathbb{R}$ nếu mọi $u, v, w \in V$ và mọi $\alpha, \beta \in \mathbb{R}$ thỏa 8 tính chất sau:
+\begin{itemize}
+\item $u + v = v + u$ (tính giao hoán);
+\item $\left( {u + v} \right) + w = u + \left( {v + w} \right)$ (tính kết hợp);
+\item tồn tại $\mathbf{0} \in V$ sao cho: $u + \mathbf{0} = \mathbf{0} + u = u$ (phần tử không);
+\item tồn tại $u' \in V$ sao cho: $u + u' = u' + u = \mathbf{0}$ (phần tử đối);
+\item $\left( {\alpha \beta } \right) \cdot u = \alpha \left( {\beta  \cdot u} \right);$
+\item $\left( {\alpha  + \beta } \right) \cdot u = \alpha  \cdot u + \beta  \cdot u;$
+\item $\alpha  \cdot \left( {u + v} \right) = \alpha  \cdot u + \alpha  \cdot v$ (tính phân phối);
+\item $1 \cdot u = u$ (nhân với số $1$).
+\end{itemize}
+Khi đó ta gọi:
+\begin{itemize}
+\item mỗi phần tử $u \in V$ là một \textit{vector}.
+\item vector $\mathbf{0}$ là \textit{vector không}.
+\item vector $u'$ là \textit{vector đối} của $u.$
+\end{itemize}
+\begin{mybox}
+\textbf{Mệnh đề.} Cho $V$ là một không gian vector trên $\mathbb{R}.$ Khi đó với mọi $u \in V$ và $\alpha \in \mathbb{R},$ ta có
+\begin{itemize}
+\item $\alpha u = \mathbf{0} \Leftrightarrow$ ($\alpha = 0$ hoặc $u = \mathbf{0}$);
+\item $\left( {-1} \right)u = u'.$ Do đó để đơn giản ta có thể ký hiệu $-u$ thay cho $u'.$
+\end{itemize}
+\end{mybox}
+\section{Tổ hợp tuyến tính}
+\subsection{Tổ hợp tuyến tính}
+Cho $u_1, u_2, ..., u_m \in V.$ Một \textit{tổ hợp tuyến tính} của $u_1, u_2, ..., u_m$ là một vector có dạng
+$$u = {\alpha _1}{u_1} + {\alpha _2}{u_2} + ... + {\alpha _m}{u_m}, \text{  với }{a_i} \in \mathbb{R} $$
+Khi đó, đẳng thức trên được gọi là \textit{dạng biểu diễn} của $u$ theo các vector $u_1, u_2, ..., u_m.$
+\begin{mybox}
+\textbf{Nhận xét.} Vector $\mathbf{0}$ luôn luôn là một tổ hợp tuyến tính của $u_1, u_2, ..., u_m$ vì
+$$\mathbf{0} = 0{u_1} + 0{u_2} + ... + 0{u_m}.$$
+\end{mybox}
+Để kiểm tra $u$ là tổ hợp tuyến tính của $u_1, u_2, ..., u_m$ trong $\mathbb{R}^n$ ta áp dụng các bước sau:
+\begin{itemize}
+\item Lập ma trận mở rộng 
+\begin{equation}
+\left( {\begin{array}{*{20}{c}}
+  {u_1^{\mathrm{T}}}&{u_2^{\mathrm{T}}}&{...}&{\left. {u_m^{\mathrm{T}}} \right|{u^{\mathrm{T}}}} 
+\end{array}} \right)
+\label{eq31}
+\end{equation}
+\item Giải hệ phương trình (\ref{eq31}).
+\begin{itemize}
+\item Nếu (\ref{eq31}) \textbf{vô nghiệm,} thì $u$ \textbf{không} là tổ hợp tuyến tính của $u_1, u_2, ..., u_m.$
+\item Nếu (\ref{eq31}) \textbf{có nghiệm} ${\alpha _1},{\alpha _2},...,{\alpha _m}$ thì $u$ là tổ hợp tuyến tính của $u_1, u_2, ..., u_m$ và có dạng biểu diễn là
+$$u = {\alpha _1}{u_1} + {\alpha _2}{u_2} + ... + {\alpha _m}{u_m}.$$
+\end{itemize}
+\end{itemize} 
+\subsection{Độc lập tuyến tính và phụ thuộc tuyến tính}
+Cho $u_1, u_2, ..., u_m \in V.$ Xét phương trình
+\begin{equation}
+{\alpha _1}{u_1} + {\alpha _2}{u_2} + ... + {\alpha _m}{u_m} = 0.
+\label{eq32}
+\end{equation}
+\begin{itemize}
+\item Nếu (\ref{eq32}) chỉ có nghiệm tầm thường $\alpha_1 = \alpha_2 = ... = \alpha_m = 0$ thì ta nói $u_1, u_2, ..., u_m$ (hay $\left\{ {u_1, u_2, ..., u_m} \right\}$) \textit{độc lập tuyến tính}.
+\item Nếu (\ref{eq32}) \textit{có nghiệm không tầm thường} thì ta nói $u_1, u_2, ..., u_m$ (hay $\left\{ {u_1, u_2, ..., u_m} \right\}$) \textit{phụ thuộc tuyến tính.}
+\end{itemize} 
+Nói cách khác,
+\begin{itemize}
+\item Nếu phương trình (\ref{eq32}) có nghiệm duy nhất thì  $u_1, u_2, ..., u_m$ độc lập tuyến tính.
+\item Nếu phương trình (\ref{eq32}) có vô số nghiệm thì  $u_1, u_2, ..., u_m$ phụ thuộc tuyến tính
+\end{itemize}
+\begin{mybox}
+\textbf{Nhận xét.} Họ vector $u_1, u_2, ..., u_m$ phụ thuộc tuyến tính khi và chỉ khi tồn tại vector $u_i$ là tổ hợp tuyến tính của các vector còn lại.
+\end{mybox}
+\begin{mybox}
+\textbf{Nhắc lại.} Cho hệ phương trình tuyến tính thuần nhất $AX = 0$ có $m$ ẩn Khi đó $r\left( A \right) = r\left( {\mathop A\limits^ \sim  } \right)$ với $\mathop A\limits ^\sim$ là ma trận mở rộng. Hơn nữa áp dụng định lí Kronecker - Capelli ta có
+\begin{itemize}
+\item Nếu $r \left( A \right) = m$ hệ chỉ có nghiệm tầm thường.
+\item Nếu $r \left( A \right) < m$ hệ có vô số nghiệm.
+\end{itemize}
+\end{mybox}
+\textbf{Nhắc lại.} Cho $A \in M_n \left( {\mathbb{R}} \right).$ Khi đó các khẳng định sau tương đương:
+\begin{itemize}
+\item Hệ phương trình $AX = 0$ chỉ có nghiệm tầm thường;
+\item $r \left( A \right) = n;$
+\item $\det \left( A \right) \ne 0.$
+\end{itemize}
+\begin{mybox}
+\textbf{Mệnh đề.} Cho $V$ là không gian vector trên $\mathbb{R}$ và $S = \left\{ {{u_1},{u_2},...,{u_m}} \right\}$ là tập hợp các vector thuộc $V.$ Khi đó
+\begin{itemize}
+\item Nếu $S$ phụ thuộc tuyến tính thì mọi tập chứa $S$ đều phụ thuộc tuyến tính.
+\item Nếu $S$ độc lập tuyến tính thì mọi tập con của $S$ đều độc lập tuyến tính.
+\end{itemize}
+\end{mybox}
+\textbf{Nhắc lại.} Cho $A \in M_{m \times n} \left( {\mathbb{R}} \right).$ Khi đó $r\left( {{A^{\mathrm{T}}}} \right) = r\left( A \right).$
+\begin{mybox}
+\textbf{Mệnh đề.} Cho ${u_1},{u_2},...,{u_m}$ là $m$ vector trong $\mathbb{R}^n.$ Gọi $A$ là ma trận có được bằng cách xếp ${u_1},{u_2},...,{u_m}$ thành các cột hoặc thành các dòng. Khi đó ${u_1},{u_2},...,{u_m}$ \textbf{\textit{độc lập tuyến tính}} khi và chỉ khi $A$ có hạng $r \left( A \right) = m.$
+\end{mybox}
+Từ mệnh đề trên ta sẽ xây dựng thuật toán kiểm tra tính độc lập tuyến tính của các vector trong $\mathbb{R}^n$ như sau:
+\subsubsection{Thuật toán kiểm tra tính độc lập tuyến tính của các vector $u_1, u_2, ..., u_m$ trong $\mathbb{R}^n$}
+\begin{mybox}
+\textbf{Bước 1.} Lập ma trận $A$ bằng cách xếp ${u_1},{u_2},...,{u_m}$ thành các cột hoặc thành các dòng.\\
+\textbf{Bước 2.} Xác định hạng $r \left( A \right)$ của $A.$
+\begin{itemize}
+\item Nếu $r \left( A \right) = m$ thì $u_1, u_2, ..., u_m$ \textbf{độc lập tuyến tính.}
+\item Nếu $r \left( A \right) < m$ thì $u_1, u_2, ..., u_m$ \textbf{phụ thuộc tuyến tính.}
+\end{itemize}
+Trường hợp $m = n,$ ta có $A$ là ma trận vuông. Khi đó có thể thay Bước 2 bằng Bước 2' sau đây:\\
+\textbf{Bước 2'.} Tính định thức của $A.$
+\begin{itemize}
+ \item Nếu $\det \left( A \right) \ne  0$ thì ${u_1},{u_2},...,{u_m}$ độc lập tuyến tính.
+ \item Nếu $\det \left( A \right) = 0$ thì ${u_1},{u_2},...,{u_m}$ phụ thuộc tuyến tính.
+ \end{itemize} 
+\end{mybox}
+\section{Cơ sở và số chiều của không gian vector}
+\subsection{Tập sinh}
+Cho $V$ là không gian vector và $S$ là tập con của $V.$ Tập $S$ được gọi là \textit{tập sinh} của $V$ nếu mọi vector của $V$ đều là tổ hợp tuyến tính của $S.$ Khi đó, ta nói $S$ \textit{sinh ra} $V$ hoặc $V$ \textit{được sinh bởi} $S$, ký hiệu $V = \left\langle S \right\rangle.$
+\subsection{Cơ sở và số chiều}
+\subsubsection{Cơ sở}
+Cho $V$ là không gian vector và $\mathbf{B}$ là tập con của $V$. Tập $B$ được gọi là một \textit{cơ sở} của $V$ nếu $\mathbf{B}$ là một tập sinh của $V$ và $\mathbf{B}$ độc lập tuyến tính.
+\subsubsection{Số chiều}
+\begin{mybox}
+\textbf{Mệnh đề.} Giả sử $V$ sinh bởi $m$ vector, $V = \left\langle {{u_1},{u_2},...,{u_m}} \right\rangle .$ Khi đó mọi tập con độc lập tuyến tính của $V$ có không quá $m$ phần tử.
+\end{mybox}
+\textbf{Hệ quả.} Giả sử $V$ có một cơ sở $\mathbf{B}$ gồm $n$ vector. Khi đó mọi cơ sở khác của $V$ cũng có đúng $n$ vector.\\
+Cho $V$ là không gian vector. \textit{Số chiều} của $V$, ký hiệu là $\dim V,$ là số vector của một cơ sở nào đó của $V.$
+\begin{mybox}
+\textbf{Nhận xét.} Trong không gian $\mathbb{R}^n,$ xét ${\mathbf{B}_0} = \left\{ {{e_1},{e_2},...,{e_n}} \right\},$ trong đó
+$${e_1} = \left( {1,0,0,...,0} \right),$$
+$${e_2} = \left( {0,1,0,...,0} \right),$$
+$$...........................$$
+$${e_n} = \left( {0,0,0,...,1} \right).$$
+Với $u = \left( {x_1, x_2, ..., x_n} \right)\in \mathbb{R}^n,$ ta có
+$$u = {x_1}{e_1} + {x_2}{e_2} + ... + {x_n}{e_n}.$$
+Do đó ${\mathbf{B}_0}$ là tập sinh của $\mathbb{R}^n.$ Mặt khác ${\mathbf{B}_0}$ độc lập tuyến tính nên ${\mathbf{B}_0}$ là cơ sở của $\mathbb{R}^n.$ Ta gọi ${\mathbf{B}_0}$ là \textit{cơ sở chính tắc} của $\mathbb{R}^n.$ Như vậy
+$$\dim \mathbb{R}^n = n.$$
+\end{mybox}
+\begin{mybox}
+\textbf{Mệnh đề.} Cho $V$ là không gian vector có $\dim V = n.$ Khi đó
+\begin{itemize}
+\item Mọi tập con của $V$ chứa nhiều hơn $n$ vector thì phụ thuộc tuyến tính.
+\item Mọi tập con của $V$ chứa ít hơn $n$ vector thì không là tập sinh của $V.$
+\end{itemize}
+\end{mybox}
+\subsubsection{Nhận diện cơ sở của không gian $V$ có $\dim V = n$}
+Vì $\dim V = n$ nên mọi cơ sở của $V$ phải gồm $n$ vector. Hơn nữa, nếu $S$ là tập con của $V$ và số phần tử của $S$ bằng $n$ thì
+\begin{center}
+$S$ là cơ sở của $V$\\
+$\Leftrightarrow$ $S$ độc lập tuyến tính\\
+$\Leftrightarrow$ $S$ là tập sinh của $V.$
+\end{center}
+\section{Không gian vector con}
+\subsection{Định nghĩa}
+Cho $W$ là một tập con khác rỗng của không gian vector $V.$ Ta nói $W$ là \textit{không gian vector con} (gọi tắt là \textit{không gian con}) của $V,$ ký hiệu $W \leqslant V,$ nếu $W$ với phép toán $\left( + , \mathbf{\cdot} \right)$ được hạn chế từ $V$ cũng là một không gian vector.
+\begin{mybox}
+\begin{theorem}
+Cho $W$ là một tập con khác rỗng của $V.$ Khi đó, các mệnh đề sau là tương đương:
+\begin{itemize}
+\item $W \leqslant V.$
+\item Với mọi $u, v \in W$ và mọi $\alpha in \mathbb{R},$ ta có $u + v \in W$ và $\alpha \cdot u \in W.$
+\item Với mọi $u, v \in W$ và mọi $\alpha in \mathbb{R},$ ta có $\alpha \cdot u + v \in W.$
+\end{itemize}
+\end{theorem}
+\end{mybox}
+\begin{mybox}
+\textbf{Nhận xét.} Cho $V$ là không gian vector và $W$ là tập con của $V.$ Khi đó
+\begin{itemize}
+\item Nếu $W$ là không gian con của $V$ thì $\mathbf{0} \in W.$
+\item Nếu $\mathbf{0} \notin W$ thì $W$ không là không gian con của $V.$
+\end{itemize}
+\end{mybox}
+\subsubsection{Phương pháp kiểm tra không gian con}
+Cho $W$ là tập con của không gian $V.$ Để kiểm tra $W$ là không gian con của $V,$ ta tiến hành như sau:\\
+\textbf{Bước 1.} Kiểm tra vector $\mathbf{0} \in W.$
+\begin{itemize}
+\item Nếu $\mathbf{0} \notin W$ thì kết luận $W$ không là không gian con của $v.$ Dừng.
+\item Nếu $\mathbf{0} \in W$ thì sang Bước 2.
+\end{itemize}
+\textbf{Bước 2.} Với mọi $u, v \in W$ và mọi $\alpha \in \mathbb{R}.$
+\begin{itemize}
+\item Nếu $u + v \in W$ và $\alpha u \in W$ thì kết luận $W \leqslant V.$
+\item Ngược lại, ta cần chỉ ra một ví dụ cụ thể chứng tỏ $u, v \in W$ nhưng $u + v \notin W$ hoặc $u \in W, \alpha \in \mathbb{R}$ nhưng $\alpha \cdot u \notin W.$ Khi đó kết luận $W$ không là không gian con của $V.$
+\end{itemize}
+\begin{mybox}
+\begin{theorem}
+Nếu $W_1, W_2$ là hai không gain con của $V$ thì $W_1 \cap W_2$ cũng là không gian con của $V.$
+\end{theorem}
+\end{mybox}
+\begin{mybox}
+\begin{theorem}
+Nếu $W_1, W_2$ là không gian con của $V,$ ta định nghĩa
+$${W_1} + {W_2} = \left\{ {{w_1} + \left. {{w_2}} \right|{w_1} \in {W_1},{w_2} \in {W_2}} \right\}.$$
+Khi đó $W_1 + W_2$ cũng là một không gian con của $V.$
+\end{theorem}
+\end{mybox}
+\subsection{Không gian sinh bởi tập hợp}
+\begin{mybox}
+\begin{theorem}
+ChO $V$ là không gian vector trên $\mathbb{R}$ và $S$ là tập con khác rỗng của $V.$ Ta đặt $W$ là tập hợp tất cả các tổ hợp tuyến tính của $S.$ Khi đó:
+\begin{itemize}
+\item $W \leqslant V.$
+\item $W$ là không gian nhỏ nhất trong tất cả các không gian của $V$ mà chứa $S.$
+\end{itemize}
+Không gian $S$ được gọi là \textit{không gian con sinh bởi tập hợp} $S,$ ký hiệu $W = \left\langle S \right\rangle.$ Cụ thể, nếu $S = \left\{ {{u_1},{u_2},...,{u_m}} \right\}$ thì
+$$W = \left\langle S \right\rangle  = \left\{ {{\alpha _1}{u_1} + {\alpha _2}{u_2} + ... + \left. {{\alpha _m}{u_m}} \right|{\alpha _i} \in \mathbb{R} } \right\}$$
+\end{theorem}
+\end{mybox}
+\begin{mybox}
+\textbf{Nhận xét.} Vì không gian sinh bởi $S$ là không gian nhỏ nhất chứa $S$ nên ta quy ước $\left\langle \emptyset  \right\rangle  = \left\{ 0 \right\}.$
+\end{mybox}
+\begin{mybox}
+\begin{theorem}
+Cho $V$ là không gian vector và $S_1, S_2$ là tập con của $V.$ Khi đó, nếu mọi vector của $S_1$ đều là tổ hợp tuyến tính của $S_2$ và ngược lại thì $\left\langle {S_1} \right\rangle = \left\langle {S_2} \right\rangle.$
+\end{theorem}
+\end{mybox}
+\begin{mybox}
+\begin{theorem}[về cơ sở không toàn vẹn]
+Cho $V$ là một không gian vector và $S$ là một tập con độc lập tuyến tính của $V.$ Khi đó, nếu $S$ không là cơ sở của $V$ thì có thể thêm vào $S$ một số vector để được một cơ sở của $V.$
+\end{theorem}
+\end{mybox}
+\begin{mybox}
+\begin{theorem}
+Cho $V$ là một không gian vector sinh bởi $S.$ Khi đó tồn tại một cơ sở $\mathbf{B}$ của $V$ sao cho $\mathbf{B} \subset S.$ Nói cách khác, nếu $S$ không phải là một cơ sở của $V$ thì ta có thể loại bỏ ra khỏi $S$ một số vector để được một cơ sở của $V.$
+\end{theorem}
+\end{mybox}
+\subsection{Không gian dòng của ma trận}
+Cho $A = \left( {a_{ij}} \right) \in M_{m \times n} \left( {\mathbb{R}} \right)$ 
+\[A = \left( {\begin{array}{*{20}{c}}
+  {{a_{11}}}&{{a_{12}}}&{...}&{{a_{1n}}} \\ 
+  {{a_{21}}}&{{a_{22}}}&{...}&{{a_{2n}}} \\ 
+  {...}&{...}&{...}&{...} \\ 
+  {{a_{m1}}}&{{a_{m2}}}&{...}&{{a_{mn}}} 
+\end{array}} \right).\]
+Đặt 
+$${u_1} = \left( {\begin{array}{*{20}{c}}
+  {{a_{11}}}&{{a_{12}}}&{...}&{{a_{1n}}} 
+\end{array}} \right);$$
+$${u_2} = \left( {\begin{array}{*{20}{c}}
+  {{a_{21}}}&{{a_{22}}}&{...}&{{a_{2n}}} 
+\end{array}} \right);$$
+$$........................................$$
+$${u_m} = \left( {\begin{array}{*{20}{c}}
+  {{a_{m1}}}&{{a_{m2}}}&{...}&{{a_{mn}}} 
+\end{array}} \right)$$
+và
+$${W_A} = \left\langle {{u_1},{u_2},...,{u_m}} \right\rangle .$$
+Ta gọi ${{u_1},{u_2},...,{u_m}}$ là các \textit{vector dòng} của $A,$ và $W_A$ được gọi là \textit{không gian dòng} của $A.$\\
+\textbf{Bổ đề.} Nếu $A$ và $B$ là hai ma trận tương đương dòng thì $W_A = W_B,$ nghĩa là hai ma trận tương đương dòng có cùng không gian dòng. 
+\begin{mybox}
+\begin{theorem}
+Giả sử $A \in M_{m \times n} \left( {\mathbb{R}} \right).$ Khi đó, $\dim W_A = r \left( A \right)$ và tập hợp các vector khác không trong một dạng bậc thang của $A$ là cơ sở của $W_A.$
+\end{theorem}
+\end{mybox}
+\subsection{Không gian tổng}
+\begin{mybox}
+\begin{theorem}
+Cho $V$ là không gian vector trên $\mathbb{R}$ và $W_1, W_2$ là hai không gian con của $V.$ Nếu $W_1 = \left\langle {S_1} \right\rangle$ và $W_2 = \left\langle {S_2} \right\rangle$ thì
+$$W_1 + W_2 = \left\langle {S_1 \cup S_2} \right\rangle.$$
+\end{theorem}
+\end{mybox}
+\section{Không gian nghiệm của hệ phương trình tuyến tính}
+\subsection{Mở đầu}
+\begin{mybox}
+\begin{theorem}
+Gọi $W$ là tập hợp nghiệm $\left( {x_1, x_2, ..., x_n} \right)$ của hệ phương trình tuyến tính \textbf{thuần nhất}
+$$\left\{ \begin{gathered}
+  {a_{11}}{x_1} + {a_{12}}{x_2} + ... + {a_{1n}}{x_n} = 0; \hfill \\
+  {a_{21}}{x_1} + {a_{22}}{x_2} + ... + {a_{2n}}{x_n} = 0; \hfill \\
+  ............................................. \hfill \\
+  {a_{m1}}{x_1} + {a_{m2}}{x_2} + ... + {a_{mn}}{x_n} = 0. \hfill \\ 
+\end{gathered}  \right.$$
+Khi đó, $W$ là không gian con của $\mathbb{R}^n$ và số chiều của $W$ bằng số ẩn tự do của hệ. Như vậy
+$$W = \left\{ {u \in \left. {{\mathbb{R}^n}} \right|A{u^\mathrm{T}} = 0} \right\}$$
+với $A$ là ma trận cho trước và $ u =\left( {x_1, x_2, ..., x_n} \right).$
+\end{theorem}
+\end{mybox}
+\subsection{Tìm cơ sở của không gian nghiệm}
+\textbf{Thuật toán.}\\
+\textbf{Bước 1.} Giải hệ phương trình, tìm nghiệm tổng quát.\\
+\textbf{Bước 2.} Lần lượt cho bộ ẩn tự do các giá trị
+$$\left( {1,0,...,0} \right),...,\left( {0,0,...,1} \right)$$
+ta được các nghiệm cơ bản $u_1, u_2, ..., u_m.$\\
+\textbf{Bước 3.} Khi đó không gian nghiệm có cơ sở là $\left\{ {u_1, u_2, ..., u_m}\right\}.$
+\subsection{Không gian giao}
+\begin{mybox}
+\textbf{Nhận xét.} Cho $V$ là không gian vector và $W_1, W_2$ là hai không gian con của $V.$ Nếu $W_1 = \left\langle {S_1} \right\rangle, W_2 = \left\langle {S_2} \right\rangle$ thì $u \in W_1 \cap W_2$ khi và chỉ khi $u$ là tổ hợp tuyến tính của $S_1$ và  $u$ là tổ hợp tuyến tính của $S_2.$
+\end{mybox}
+\begin{mybox}
+\begin{theorem}
+Cho $W_1, W_2$ là hai không gian con của $V.$ Khi đó
+$$\dim \left( {{W_1} + {W_2}} \right) = \dim {W_1} + \dim {W_2} - \dim \left( {{W_1} \cap {W_2}} \right).$$
+\end{theorem}
+\end{mybox}
+\section{Tọa độ và ma trận chuyển cơ sở}
+\subsection{Tọa độ}
+Cho $V$ là không gian vector và $\mathbf{B} = \left\{ {{u_1},{u_2},...,{u_n}} \right\}$ là một cơ sở của $V.$ Khi đó $\mathbf{B}$ được gọi là \textit{một cơ sở được sắp} của $V$ nếu thứ tự các vector trong $\mathbf{B}$ được cố đinh. Ta thường dùng ký hiệu
+$$\left( {{u_1},{u_2},...,{u_n}} \right)$$
+để chỉ cơ sở được sắp theo thứ tự ${{u_1},{u_2},...,{u_n}}.$
+\begin{mybox}
+Cho $\mathbf{B} = \left( {{u_1},{u_2},...,{u_n}} \right)$ là cơ sở được sắp của $V.$ Khi đó mọi vector $u \in V$ đều được\textit{ biểu diễn một cách duy nhất} dưới dạng
+$$u = {\alpha _1}{u_1} + {\alpha _2}{u_2} + ... + {\alpha _n}{u_n}.$$
+\end{mybox}
+Cho $\mathbf{B} = \left( {{u_1},{u_2},...,{u_n}} \right)$ là một cơ sở được sắp của $V$ và $u \in V.$ Khi đó $u$ sẽ được biểu diễn duy nhất dưới dạng:
+$$u = {\alpha _1}{u_1} + {\alpha _2}{u_2} + ... + {\alpha _n}{u_n}.$$
+Ta đặt $${\left[ u \right]_{\mathbf{B}}} = \left( \begin{gathered}
+  {\alpha _1} \hfill \\
+  {\alpha _2} \hfill \\
+  ... \hfill \\
+  {\alpha _n} \hfill \\ 
+\end{gathered}  \right).$$ 
+Khi đó ${\left[ u \right]_{\mathbf{B}}}$ được gọi là \textit{tọa độ} của $u$ theo cơ sở $\mathbf{B}.$
+\begin{mybox}
+Đối với cơ sở chính tắc ${\mathbf{B}_0} = \left( {{e_1},{e_2},...,{e_n}} \right)$ của không gian $\mathbb{R}^n$ và ${B_0} = \left( {{e_1},{e_2},...,{e_n}} \right) \in \mathbb{R}^n $ ta có
+$${\left[ u \right]_{{\mathbf{B}_0}}} = \left( \begin{gathered}
+  {x_1} \hfill \\
+  {x_2} \hfill \\
+  ... \hfill \\
+  {x_n} \hfill \\ 
+\end{gathered}  \right) = {u^\mathrm{T}}.$$
+Tọa độ của một vector theo cơ sở chính tắc chính là các thành phần của nó.
+\end{mybox}
+\subsubsection{Phương pháp tìm ${\left[ u \right]_B}$}
+Cho $V$ là không gian vector có cơ sở là $\mathbf{B} = \left( {{u_1},{u_2},...,{u_n}} \right)$ và $u \in V.$ Để tìm ${\left[ u \right]_B}$ ta đi giải phương trình
+\begin{equation}
+u = {\alpha _1}{u_1} + {\alpha _2}{u_2} + ... + {\alpha _n}{u_n}
+\label{eq33}
+\end{equation}
+với ẩn $\alpha_1, \alpha_2, ..., \alpha_n \in \mathbb{R}.$ Do $\mathrm{B}$ là cơ sở nên phương trình (\ref{eq33}) có nghiệm duy nhất
+$$\left( {{\alpha _1},{\alpha _2},...,{\alpha _n}} \right) = \left( {{c_1},{c_2},...,{c_n}} \right).$$
+Khi đó 
+$${\left[ u \right]_B} = \left( \begin{gathered}
+  {c_1} \hfill \\
+  {c_2} \hfill \\
+  ... \hfill \\
+  {c_n} \hfill \\ 
+\end{gathered}  \right).$$
+\begin{mybox}
+\textbf{Lưu ý.} Khi $V$ là không gian con của $\mathbb{R}^m,$ để giải phương trình (\ref{eq33}) ta lập hệ
+$$\left( {u_1^{\mathrm{T}}u_2^{\mathrm{T}}...\left. {u_n^{\mathrm{T}}} \right|{u^{\mathrm{T}}}} \right).$$
+\end{mybox}
+\begin{mybox}
+\textbf{Mệnh đề.} Cho $\mathbf{B}$ là cơ sở của $V.$ Khi đó, với mọi $u, v \in V, \alpha \in \mathbb{R}$ ta có:
+\begin{itemize}
+\item ${\left[ {u + v} \right]_{\mathbf{B}}} = {\left[ u \right]_{\mathbf{B}}} + {\left[ v \right]_{\mathbf{B}}}.$
+\item ${\left[ {\alpha u} \right]_{\mathbf{B}}} = \alpha {\left[ u \right]_{\mathbf{B}}}.$
+\end{itemize}
+\end{mybox}
+\subsection{Ma trận chuyển cơ sở}
+Cho $V$ là một không gian vector và
+$${\mathbf{B}_1} = \left( {{u_1},{u_2},...,{u_n}} \right),{\mathbf{B}_2} = \left( {{v_1},{v_2},...,{v_n}} \right)$$
+là hai cơ sở của $V.$ Đặt
+$$P = \left( {{{\left[ {{v_1}} \right]}_{\mathbf{B}_1}}{{\left[ {{v_2}} \right]}_{\mathbf{B}_1}}...{{\left[ {{v_n}} \right]}_{\mathbf{B}_1}}} \right).$$
+Khi đó $P$ được gọi là \textit{ma trận chuyển cơ sở} từ cơ sở $\mathbf{B}_1$ sang cơ sở $\mathbf{B}_2$ và được kí hiệu là $\left( {\mathbf{B}_1 \to \mathbf{B}_2} \right).$
+\begin{mybox}
+\textbf{Nhận xét.} Nếu ${\mathbf{B}} = \left( {{u_1},{u_2},...,{u_n}} \right)$ là một cơ sở của $\mathbb{R}^n$ và $\mathbf{B}_0$ là cơ sở chính tắc của $\mathbb{R}^n$ thì
+$$\left( {{\mathbf{B}_0} \to \mathbf{B}} \right) = \left( {u_1^{\mathrm{T}}u_2^{\mathrm{T}}...u_n^{\mathrm{T}}} \right).$$
+\end{mybox}
+\subsubsection{Phương pháp tìm $\left( {\mathbf{B}_1 \to \mathbf{B}_2} \right)$}
+Giả sử ${\mathbf{B}_1} = \left( {{u_1},{u_2},...,{u_n}} \right)$ và ${\mathbf{B}_2} = \left( {{v_1},{v_2},...,{v_n}} \right)$ là hai cơ sở của $V.$ Để tìm $\left( {\mathbf{B}_1 \to \mathbf{B}_2} \right)$, ta thực hiện như sau:
+\begin{itemize}
+\item Cho $u$ là vector bất kì của $V,$ xác định ${\left[ u \right]_{{B\mathbf{B}_1}}}.$
+\item Lần lượt thay thế $u$ bằng $v_1, v_2, ..., v_n$ ta xác định được
+$${\left[ {{v_1}} \right]}_{\mathbf{B}_1}, {\left[ {{v_2}} \right]}_{\mathbf{B}_1}, ..., {\left[ {{v_n}} \right]}_{\mathbf{B}_1}.$$
+Khi đó $$\left( {\mathbf{B}_1 \to \mathbf{B}_2} \right) = \left( {{{\left[ {{v_1}} \right]}_{\mathbf{B}_1}}{{\left[ {{v_2}} \right]}_{\mathbf{B}_1}}...{{\left[ {{v_n}} \right]}_{\mathbf{B}_1}}} \right).$$
+\end{itemize}
+Đặc biệt, khi $V = \mathbb{R}^n,$ để xác định $\left( {\mathbf{B}_1 \to \mathbf{B}_2} \right)$ ta có thể làm như sau:
+\begin{itemize}
+\item Lập ma trận mở rộng $\left( {\left. {\begin{array}{*{20}{c}}
+  {u_1^{\mathrm{T}}}&{u_2^{\mathrm{T}}}&{...}&{u_n^{\mathrm{T}}} 
+\end{array}} \right|\begin{array}{*{20}{c}}
+  {v_1^{\mathrm{T}}}&{v_2^{\mathrm{T}}}&{...}&{v_n^{\mathrm{T}}} 
+\end{array}} \right).$
+\item Dùng các phép biến đổi sơ cấp trên dòng đưa ma trận trên về dạng $\left( {\left. {{I_n}} \right|P} \right).$
+\item Khi đó $\left( {\mathbf{B}_1 \to \mathbf{B}_2} \right) = P.$
+\end{itemize}
+\begin{mybox}
+\begin{theorem}
+Cho $V$ là một không gian vector $n$ chiều và $\mathbf{B}, \mathbf{B}_1, \mathbf{B}_2, \mathbf{B}_3$ là những cơ sở của $V.$ Khi đó
+\begin{itemize}
+\item $\left( {\mathbf{B} \to \mathbf{B}} \right) = {I_n}.$
+\item $\forall u \in V,{\left[ u \right]_{{\mathbf{B}_1}}} = \left( {{\mathbf{B}_1} \to {\mathbf{B}_2}} \right){\left[ u \right]_{{\mathbf{B}_2}}}.$
+\item $\left( {{\mathbf{B}_2} \to {\mathbf{B}_1}} \right) = {\left( {{\mathbf{B}_1} \to {\mathbf{B}_2}} \right)^{ - 1}}.$
+\item $\left( {{\mathbf{B}_1} \to {\mathbf{B}_3}} \right) = \left( {{\mathbf{B}_1} \to {\mathbf{B}_2}} \right)\left( {{\mathbf{B}_2} \to {\mathbf{B}_3}} \right).$
+\end{itemize}
+\end{theorem}
+\end{mybox}
+\textbf{Nhắc lại.} Cho ${\mathbf{B}} = \left( {{u_1},{u_2},...,{u_n}} \right)$ là một cơ sở của $\mathbb{R}^n.$ Khi đó
+$$\left( {{\mathbf{B}_0} \to \mathbf{B}} \right) = \left( {u_1^{\mathrm{T}}u_2^{\mathrm{T}}...u_n^{\mathrm{T}}} \right).$$
+\textbf{Hệ quả.} Cho $\mathbf{B}, \mathbf{B}_1, \mathbf{B}_2$ là những cơ sở của không gian $\mathbb{R}^n.$ Khi đó
+\begin{itemize}
+\item $\left( {\mathbf{B} \to {\mathbf{B}_0}} \right) = {\left( {{\mathbf{B}_0} \to \mathbf{B}} \right)^{ - 1}}.$
+\item $\forall u \in V,{\left[ u \right]_\mathbf{B}} = {\left( {{\mathbf{B}_0} \to \mathbf{B}} \right)^{ - 1}}{\left[ u \right]_{{\mathbf{B}_0}}}.$
+\item $\left( {{\mathbf{B}_1} \to {\mathbf{B}_2}} \right) = {\left( {{\mathbf{B}_0} \to {\mathbf{B}_1}} \right)^{ - 1}}\left( {{\mathbf{B}_0} \to {\mathbf{B}_2}} \right).$
+\end{itemize}

@@ -1,0 +1,113 @@
+\chapter{Ánh xạ tuyến tính}
+\section{Định nghĩa}
+\subsection{Ánh xạ}
+Một \textit{ánh xạ} $f$ từ tập $X$ vào tập $Y$ là một phép liên kết từ $X$ vào $Y$ sao cho mỗi phần tử $x$ của $X$ được liên kết duy nhất một phần tử $y$ của $Y,$ ký hiệu $y = f \left( x \right).$
+$$\begin{gathered}
+  f:\begin{array}{*{20}{c}}
+  {}&{X \to Y} 
+\end{array} \hfill \\
+  \begin{array}{*{20}{c}}
+  {}&{}&{x \mapsto y = f\left( x \right)} 
+\end{array}. \hfill \\ 
+\end{gathered} $$
+Khi đó $X$ được gọi là \textit{tập nguồn,} $Y$ được gọi là \textit{tập đích.}
+\subsection{Ánh xạ tuyến tính}
+Cho $V$ và $W$ là hai không gian vector trên $\mathbb{R}.$ Ta nói ánh xạ $f: V \to W$ là một \textit{ánh xạ tuyến tính} nếu thỏa hai điều kiện sau:
+\begin{itemize}
+\item $f \left( {u + v} \right) = f \left( u \right) + f \left( v \right)$ với mọi $u, v \in V;$
+\item $f \left( {\alpha u} \right) = \alpha f \left( u \right)$ với mọi $\alpha \in \mathbb{R}$ và với mọi $u \in V.$
+\end{itemize}
+\textbf{Nhận xét.} Hai điều kiện trong định nghĩa trên có thể được thay thế bằng một điều kiện:
+$$f \left( {\alpha u + v} \right) = \alpha f \left( u \right) + f \left( v \right), \forall \alpha \in \mathbb{R}, \forall u, v \in V.$$
+Ký hiệu:
+\begin{itemize}
+\item $\mathbf{L \left( {V, W} \right)}$ là tập hợp các ánh xạ tuyến tính từ $V$ vào $W.$
+\item Nếu $f \in L \left( {V, V} \right)$ thì $f$ được gọi là một \textit{toán tử tuyến tính} trên $V.$ Viết tắt $f \in L \left( V \right).$
+\end{itemize}
+\begin{mybox}
+\textbf{Mệnh đề.} Cho $f: V \to W$ là ánh xạ tuyến tính. Khi đó
+\begin{itemize}
+\item $f \left( 0 \right) = 0;$
+\item Với mọi $u \in V,$ ta có $f \left( {- u} \right) = - f \left( u \right);$
+\item Với mọi $u_1, u_2, ..., u_m \in V$ và với mọi $\alpha_1, \alpha_2, ..., \alpha_m \in \mathbb{R},$ ta có
+$$f\left( {{\alpha _1}{u_1} + {\alpha _2}{u_2} + ... + {\alpha _m}{u_m}} \right) = {\alpha _1}f\left( {{u_1}} \right) + {\alpha _2}f\left( {{u_2}} \right) + ... + {\alpha _m}f\left( {{u_m}} \right).$$
+\end{itemize}
+\end{mybox}
+\begin{mybox}
+\begin{theorem}
+Cho $V$ và $W$ là hai không gian vector và $\mathbf{B} = \left\{ {u_1, u_2, ..., u_n} \right\}$ là cơ sở của $V.$ Khi đó, nếu $S = \left\{ {v_1, v_2, ..., v_n} \right\}$ là một tập con của $W$ thì \textit{tồn tại duy nhất} một ánh xạ tuyến tính $f: V \to W$ sao cho
+$$f\left( {{u_1}} \right) = {v_1},f\left( {{u_2}} \right) = {v_2},...,f\left( {{u_n}} \right) = {v_n}.$$
+Hơn nữa, nếu ${\left[ u \right]_{\mathbf{B}}} = \left( \begin{gathered}
+  {\alpha _1} \hfill \\
+  {\alpha _2} \hfill \\
+  ... \hfill \\
+  {\alpha _n} \hfill \\ 
+\end{gathered}  \right)$ thì 
+$$f\left( u \right) = {\alpha _1}f\left( {{u_1}} \right) + {\alpha _2}f\left( {{u_2}} \right) + ... + {\alpha _n}f\left( {{u_n}} \right).$$
+\end{theorem}
+\end{mybox}
+\section{Nhân và ảnh của ánh xạ tuyến tính}
+\subsection{Không gian nhân}
+Cho $f: V \to W$ là một ánh xạ tuyến tính. Ta đặt
+$$\ker f = \left\{ {u \in \left. V \right|f\left( u \right) = 0} \right\}$$
+Khi đó $\ker f$ là không gian con của $V,$ ta gọi $\ker f$ alaf \textit{không gian nhân} của $f.$
+\begin{mybox}
+\textbf{Nhận xét.} Dựa vào định nghĩa, ta được
+$$u \in \ker f \Leftrightarrow f \left( u \right) = 0.$$
+\end{mybox}
+\subsection{Không gian ảnh}
+Cho $f: V \in W$ là một ánh xạ tuyến tính. Ta đặt
+$$\operatorname{Im} f = \left\{ {\left. {f\left( u \right)} \right|u \in V} \right\}.$$
+Khi đó $\operatorname{Im} f$ là không gian con của $W,$ ta gọi $\operatorname{Im} f$ là \textit{không gian ảnh} của $f.$
+\begin{mybox}
+\begin{theorem}
+Cho $f: V \in W$ là một ánh xạ tuyến tính. Khi đó, nếu
+$$S = \left\{ {{u_1},{u_2},...,{u_m}} \right\}$$ 
+là tập sinh của $V$ thì
+$$f\left( S \right) = \left\{ {f\left( {{u_1}} \right),f\left( {{u_2}} \right),...,f\left( {{u_m}} \right)} \right\}$$
+là tập sinh của $\operatorname{Im} f.$
+\end{theorem}
+\end{mybox}
+\begin{mybox}
+\textbf{Nhận xét.} Dựa vào định lí trên, để tìm cơ sở của $\operatorname{Im} f,$ ta chọn một tập sinh $S$ của $V$ (để đơn giản ta nên chọn cơ sở chính tắc). Khi đó $\operatorname{Im} f$ sinh bởi tập ảnh của $S.$
+\end{mybox}
+\begin{mybox}
+\begin{theorem}
+Cho $f: V \in W$ là một ánh xạ tuyến tính và $V$ hữu hạn chiều. Khi đó
+$$\dim \operatorname{Im} f + \dim \ker f = \dim V.$$
+\end{theorem}
+\end{mybox}
+\section{Ma trận biểu diễn ánh xạ tuyến tính}
+Cho $\mathbf{B} = \left( {u_1, u_2, ..., u_n} \right)$ là cơ sở của $V,$  
+$\mathbf{C} = \left( {v_1, v_2, ..., v_m} \right)$ là cơ sở của $W$ và $f \in L \left( {V, W} \right).$ Ta đặt
+$$P = \left( {{{\left[ {f\left( {{u_1}} \right)} \right]}_{\mathbf{C}}}{{\left[ {f\left( {{u_2}} \right)} \right]}_{\mathbf{C}}}...{{\left[ {f\left( {{u_n}} \right)} \right]}_{\mathbf{C}}}} \right).$$
+Khi đó ma trận $P$ được gọi là \textit{ma trận biểu diễn} của ánh xạ $f$ theo cặp cơ sở $\mathbf{B}, \mathbf{C},$ ký hiệu là $P = {\left[ f \right]_{\mathbf{B},\mathbf{C}}}$ (hoặc $\left[ f \right]_{\mathbf{B}}^{\mathbf{C}}$).
+\begin{mybox}
+\textbf{Nhận xét.} Khi $V = \mathbb{R}^n, W = \mathbb{R}^m,$ ta có phương pháp tìm $P = {\left[ f \right]_{\mathbf{B},\mathbf{C}}}$ như sau:
+\begin{itemize}
+\item Tính $f\left( {{u_1}} \right),f\left( {{u_2}} \right),...,f\left( {{u_n}} \right).$
+\item Đặt $M = \left( {\begin{array}{*{20}{c}}
+  {v_1^{\mathrm{T}}}&{v_2^{\mathrm{T}}}&{...}&{\left. {v_m^{\mathrm{T}}} \right|\begin{array}{*{20}{c}}
+  {f{{\left( {{u_1}} \right)}^{\mathrm{T}}}}&{f{{\left( {{u_2}} \right)}^{\mathrm{T}}}}&{...}&{f{{\left( {{u_n}} \right)}^{\mathrm{T}}}} 
+\end{array}} 
+\end{array}} \right).$
+\item Dùng thuật toán Gauss $-$ Jordan, đưa $M$ về dạng $\left( {\left. {{I_m}} \right|P} \right).$
+\item Khi đó $\left[ f \right]_{\mathbf{B},\mathbf{C}} = P.$
+\end{itemize}
+\end{mybox}
+Cho $\mathbf{B} = \left( {u_1, u_2, ..., u_n} \right)$ là cơ sở của $V$ và $f \in L \left( V \right).$ Khi đó ma trận $\left[ f \right]_{\mathbf{B},\mathbf{B}}$ được gọi là \textit{ma trận biểu diễn toán tử tuyến tính $f,$} ký hiệu là $\left[ f \right]_{\mathbf{B}}.$ Rõ ràng
+$$\left[ f \right]_{\mathbf{B}} = \left( {{{\left[ {f\left( {{u_1}} \right)} \right]}_{\mathbf{B}}}{{\left[ {f\left( {{u_2}} \right)} \right]}_{\mathbf{B}}}...{{\left[ {f\left( {{u_n}} \right)} \right]}_{\mathbf{B}}}} \right).$$
+\begin{mybox}
+\begin{theorem}
+Cho $V$ và $W$ là các không gian vector; $\mathbf{B}, \mathbf{B'}$ và $\mathbf{C}, \mathbf{C'}$ tương ứng là các cặp cơ sở của $V$ và $W.$ Khi đó, với mọi ánh xạ tuyến tính $f: V \to W$ ta có
+\begin{itemize}
+\item $\forall u \in V,{\left[ {f\left( u \right)} \right]_{\mathbf{C}}} = {\left[ f \right]_{\mathbf{B},\mathbf{C}}}{\left[ u \right]_{\mathbf{B}}}.$
+\item ${\left[ f \right]_{\mathbf{B'},\mathbf{C'}}} = {\left( {\mathbf{C} \to \mathbf{C'}} \right)^{ - 1}}{\left[ f \right]_{\mathbf{B},\mathbf{C}}}\left( {\mathbf{B} \to \mathbf{B'}} \right).$
+\end{itemize}
+\end{theorem}
+\end{mybox}
+\textbf{Hệ quả.} Cho $\mathbf{B}$ và $\mathbf{B'}$ là hai cơ sở của không gian hữu hạn chiều $V.$ Khi đó đối với mọi toán tử tuyến tính $f \in L \left( V \right)$ ta có
+\begin{itemize}
+\item $\forall u \in V,{\left[ {f\left( u \right)} \right]_{\mathbf{B}}} = {\left[ f \right]_{\mathbf{B}}}{\left[ u \right]_{\mathbf{B}}}.$
+\item ${\left[ f \right]_{\mathbf{B'}}} = \left(\mathbf{B}  \to \mathbf{B'} \right)^{-1}{\left[ f \right]_{\mathbf{B}}}\left(\mathbf{B}  \to \mathbf{B'} \right).$
+\end{itemize}

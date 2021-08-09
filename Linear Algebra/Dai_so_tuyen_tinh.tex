@@ -1,0 +1,57 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage[unicode]{hyperref}
+\usepackage{amssymb}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{hyperref}
+\usepackage{draftwatermark}
+\usepackage{graphicx}
+\usepackage{cases} 
+\pgfplotsset{compat=1.5}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows, calc}
+\usepackage{float}
+\usepackage{fancyhdr}
+\pagestyle{headings}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\newtheorem{theorem}{Định lí}[chapter]
+\SetWatermarkAngle{60} %Góc là 60 độ
+
+\SetWatermarkColor[gray]{0.8} %Màu xám, độ mờ là 80%
+
+\SetWatermarkFontSize{5cm} %Độ dài của Watermark là 5cm
+
+\SetWatermarkScale{0.1} %Độ phóng to
+
+\SetWatermarkText{Tổng hợp bởi Nguyễn Văn Lộc} %Nội dung Watermark
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
+\textbf{TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}
+\end{center}
+\vspace{4 cm}
+\begin{center}
+\fontsize{20}{16}\selectfont
+\centerline{\textbf{ĐẠI SỐ TUYẾN TÍNH}}
+\end{center}
+
+\vspace{14 cm}
+\centerline{\textbf{\textit{Tổng hợp bởi Nguyễn Văn Lộc}}}
+\end{titlepage}
+\tableofcontents
+\newpage
+\include{Chuong_1}
+\include{Chuong_2}
+\include{Chuong_3}
+\include{Chuong_4}
+\end{document}
