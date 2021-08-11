@@ -1,0 +1,129 @@
+
+\chapter{Cơ học vật rắn}
+Vật rắn là một hệ chất điểm, mà \textit{khoảng cách giữa các chất điểm luôn giữ không đổi trong quá trình chuyển động.}
+\section{Các dạng chuyển động của vật rắn}
+\subsection{Chuyển động tịnh tiến}
+\subsubsection{Định nghĩa}
+Là chuyển động mà trong đó đoạn thẳng nối hai điểm bất kì của vật rắn luôn song song với chính nó.
+\subsubsection{Đặc điểm}
+Khi vật rắn chuyển động tịnh tiến, mọi chất điểm của vật rắn có cùng vector vận tốc và cùng vector gia tốc.
+\subsubsection{Khối tâm của vật rắn}
+\textbf{\textit{Định nghĩa.}} Xem vật rắn như một hệ gồm $n$ chất điểm. $C$ được gọi là \textit{khối tâm của vật rắn} nếu vị trí của $C$ thỏa công thức:
+$$\overrightarrow {OC}  = \overrightarrow {{r_C}}  = \frac{{\sum\limits_{i = 1}^n {{m_i}\overrightarrow {{r_i}} } }}{{\sum\limits_{i = 1}^n {{m_i}} }}$$
+$$ \Leftrightarrow \overrightarrow {{r_C}}  = \frac{1}{m}\sum\limits_{i = 1}^n {{m_i}\overrightarrow {{r_i}} } .$$
+\textbf{\textit{Đặc điểm của khối tâm.}}
+\begin{itemize}
+\item Vận tốc của khối tâm
+$$\overrightarrow{p} = m \overrightarrow{v_c}.$$
+\item Gia tốc của khối tâm
+$$\overrightarrow{F} = m \overrightarrow{a_c}.$$
+\end{itemize}
+\subsection{Chuyển động tổng quát của vật rắn}
+$$\overrightarrow {{v_M}}  = \overrightarrow {{v_C}}  + \left( {\overrightarrow \omega   \times \overrightarrow r } \right).$$
+Công thức trên chứng tỏ: chuyển động song phẳng bất kì của vật rắn bao giờ cũng có thể phân thành hai chuyển động thành phần:
+\begin{itemize}
+\item Chuyển động tịnh tiến của khối tâm của vật rắn.
+\item Chuyển động quay của vật rắn quanh trục quay đi qua khối tâm với vận tốc góc $\overrightarrow{\omega}.$
+\end{itemize}
+\subsection{Chuyển động quay quanh trục của vật rắn}
+\subsubsection{Định nghĩa}
+Là chuyển động mà các chất điểm của vật rắn có quỹ đạo là những vòng tròn tâm nằm trên trục quay và bán kính bằng khoảng cách từ chất điểm đến trục quay.
+\subsubsection{Đặc điểm}
+\begin{itemize}
+\item Sau thời gian $t$ như nhau thì tất cả các chất điểm ở vật rắn quay những góc bằng nhau:
+$$\theta_1 = \theta_2 = ... $$
+\item Tất cả các chất điểm có cùng vận tốc góc, đạo hàm theo $t$ từ ý trên, ta được:
+$$\omega_1 = \omega_2 = ... $$
+với trục quay cố định thì vector vận tốc góc cũng bằng nhau.
+Khi quay thì vận tốc dài của các chất điểm khác nhau vì:
+$$v_i = R_i \omega_i = R_i \omega.$$
+\item Tương tự với gia tốc góc:
+$$\beta_1 = \beta_2 = ... $$
+$$a_i = R_i \beta_i = R_i \beta.$$
+\end{itemize}
+\section{Phương trình cơ bản của vật rắn quay quanh một trục cố định}
+Như đã nêu trong sách Cơ $-$ Nhiệt đại cương, trong chuyển động quay quanh trục, để đơn giản ta chỉ xét đến những lực tiếp tuyến $\overrightarrow{F_t}.$
+\subsection{Moment động lượng của vật rắn quay}
+Động lượng của chất điểm thứ $i$ là:
+$$\overrightarrow{p}_i = m_i \overrightarrow{v}_i.$$
+Ta định nghĩa moment động lượng của chất điểm thứ $i$ đối với trục quay là:
+$$\overrightarrow{L}_i = \overrightarrow{R}_i \overrightarrow{p}_i.$$
+Mặt khác, do $v_i = R_i \omega_i$ nên $L_i = m_i R_i^2 \omega_i.$\\
+Theo định nghĩa,
+$$\overrightarrow L  = \sum\limits_{i = 1}^n {{{\overrightarrow L }_i}}  = \sum\limits_{i = 1}^n {{{\overrightarrow R }_i} \times {{\overrightarrow p }_i}} $$
+là vector moment động lượng của vật rắn đối với trục quay.
+$\overrightarrow{L}_i$ hướng theo trục quay nên $\overrightarrow{L}$ cũng hướng theo trục quay.\\
+Độ lớn:
+$$L = \sum\limits_{i = 1}^n {{m_i}R_i^2{\omega _i}} .$$
+Vì $\omega_1 = \omega_2 = ... = \omega$ nên
+$$L = \omega \left( {\sum\limits_{i = 1}^n {{m_i}R_i^2} } \right).$$
+Ta đặt 
+$$I = \sum\limits_{i = 1}^n {{m_i}R_i^2} ,$$
+được gọi là moment quán tính của vật rắn đối với trục quay. Vậy
+$$L = I \omega.$$
+Và vì $\overrightarrow{L}$ và $\overrightarrow{\omega}$ cùng phương, cùng chiều nên ta có thể viết:
+$$\overrightarrow{L} = I \overrightarrow{\omega}.$$
+\subsection{Vector moment lực đối với trục quay}
+Vector moment của lực $\overrightarrow{F}_i$ đối với trục quay được định nghĩa:
+$$\overrightarrow{M}_i = \overrightarrow{R}_i \times \overrightarrow{F}_i.$$
+Ta định nghĩa moment lực đối với trục quay tác dụng lên vật rắn:
+$$\overrightarrow M  = \sum\limits_{i = 1}^n {{{\overrightarrow M }_i}}  = \sum\limits_{i = 1}^n {{{\overrightarrow R }_i} \times \overrightarrow {{F_i}} } .$$
+$\overrightarrow{M}_i$ và $\overrightarrow{M}$ đều hướng theo trục quay.
+\subsection{Phương trình cơ bản của vật rắn quay quanh trục cố định}
+Từ các công thức về moment động lượng, moment lực, bằng các phép đạo hàm, ta được:
+$$\overrightarrow{M} = I \overrightarrow{\beta}.$$
+Phương trình trên được gọi là \textit{phương trình cơ bản của chuyển động quay của vật rắn quanh một trục cố định.}
+\section{Moment quán tính của một vài vật rắn đơn giản}
+\subsection{Công thức}
+Moment quán tính với một trục quay xác định được tính từ công thức ở mục trước dùng cho vật rắn gồm các chất điểm phân bố rời rạc là:
+$$I = \sum\limits_{i = 1}^n {{m_i}R_i^2} .$$
+Thực tế thường thì các chất điểm phân bố liên tục, khi đó ta thay phép tính tổng bằng phép tính tích phân bằng cách chia vật rắn ra thành nhiều phần nhỏ với khối lượng mỗi phần là $\mathrm{d}m$ $\left( {\mathrm{d}m \approx m} \right).$ $R$ là khoảng cách từ chất điểm $\mathrm{d}m$ đến trục, vậy $m_i R_i^2 \approx \mathrm{d}m R^2$ và
+$$I = \int\limits_m {{R^2}\mathrm{d}m} .$$
+\subsubsection{Tính moment quán tính $I$ của một thanh đồng chất đối với trục quay vuông góc với thanh tại trung điểm}
+$$ I = \frac{1}{12} m \ell^2. $$
+\subsubsection{Tính moment quán tính $I$ của vòng tròn đối với trục quay là trục của vòng tròn}
+$$I = mR^2.$$
+\subsubsection{Moment quán tính $I$ của một đĩa tròn với trục quay là trục của đĩa}
+$$I = \frac{1}{2}mR^2.$$
+\subsubsection{Moment quán tính của trụ rỗng, trụ đặc}
+Trụ rỗng:
+$$I = mR^2.$$
+Trụ đặc:
+$$I = \frac{1}{2}mR^2.$$
+\subsubsection{Moment quán tính của các vật tròn xoay}
+Hình nón:
+$$I = \frac{3}{10}mR^2.$$
+Hình cầu:
+$$I = \frac{2}{5}mR^2.$$
+\subsection{Định lý Steiner - Huyghens cho moment quán tính $I$ đối với một trục bất kì không qua khối tâm}
+Để tính moment quán tính của một vật đối với trục quay không đi qua khối tâm của chúng thì ta sử dụng định lý Steiner - Huyghens sau:
+$$I = I_C +ma^2,$$
+trong đó:
+\begin{itemize}
+\item $\Delta:$ trục quay bất kỳ không qua khối tâm,
+\item $\Delta_C:$ trục quay qua khối tâm của vật và song song với $\Delta,$
+\item $I:$ moment quán tính của vật rắn đối với trục $\Delta,$
+\item $I_C:$ moment quán tính của vật rắn đối với trục $\Delta_C,$
+\item $m:$ khối lượng của vật rắn,
+\item $a:$ khoảng cách giữa hai trục $\Delta$ và $\Delta_C.$
+\end{itemize}
+\section{Động năng của vật rắn quay quanh một trục cố định}
+Động năng quay của vật rắn:
+$$K_q = \frac{1}{2}I \omega^2.$$
+Động năng tịnh tiến của vật rắn:
+$$K_{tt} = \frac{1}{2}mv_C^2.$$
+Nếu vật lăn: vừa tịnh tiến vừa quay thì
+$$K = K_{tt} + K_{q}$$
+$$\Leftrightarrow K = \frac{1}{2}mv_C^2 + \frac{1}{2}I \omega^2.$$
+\section{Định luật bảo toàn moment động lượng của vật rắn quay}
+\subsection{Trường hợp một vật rắn}
+Cho vật rắn quay quanh trục cố định. Vật rắn cô lập thì moment lực tác dụng lên nó bằng không nên:
+$$\frac{\mathrm{d}\overrightarrow{L}}{\mathrm{d}t} = \overrightarrow{M} = 0$$
+$$\Rightarrow \overrightarrow{L} = I \overrightarrow{\omega} = \mathrm{const}.$$
+\subsection{Hệ gồm nhiều vật quay quanh trục}
+Tương tự như trường hợp một vật rắn.
+\section{Con quay}
+\subsection{Định nghĩa}
+\subsection{Con quay tự do định hướng}
+\subsection{Con quay tiến động}
+\subsection{Con quay đối xứng}
