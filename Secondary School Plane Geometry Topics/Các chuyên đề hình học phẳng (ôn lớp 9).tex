@@ -1,0 +1,327 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{pstricks-add}
+\begin{document}
+\sloppy
+\fussy
+\begin{center}
+\fontsize{20}{16}\selectfont
+\textbf{CÁC CHUYÊN ĐỀ HÌNH HỌC PHẲNG}\\
+\textbf{(ôn lại lớp 9)}
+\end{center}
+\begin{center}
+\fontsize{16}{16}\selectfont
+\textbf{1. Đường tròn Euler - đường thẳng Euler.}
+\end{center}
+\fontsize{14}{12}\selectfont
+Cho tam giác \(ABC\) có trực tâm \(H,\) tâm đường tròn ngoại tiếp là \(O.\)\\
+\textbf{Bài toán 1.} Gọi \({A_0},{B_0},{C_0}\) lần lượt là trung điểm của \(BC,CA,AB;\) \({A_1},{B_1},{C_1}\) lần lượt là trung điểm \(HA,HB,HC;\) \({A_2},{B_2},{C_2}\) lần lượt là chân đường cao kẻ từ \(A,B,C.\) Khi đó, chín điểm \({A_0},{B_0},{C_0},{A_1},{B_1},{C_1},{A_2},{B_2},{C_2}\) cùng thuộc một đường tròn, tâm là trung điểm \(OH,\) gọi là đường tròn Euler của tam giác \(ABC.\)\\
+\textbf{Bài toán 2.} Gọi \(G\) là trọng tâm tam giác \(ABC.\) Khi đó, ba điểm \(O,H,G\) cùng thuộc môt đường thẳng, gọi là đường thẳng Euler của tam giác \(ABC\) và \(GH = 2GO.\)
+\begin{center}
+\newrgbcolor{uququq}{0.25098039215686274 0.25098039215686274 0.25098039215686274}
+\newrgbcolor{sqsqsq}{0.12549019607843137 0.12549019607843137 0.12549019607843137}
+\psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-11.33,-9.61)(11.33,5.05)
+\pspolygon[linewidth=2pt,linecolor=white,fillcolor=white,fillstyle=solid,opacity=0.1](-2,3)(-4,-2)(2,-2)
+\psline[linewidth=1pt](-2,3)(-2,-2)
+\psline[linewidth=1pt](-4,-2)(-0.34146341463414637,0.926829268292683)
+\psline[linewidth=1pt](-3.172413793103448,0.06896551724137938)(2,-2)
+\psline[linewidth=1pt,linecolor=white](-2,3)(-4,-2)
+\psline[linewidth=1pt,linecolor=white](-4,-2)(2,-2)
+\psline[linewidth=1pt,linecolor=white](2,-2)(-2,3)
+\pscircle[linewidth=1pt](-1,-0.3){3.448187929913333}
+\psline[linewidth=1pt](-2,-0.4)(-1,-0.3)
+\pscircle[linewidth=1pt](-1.5,-0.35){1.7240939649566662}
+\psline[linewidth=1pt](-2,3)(-4,-2)
+\psline[linewidth=1pt](-4,-2)(2,-2)
+\psline[linewidth=1pt](2,-2)(-2,3)
+\begin{normalsize}
+\psdots[dotstyle=*,linecolor=uququq](-2,3)
+\rput[bl](-1.91,3.19){\uququq{$A$}}
+\psdots[dotstyle=*,linecolor=sqsqsq](-4,-2)
+\rput[bl](-3.91,-1.81){\sqsqsq{$B$}}
+\psdots[dotstyle=*,linecolor=sqsqsq](2,-2)
+\rput[bl](2.09,-1.81){\sqsqsq{$C$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-0.34146341463414637,0.926829268292683)
+\rput[bl](-0.27,1.09){\darkgray{$B_2$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-2,-2)
+\rput[bl](-1.91,-1.85){\darkgray{$A_2$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-2,-0.4)
+\rput[bl](-1.91,-0.25){\darkgray{$H$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-3.172413793103448,0.06896551724137938)
+\rput[bl](-3.09,0.23){\darkgray{$C_2$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-3,0.5)
+\rput[bl](-2.91,0.65){\darkgray{$C_0$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-1,-2)
+\rput[bl](-0.91,-1.85){\darkgray{$A_0$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](0,0.5)
+\rput[bl](0.09,0.65){\darkgray{$B_0$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-3,-1.2)
+\rput[bl](-2.91,-1.05){\darkgray{$B_1$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-2,1.3)
+\rput[bl](-1.91,1.45){\darkgray{$A_1$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](0,-1.2)
+\rput[bl](0.09,-1.05){\darkgray{$C_1$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-1.3333333333333333,-0.3333333333333333)
+\rput[bl](-1.25,-0.17){\darkgray{$G$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-1,-0.3)
+\rput[bl](-0.91,-0.15){\darkgray{$O$}}
+\end{normalsize}
+\end{pspicture*}
+\end{center}
+\newpage
+\begin{center}
+\fontsize{16}{16}\selectfont
+\textbf{2. Định lí Ptolemy.}
+\end{center}
+\textbf{Bài toán 3.} Cho tứ giác \(ABCD,\) điểm \(M\) thuộc miền trong tứ giác sao cho \(\widehat {MAD} = \widehat {BAC}\) và \(\widehat {MDA} = \widehat {BCA}.\)
+\begin{center}
+\newrgbcolor{sqsqsq}{0.12549019607843137 0.12549019607843137 0.12549019607843137}
+\psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-11.33,-7.33)(11.33,7.33)
+\pspolygon[linewidth=2pt,linecolor=white,fillcolor=white,fillstyle=solid,opacity=0.1](-5,-1)(5,-1)(3,4)(-2,5)
+\psline[linewidth=2pt,linecolor=white](-5,-1)(5,-1)
+\psline[linewidth=2pt,linecolor=white](5,-1)(3,4)
+\psline[linewidth=2pt,linecolor=white](3,4)(-2,5)
+\psline[linewidth=2pt,linecolor=white](-2,5)(-5,-1)
+\psline[linewidth=2pt](1.0681542116636813,2.707644928856306)(-5,-1)
+\psline[linewidth=2pt](1.0681542116636813,2.707644928856306)(-2,5)
+\psline[linewidth=2pt](3,4)(5,-1)
+\psline[linewidth=2pt](3,4)(-2,5)
+\psline[linewidth=2pt](-2,5)(-5,-1)
+\psline[linewidth=2pt](-5,-1)(5,-1)
+\begin{normalsize}
+\psdots[dotstyle=*,linecolor=sqsqsq](-5,-1)
+\rput[bl](-4.91,-0.81){\sqsqsq{$A$}}
+\psdots[dotstyle=*,linecolor=sqsqsq](5,-1)
+\rput[bl](5.09,-0.81){\sqsqsq{$B$}}
+\psdots[dotstyle=*,linecolor=sqsqsq](3,4)
+\rput[bl](3.09,4.19){\sqsqsq{$C$}}
+\psdots[dotstyle=*,linecolor=sqsqsq](-2,5)
+\rput[bl](-1.91,5.19){\sqsqsq{$D$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](1.0681542116636813,2.707644928856306)
+\rput[bl](1.15,2.87){\darkgray{$M$}}
+\end{normalsize}
+\end{pspicture*}
+\end{center}
+Hai tam giác \(AMD\) và \(ABC\) đồng dạng nên ta có \(\frac{{AD}}{{AC}} = \frac{{MD}}{{BC}} = \frac{{AM}}{{AB}}.\)\\
+\begin{equation}
+\Rightarrow AD.BC = AC.MD
+\end{equation}
+Lại có: \(\frac{{AD}}{{AM}} = \frac{{AC}}{{AB}}\) nên hai tam giác \(ADC\) và \(AMB\) đồng dạng.\\
+\\
+\( \Rightarrow \frac{{CD}}{{MB}} = \frac{{AC}}{{AB}} = \frac{{AD}}{{AM}}.\)
+\begin{equation}
+\Rightarrow AB.CD = AC.BM
+\end{equation}
+Từ (1) và (2), ta có: \(AB.CD + AD.BC = AC\left( {BM + MD} \right) \ge AC.BD.\) gọi là \textbf{hệ thức Ptolemy}.
+Dấu bằng xảy ra khi tứ giác \(ABCD\) là tứ giác nội tiếp.\\
+\textbf{Định lí Ptolemy:} Cho tứ giác \(ABCD\) nội tiếp đường tròn tâm \(O,\) khi đó: \(AB.CD + AD.BC = AC.BD.\)\\
+\textbf{Bài tập.} Cho tam giác \(ABC\) nội tiếp đường tròn \(\left( O \right)\). Đường phân giác trong của các góc \(B,C\) cắt các cạnh đối theo thứ tự tại \(E,F.\) Các tia \(EF,FE\) cắt đường tròn \(\left( O \right)\) lần lượt tại \(M,N\). Chứng minh rằng\\
+a. \(\frac{{AM.AN}}{{BM.BN}} = \frac{{CA}}{{CB}}.\)\\
+b. \(\frac{1}{{AM}} + \frac{1}{{AN}} + \frac{1}{{BN}} + \frac{1}{{CM}} = \frac{1}{{BM}} + \frac{1}{{CN}}.\)\\
+\begin{center}
+\newrgbcolor{sqsqsq}{0.12549019607843137 0.12549019607843137 0.12549019607843137}
+\newrgbcolor{wqwqwq}{0.3764705882352941 0.3764705882352941 0.3764705882352941}
+\psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-4.3,-8.36)(18.36,6.3)
+\pspolygon[linewidth=2pt,linecolor=white,fillcolor=white,fillstyle=solid,opacity=0.1](4,3)(2,-2)(8,-2)
+\psline[linewidth=2pt,linecolor=white](4,3)(2,-2)
+\psline[linewidth=2pt,linecolor=white](2,-2)(8,-2)
+\psline[linewidth=2pt,linecolor=white](8,-2)(4,3)
+\pscircle[linewidth=2pt,linecolor=wqwqwq](5,-0.3){3.448187929913333}
+\psline[linewidth=2pt](1.6076788388868701,0.31818859570851143)(8.264490567746673,0.8104509593372407)
+\psline[linewidth=2pt](2,-2)(5.891993624461156,0.6350079694235536)
+\psline[linewidth=2pt](2.967498169838837,0.4187454245970922)(8,-2)
+\psline[linewidth=2pt](4,3)(2,-2)
+\psline[linewidth=2pt](2,-2)(8,-2)
+\psline[linewidth=2pt](8,-2)(4,3)
+\psline[linewidth=2pt](1.6076788388868701,0.31818859570851143)(2,-2)
+\psline[linewidth=2pt](1.6076788388868701,0.31818859570851143)(4,3)
+\psline[linewidth=2pt](4,3)(8.264490567746673,0.8104509593372407)
+\psline[linewidth=2pt](8.264490567746673,0.8104509593372407)(8,-2)
+\begin{normalsize}
+\psdots[dotstyle=*,linecolor=sqsqsq](4,3)
+\rput[bl](4.08,3.2){\sqsqsq{$A$}}
+\psdots[dotstyle=*,linecolor=sqsqsq](2,-2)
+\rput[bl](2.08,-1.8){\sqsqsq{$B$}}
+\psdots[dotstyle=*,linecolor=sqsqsq](8,-2)
+\rput[bl](8.08,-1.8){\sqsqsq{$C$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](5.891993624461156,0.6350079694235536)
+\rput[bl](5.98,0.8){\darkgray{$E$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](2.967498169838837,0.4187454245970922)
+\rput[bl](3.04,0.58){\darkgray{$F$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](1.6076788388868701,0.31818859570851143)
+\rput[bl](1.68,0.48){\darkgray{$M$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](8.264490567746673,0.8104509593372407)
+\rput[bl](8.34,0.98){\darkgray{$N$}}
+\end{normalsize}
+\end{pspicture*}
+\end{center}
+a. Ta có hai tam giác \(MFA\) và \(BFM\) đồng dạng nên \(\frac{{MA}}{{NB}} = \frac{{MF}}{{BF}}.\)\\
+\\
+Tương tự với hai tam giác \(AFN,MFB\) ta được \(\frac{{AN}}{{BM}} = \frac{{AF}}{{MF}}.\)\\
+\\
+Do đó: \(\frac{{MA.AN}}{{NB.BM}} = \frac{{AF}}{{MF}}.\frac{{MF}}{{BF}} = \frac{{AF}}{{BF}} = \frac{{AC}}{{CB}}\) (theo tính chất đường phân giác trong tam giác).\\
+b. Tương tự câu a, ta có: \(\frac{{AM.AN}}{{CM.CN}} = \frac{{BA}}{{BC}}.\)\\
+Do đó: \(BC.AM.AN = AC.BM.BN = AB.CM.CN = k.\)\\
+Các tứ giác \(AMBC,ABCN\) nội tiếp nên theo định lí Ptolemy:\\
+\(BC.AM + AC.BM = AB.CM\) và \(BC.AN + AB.CN = AC.BN.\)\\
+Cộng từng vế hai đẳng thức, ta có:\\
+\[BC.AM + AC.BM + BC.AN + AB.CN = AB.CM + AC.BN.\]
+\[ \Rightarrow \frac{{BC.AM}}{k} + \frac{{AC.BM}}{k} + \frac{{BC.AN}}{k} + \frac{{AB.CN}}{k} = \frac{{AB.CM}}{k} + \frac{{AC.BN}}{k}.\]
+\( \Rightarrow \frac{1}{{AN}} + \frac{1}{{BN}} + \frac{1}{{AM}} + \frac{1}{{CM}} = \frac{1}{{CN}} = \frac{1}{{BM}}\) (đpcm).
+\newpage
+\begin{center}
+\fontsize{16}{16}\selectfont
+\textbf{3. Đường thẳng Simson.}
+\end{center}
+\textbf{Bài toán 4.} Cho tam giác \(ABC\) nội tiếp đường tròn \(\left( O \right)\) và điểm \(M\) nằm trên đường tròn đó (không trùng với ba đỉnh của tam giác). Gọi \(I,J,K\) theo thứ tự là chân đường cao kẻ từ \(M\) đến \(BC,CA,AB.\) thì \(I,J,K\) cùng nằm trên một đường thẳng (gọi là đường thẳng Simson của điểm \(M\) đối với tam giác tam giác \(ABC\)). 
+\begin{center}
+\psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-11.33,-7.33)(11.33,7.33)
+\pspolygon[linewidth=2pt,linecolor=white,fillcolor=white,fillstyle=solid,opacity=0.1](-3,3)(-5,-1)(1,-1)
+\psline[linewidth=2pt,linecolor=white](-3,3)(-5,-1)
+\psline[linewidth=2pt,linecolor=white](-5,-1)(1,-1)
+\psline[linewidth=2pt,linecolor=white](1,-1)(-3,3)
+\pscircle[linewidth=2pt](-2,0){3.1622776601683795}
+\psline[linewidth=2pt](-5,-1)(-5.405758399104672,-1.8115167982093434)
+\psline[linewidth=2pt](-5.405758399104672,-1.8115167982093434)(-3.7145840673815895,-2.6571039640708842)
+\psline[linewidth=2pt](-3.7145840673815895,-2.6571039640708842)(-3.714584067381589,-1)
+\psline[linewidth=2pt](-3.7145840673815895,-2.6571039640708842)(-0.5287400516553526,0.5287400516553526)
+\psline[linewidth=2pt](-3.714584067381589,-1)(-0.5287400516553526,0.5287400516553526)
+\psline[linewidth=2pt](-3.7145840673815895,-2.6571039640708842)(1,-1)
+\psline[linewidth=2pt](-3.7145840673815895,-2.6571039640708842)(-5,-1)
+\psline[linewidth=2pt](-5.405758399104672,-1.8115167982093434)(-3.714584067381589,-1)
+\psline[linewidth=2pt](-3,3)(-5,-1)
+\psline[linewidth=2pt](-5,-1)(1,-1)
+\psline[linewidth=2pt](1,-1)(-3,3)
+\begin{normalsize}
+\psdots[dotstyle=*](-3,3)
+\rput[bl](-2.91,3.19){$A$}
+\psdots[dotstyle=*](-5,-1)
+\rput[bl](-4.91,-0.81){$B$}
+\psdots[dotstyle=*](1,-1)
+\rput[bl](1.09,-0.81){$C$}
+\psdots[dotstyle=*](-3.7145840673815895,-2.6571039640708842)
+\rput[bl](-3.87,-3.23){$M$}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-3.714584067381589,-1)
+\rput[bl](-3.63,-0.85){\darkgray{$I$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-0.5287400516553526,0.5287400516553526)
+\rput[bl](-0.45,0.69){\darkgray{$J$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-5.405758399104672,-1.8115167982093434)
+\rput[bl](-5.33,-1.65){\darkgray{$K$}}
+\end{normalsize}
+\end{pspicture*}
+\end{center}
+\textbf{Chứng minh:}
+\textit{Ở đây ta xét trường hợp tam giác \(ABC\) nhọn và \(M\) nằm trên cung nhỏ \(BC\) của đường tròn \(\left( O \right)\).}
+Do \(\widehat {MIC} = \widehat {MJC} = {90^ \circ }\) nên tứ giác \(MIJC\) là tứ giác nội tiếp \[ \Rightarrow \widehat {JIC} = \widehat {JMC}.\] Tương tự, ta có: \(\widehat {KMB} = \widehat {KIB}.\)\\
+Mặt khác, ta có \(\widehat {KBM} = \widehat {ACM}\) do cùng bù với \(\widehat {ABM}.\) \\
+Vì vậy, hai tam giác vuông \(MKB\) và \(MJC\) đồng dạng nên \(\widehat {KMB} = \widehat {JMC}.\)
+\( \Rightarrow \widehat {KIB} = \widehat {JIC}.\) Do đó, \(I,J,K\) thẳng hàng. Đường thẳng này được goi là \textbf{đường thẳng Simson của điểm \(M\) đối với tam giác \(ABC\)}.
+\newpage
+\begin{center}
+\fontsize{16}{16}\selectfont
+\textbf{4. Đường thẳng Steiner.}
+\end{center}
+\textbf{Bài toán 5.} Cho tam giác \(ABC\) nội tiếp đường tròn \(\left( O \right)\) và điểm \(M\) nằm trên đường tròn đó (không trùng với ba đỉnh của tam giác). Gọi \(P,Q,R\) lần lượt là điểm đối xứng của \(M\) qua \(BC,CA,AB.\) Khi đó, \(P,Q,R\) cùng nằm trên một đường thẳng, gọi là đường thẳng Steiner của điểm \(M\) đối với tam giác \(ABC\).
+\begin{center}
+\psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-11.33,-7.33)(11.33,7.33)
+\pspolygon[linewidth=2pt,linecolor=white,fillcolor=white,fillstyle=solid,opacity=0.1](-3,3)(-5,-2)(1,-2)
+\psline[linewidth=2pt,linecolor=white](-3,3)(-5,-2)
+\psline[linewidth=2pt,linecolor=white](-5,-2)(1,-2)
+\psline[linewidth=2pt,linecolor=white](1,-2)(-3,3)
+\psline[linewidth=2pt](-3,3)(-5,-2)
+\psline[linewidth=2pt](-5,-2)(1,-2)
+\psline[linewidth=2pt](1,-2)(-3,3)
+\pscircle[linewidth=2pt](-2,-0.3){3.448187929913333}
+\psline[linewidth=2pt](-6.919238815542512,-2.0234018715767714)(3.3234018715767717,2.2192388155425133)
+\psline[linewidth=2pt](-3.6263455967290597,-3.340559159102153)(-6.919238815542512,-2.0234018715767714)
+\psline[linewidth=2pt](-5,-2)(-5.272792206135786,-2.681980515339463)
+\psline[linewidth=2pt](-3.6263455967290597,-0.6594408408978469)(-3.6263455967290597,-3.340559159102153)
+\psline[linewidth=2pt](-3.6263455967290597,-3.340559159102153)(3.3234018715767717,2.2192388155425133)
+\psline[linewidth=2pt](-3,3)(-3,-0.4)
+\psline[linewidth=2pt](-3,-0.4)(-5,-2)
+\psline[linewidth=2pt](-3,-0.4)(1,-2)
+\begin{normalsize}
+\psdots[dotstyle=*](-3,3)
+\rput[bl](-2.91,3.19){$A$}
+\psdots[dotstyle=*](-5,-2)
+\rput[bl](-4.91,-1.81){$B$}
+\psdots[dotstyle=*](1,-2)
+\rput[bl](1.09,-1.81){$C$}
+\psdots[dotstyle=*](-3.6263455967290597,-3.340559159102153)
+\rput[bl](-3.55,-3.15){$M$}
+\psdots[dotstyle=*](-3.6263455967290597,-0.6594408408978469)
+\rput[bl](-3.55,-0.45){$P$}
+\psdots[dotstyle=*](-6.919238815542512,-2.0234018715767714)
+\rput[bl](-6.83,-1.83){$R$}
+\psdots[dotstyle=*](3.3234018715767717,2.2192388155425133)
+\rput[bl](3.41,2.41){$Q$}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-5.272792206135786,-2.681980515339463)
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-3.6263455967290597,-2)
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-0.1514718625761441,-0.56066017177982)
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-3,-0.4)
+\rput[bl](-2.91,-0.25){\darkgray{$H$}}
+\end{normalsize}
+\end{pspicture*}
+\end{center}  
+\textbf{Chứng minh:} \textit{Ở đây ta xét trường hợp tam giác \(ABC\) nhọn và \(M\) nằm trên cung nhỏ \(BC\) của đường tròn \(\left( O \right)\).}\\ 
+Gọi \(H\) là trực tâm của tam giác \(ABC\). \\
+\(\widehat {ARB} + \widehat {AHB} = \widehat {AMB} + \left( {{{180}^ \circ } - \widehat {ACB}} \right) = {180^ \circ }\) nên tứ giác \(ARBH\) là tứ giác nội tiếp.\\
+\( \Rightarrow \widehat {AHR} = \widehat {ABR} = \widehat {ABM}.\)\\
+Chứng minh tương tự, ta được: \(\widehat {AHQ} = \widehat {ACQ} = \widehat {ACM}.\) \\
+\( \Rightarrow \widehat {AHR} + \widehat {AHQ} = \widehat {ABM} + \widehat {ACM} = {180^ \circ }.\) \\
+\( \Rightarrow H,R,Q\) thẳng hàng.\\
+\( \Rightarrow H,P,Q,R\) cùng nằm trên một đường thẳng, gọi là đường thẳng Steiner của điểm \(M\) đối với tam giác \(ABC\). \\
+\textbf{Tính chất:} Đường thẳng Steiner đi qua trực tâm \(H\) của tam giác \(ABC\).
+\newpage
+\begin{center}
+\fontsize{16}{16}\selectfont
+\textbf{5. Điểm anti-Steiner.}
+\end{center}
+\textbf{Bài toán 6.} Cho tam giác \(ABC\) nội tiếp đường tròn \(\left( O \right)\), \(d\) là đường thẳng đi qua trực tâm \(H\) của tam giác. Tìm điểm \(M\) trên đường tròn  \(\left( O \right)\) sao cho \(d\) là đường thẳng Steiner của tam giác \(ABC\). 
+\begin{center}
+\psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-11.33,-7.33)(11.33,7.33)
+\pspolygon[linewidth=2pt,linecolor=white,fillcolor=white,fillstyle=solid,opacity=0.1](-5,5)(-7,1)(-1,1)
+\psline[linewidth=2pt,linecolor=white](-5,5)(-7,1)
+\psline[linewidth=2pt,linecolor=white](-7,1)(-1,1)
+\psline[linewidth=2pt,linecolor=white](-1,1)(-5,5)
+\pscircle[linewidth=2pt](-4,2){3.1622776601683795}
+\psplot[linewidth=2pt]{-11.33}{11.33}{(-4.930997203784777-0.49812280751306304*x)/2.44038316621946}
+\psline[linewidth=2pt](-5,5)(-7,1)
+\psline[linewidth=2pt](-7,1)(-1,1)
+\psline[linewidth=2pt](-1,1)(-5,5)
+\psplot[linewidth=2pt]{-11.33}{11.33}{(--9.811763536223697--0.49812280751306304*x)/2.44038316621946}
+\psline[linewidth=2pt](-5,5)(-5,3)
+\psline[linewidth=2pt](-5,3)(-7,1)
+\begin{normalsize}
+\psdots[dotstyle=*](-5,5)
+\rput[bl](-4.91,5.19){$A$}
+\psdots[dotstyle=*](-7,1)
+\rput[bl](-6.91,1.19){$B$}
+\psdots[dotstyle=*](-1,1)
+\rput[bl](-0.91,1.19){$C$}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-5,3)
+\rput[bl](-4.91,3.15){\darkgray{$H$}}
+\rput[bl](-11.23,-0.05){$i$}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-5,-1)
+\rput[bl](-4.93,-0.85){\darkgray{$A_1$}}
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](-4.255709645530289,-1.1519220449089125)
+\rput[bl](-4.17,-0.99){\darkgray{$M$}}
+\rput[bl](-4.01,0.69){$k$}
+\rput[bl](-9.63,1.59){$d$}
+\end{normalsize}
+\end{pspicture*}
+\end{center}
+\textbf{Chứng minh:} \textit{Ở đây ta xét trường hợp tam giác \(ABC\) nhọn và \(M\) nằm trên cung nhỏ \(BC\) của đường tròn \(\left( O \right)\).}\\
+Gọi \({d_1}\) là đường thẳng đối xứng với \(d\) qua \(BC\), \({d_1}\) cắt đường tròn \(\left( O \right)\) tại \({A_1}\) và \(M\), trong đó \({A_1}\) là điểm đối xứng của \(H\) qua \(BC\), còn \(M\) là điểm anti-Steiner cần tìm. Tương tự với hai cạnh \(AC\) và \(AB\).    
+\end{document}
