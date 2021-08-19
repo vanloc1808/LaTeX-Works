@@ -1,0 +1,37 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage[unicode]{hyperref}
+\usepackage{amssymb}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{hyperref}
+\usepackage{etoolbox}
+\usepackage{scrextend}
+%\changefontsizes{13pt}
+\usepackage[thref,thmmarks,standard,amsmath,hyperref]{ntheorem}
+\usepackage{graphicx}
+\usepackage{cases} 
+\pgfplotsset{compat=1.5}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows, calc}
+\usepackage{float}
+\usepackage{fancyhdr}
+\pagestyle{headings}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\theorembodyfont{\normalfont}
+\theoremseparator {.}
+\newtheorem{ques}{Câu}
+\theoremstyle{nonumberplain}
+\newtheorem{ans}{Lời giải}
+\begin{document}
+\renewcommand{\chaptername}{Bài}
+\include{Bai_1+2}
+\include{Bai_3}
+\end{document}
