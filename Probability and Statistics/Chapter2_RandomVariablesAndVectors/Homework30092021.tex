@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cases} 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\pagestyle{empty}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Nguyễn Văn Lộc}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\begin{document}
+\fancyhf{}
+\lhead{}
+\chead{}
+\rhead{}
+\cfoot{}
+\rfoot{\thepage}
+\lfoot{}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\begin{mybox}
+\textbf{Họ và tên:} Nguyễn Văn Lộc\\
+\textbf{MSSV:} 20120131\\
+\textbf{Lớp:} 20CTT1
+\end{mybox}
+\begin{center}
+\fontsize{16}{14}\selectfont
+\textbf{Bài tập môn Xác suất thống kê}\\
+\textbf{Ngày 30/9/2021}
+\end{center}
+\begin{mybox}
+\textbf{Bài 1.} Tìm hàm mật độ xác suất của biến ngẫu nhiên $Y = 2 \ln \left( X \right)$ với $X$ là biến ngẫu nhiên liên tục có hàm mật độ xác suất 
+$$
+f \left( x \right) = 
+\begin{cases}
+e^{-x},&\text{nếu } x >0\\
+0,&\text{nơi khác}
+\end{cases}
+$$
+\end{mybox}
+Theo đề bài, ta có $Y = 2 \ln \left( X \right)$ nên miền giá trị của biến ngẫu nhiên $Y$ là $- \infty < Y < + \infty.$\\
+Hàm phân phối xác suất của $Y$ là 
+$$G\left( y \right) = \mathbb{P} \left( {Y \leqslant y} \right) = \mathbb{P} \left( {2\ln \left( X \right) \leqslant y} \right) = \mathbb{P} \left( {{X^2} \leqslant {e^y}} \right)$$
+$$ \mathbb{P} \Rightarrow G\left( y \right) = \mathbb{P} \left( { - {e^{\frac{y}{2}}} \leqslant X \leqslant {e^{\frac{y}{2}}}} \right) = \int\limits_{ - {e^{\frac{y}{2}}}}^{{e^{\frac{y}{2}}}} {{e^{ - x}}} \mathrm{d}x = \int\limits_{ - {e^{\frac{y}{2}}}}^0 {{e^{ - x}}} \mathrm{d}x + \int\limits_0^{{e^{\frac{y}{2}}}} {{e^{ - x}}} \mathrm{d}x$$
+$$ \Rightarrow G\left( y \right) = 1 - {e^{ - \frac{y}{2}}}.$$
+$ \Rightarrow g\left( y \right) = \frac{\mathrm{d}G}{\mathrm{d}y} = \frac{1}{2}{e^{ - \frac{y}{2}}}$ là hàm mật độ xác suất của biến ngẫu nhiên $Y.$
+\begin{mybox}
+\textbf{Bài 2.} Trung vị của biến ngẫu nhiên liên tục cho trường hợp không duy nhất. Giả sử biến ngẫu nhiên liên tục $X$ có hàm mật độ xác suất cho bởi
+$$f \left( x \right) = 
+\begin{cases}
+\frac{1}{2},&\text{khi } 0 \leqslant x \leqslant 1\\
+1,&\text{khi } 2.5 \leqslant x \leqslant 3 \\
+0,&\text{nơi khác}
+\end{cases}
+$$
+Tìm $Med \left( x \right).$
+\end{mybox}
+Đặt $Med \left( x \right) = m.$
+Trường hợp 1: $0 \leqslant m \leqslant 1.$
+$$\mathbb{P}\left( {X \leqslant m} \right) = \frac{1}{2}$$
+$$ \Leftrightarrow \int\limits_{ - \infty }^m {f\left( t \right)\mathrm{d}t}  = \int\limits_{ - \infty }^0 {f\left( t \right)\mathrm{d}t}  + \int\limits_0^m {f\left( t \right)\mathrm{d}t}  = \int\limits_0^m {\frac{1}{2}\mathrm{d}t}  = \frac{m}{2} = \frac{1}{2}.$$
+$$ \Leftrightarrow m = 1.$$
+Trường hợp 2: $2.5 \leqslant m \leqslant 3.$
+$$ \Leftrightarrow \int\limits_{ - \infty }^m {f\left( t \right)\mathrm{d}t}  =  \Leftrightarrow \int\limits_{ - \infty }^0 {f\left( t \right)\mathrm{d}t}  +  \Leftrightarrow \int\limits_0^1 {f\left( t \right)\mathrm{d}t}  +  \Leftrightarrow \int\limits_1^{2.5} {f\left( t \right)\mathrm{d}t}  +  \Leftrightarrow \int\limits_{2.5}^m {f\left( t \right)\mathrm{d}t = \frac{1}{2}} $$
+$$ \Leftrightarrow \int\limits_{ - \infty }^m {f\left( t \right)\mathrm{d}t}  = \frac{1}{2} + m - 2.5 = \frac{1}{2} \Leftrightarrow m = 2.5$$
+Trường hợp 3: $\forall m \in \left( {1,2.5} \right),\int\limits_{ - \infty }^m {f\left( t \right)\mathrm{d}t}  = \frac{1}{2} \Rightarrow m \in \left( {1,2.5} \right).$\\
+Trường hợp 4: $\forall m \in \left( { - \infty ,0} \right) \cup \left( {3, + \infty } \right),\int\limits_{ - \infty }^m {f\left( t \right)\mathrm{d}t}  \ne \frac{1}{2}.$\\
+Vậy $Med\left( X \right) \in \left[ {1,2.5} \right].$
+\end{document}
