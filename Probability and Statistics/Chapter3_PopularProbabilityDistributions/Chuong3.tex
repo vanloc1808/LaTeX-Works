@@ -1,0 +1,280 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cases} 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{diagbox}
+\pagestyle{fancy}
+\pagestyle{empty}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Nguyễn Văn Lộc}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\usepackage{tikz,tkz-euclide}
+\usetikzlibrary{calc,intersections,patterns}
+%\usetkzobj{all}
+\begin{document}
+    \fancyhf{}
+    \lhead{}
+    \chead{}
+    \rhead{}
+    \cfoot{}
+    \rfoot{\thepage}
+    \lfoot{}
+    \pagestyle{fancy}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \begin{mybox}
+    \textbf{Họ và tên:} Nguyễn Văn Lộc\\
+    \textbf{MSSV:} 20120131\\
+    \textbf{Lớp:} 20CTT1
+    \end{mybox}
+    \begin{center}
+    \fontsize{16}{14}\selectfont
+    \textbf{Bài tập môn Xác suất thống kê}\\
+    \textbf{Chương 3: Một số phân phối xác suất thông dụng}
+    \end{center}
+    
+\begin{mybox}
+\textbf{Bài tập 2.58.} Trong mỗi tình huống dưới đây, có hợp lý khi sử dụng phân phối nhị thức cho biến ngẫu nhiên $X$ không? Đưa ra lý do cho câu trả lời của bạn trong mỗi trường hợp. Nếu là phân phối nhị thức, hãy cho các giá trị của $n$ và $p.$\\
+a. Một cuộc thăm dò ý kiến của $200$ sinh viên đại học hỏi rằng bạn có thường hay cáu kỉnh vào buổi sáng hay không. $X$ là số người trả lời rằng họ thường hay cáu kỉnh vào buổi sáng.\\
+b. Bạn ném một đồng xu cân bằng cho đến khi mặt ngửa xuất hiện. $X$ là số lần tung mà bạn thực hiện.\\
+c. Hầu hết các cuộc gọi điện thoại khảo sát được thực hiện ngẫu nhiên và mẫu được coi là không thành công khi không nói chuyện được với người nghe. Trong số các cuộc gọi đến thành phố New York, chỉ $\frac{1}{12}$ thành công. Cuộc khảo sát gọi $500$ số được chọn ngẫu nhiên ở New York. $X$ là số cuộc gọi thành công. 
+\end{mybox}
+a. Xác suất cáu kỉnh vào buổi sáng của mỗi sinh viên là khác nhau nên $X$ không phải là biến ngẫu nhiên tuân theo phân phối nhị thức.\\
+b. Do số lần tung là không xác định nên $X$ không phải là biến ngẫu nhiên tuân theo phân phối nhị thức.\\
+c. $X$ là biến ngẫu nhiên tuân theo phân phối nhị thức $B \left( {500, \frac{1}{12}} \right).$ 
+ 
+\begin{mybox}
+\textbf{Bài tập 2.64} Tỉ lệ một loại bệnh bẩm sinh trong dân số là $p = 0.01.$ Bệnh này cần sự chăm sóc đặc biệt lúc mới sinh. Một nhà bảo sinh thường có $20$ ca sinh trong một tuần. Tính xác suất để:\\
+a. không có trường hợp nào cần chăm sóc đặc biệt.\\
+b. có đúng một trường hợp cần chăm sóc đặc biệt.\\
+c. có nhiều hơn một trường hợp cần chăm sóc đặc biệt.
+\end{mybox}
+Gọi $X$ là số trường hợp cần chăm sóc đặc biệt tại nhà bảo sinh này.\\
+$X$ là biến ngẫu nhiên tuân theo phân phối nhị thức $B \left( {20, 0.01} \right).$\\
+a. $$\mathbb{P} \left( {X = 0} \right) = C^0_{20} \left( {0.01} \right)^{0} \left( {0.99} \right)^{20} \approx 0.8179.$$
+b. $$\mathbb{P} \left( {X = 1} \right) = C^1_{20} \left( {0.01} \right)^{1} \left( {0.99} \right)^{19} \approx 0.1652.$$
+c. $$\mathbb{P} \left( {X > 1} \right) = 1 - \mathbb{P} \left( {X \leqslant 1} \right) \approx 1 - 0.8179 - 0.1652 = 0.0169.$$
+
+\begin{mybox}
+\textbf{Bài tập 2.66} Các đường dây (lines) điện thoại đến hệ thống đặt vé máy bay bạn chiếm $40 \%$ số lần gọi. Giả sử rằng việc các đường dây bận khi cuộc gọi đến là độc lập. Gủa sử rằng $10$ cuộc gọi được đặt cho hãng hàng không.\\
+a. Xác suất để có đúng $3$ cuộc gọi tới bị bận đường dây.\\
+b. Xác suất để có ít nhất $1$ cuộc gọi tới không bị bận.\\
+c. Tính trung bình số cuộc gọi tới bị bận bằng hai cách.
+\end{mybox}
+Gọi $X$ là số cuộc gọi tới đường dây bị bận.\\
+$X$ tuân theo phân phối nhị thức $B \left( {10, 0.4} \right).$\\
+a. $$\mathbb{P} \left( {X = 3} \right) = C^3_{10} \left( {0.4} \right)^3 \left( {0.6} \right)^7 \approx 0.2150.$$
+b. Có ít nhất $1$ cuộc gọi tới không bị bận, nghĩa là có nhiều nhất $9$ cuộc gọi bị bận.
+$$\mathbb{P} \left( {X \leqslant 9} \right) = 1 - \mathbb{P} \left( {X = 10} \right) = 1 - C^{10}_{10} \left( {0.4} \right)^{10} \left( {0.6} \right)^0 \approx 0.9999.$$
+c. $$\mathbb{E} \left( X \right) = \sum\limits_{x = 0}^{10} {xC_{10}^x{{\left( {0.4} \right)}^x}{{\left( {0.6} \right)}^{10 - x}}}  = 4.$$
+$$\mathbb{E} \left( X \right) = 10 \cdot 0.4 = 4.$$
+
+\begin{mybox}
+\textbf{Bài tập 2.67} Bài kiểm tra trắc nghiệm có $25$ câu hỏi, mỗi câu hỏi có bốn câu trả lời. Giả sử một học sinh chỉ đoán ngẫu nhiên để trả lời câu hỏi.\\
+a. Xác suất để học sinh đó có nhiều hơn $20$ câu trả lời đúng.\\
+b. Xác suất để học sinh đó có ít hơn $5$ câu trả lời đúng.\\
+\end{mybox}
+Gọi $X$ là số câu trả lời đúng.\\
+$X$ tuân theo phân phối nhị thức $B \left( {25, \frac{1}{4}} \right).$\\
+a. $$\mathbb{P} \left( {X > 20} \right) = \sum\limits_{x = 21}^{25} {C_{25}^x \left( {\frac{1}{4}} \right)^{x} \left( {\frac{3}{4}} \right)^{25 - x}} \approx 9.6769 \cdot 10^{-10}.$$
+b. $$\mathbb{P} \left( {X < 5} \right) = \sum\limits_{x = 0}^{4} {C_{25}^x \left( {\frac{1}{4}} \right)^{x} \left( {\frac{3}{4}} \right)^{25 - x}} \approx 0.2137.$$
+
+\begin{mybox}
+\textbf{Bài tập 2.94} Một lô chứa $36$ tế bào vi khuẩn và $12$ tế bào trong đó không có khả năng sao chép (sinh sản) tế bào. Giả sử bạn kiểm tra 3 tế bào vi khuẩn được chọn ngẫu nhiên, không cần hoàn lại.\\
+a. Hãy mô tả hàm phân phối ứng với biến ngẫu nhiên $X$ là số tế bào có thể sao chép trong mẫu lấy ra.\\
+b. Tính trung bình và phương sai của $X.$\\
+c. Tính xác suất để có ít nhất một tế bào trong mẫu không thể sao chép.
+\end{mybox}
+a. Có $12$ tế bào không có khả năng sao chép, nghĩa là có $24$ tế bào có khả nắng sao chép.\\
+$\Rightarrow X \sim H \left( {36, 24, 3} \right).$\\
+$\mathrm{max} \left\{ {0, 3 - \left( {36 - 24} \right)} \right\} = 0.$\\
+$\mathrm{min} \left\{ {3, 12} \right\} = 3.$\\
+$$\mathbb{P} \left( {X = x} \right) = \frac{C^x_{24}C^{3 - x}_{12}}{C^3_{36}}, \text{ với } 0 \leqslant x \leqslant 3.$$
+Bảng phân phối xác suất của $X$:
+\begin{table}[H]
+                \begin{center}
+                    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+                        \hline 
+                        $X$ & 0 & 1 & 2 & 3  \\ 
+                        \hline 
+                        $p$ & $\frac{11}{357}$ & $\frac{132}{595}$ & $\frac{276}{595}$ & $\frac{506}{1785}$ \\ 
+                        \hline 
+                        \end{tabular}
+                \end{center}
+            \end{table}
+Hàm phân phối xác suất của $X$ như sau:
+$$ F \left( x \right) = 
+	\begin{cases}
+	0, &\text{ nếu } x < 0\\
+	\frac{11}{357}, &\text{ nếu } 0 \leqslant x < 1\\
+	\frac{451}{1785}, &\text{ nếu } 1 \leqslant x < 2\\
+	\frac{1279}{1785}, &\text{ nếu } 2 \leqslant x < 3\\
+	1, &\text{ nếu } x \geqslant 3.\\
+	\end{cases}
+$$
+b. $$\mathbb{E}\left( X \right) = 3 \cdot \frac{24}{36} = 2.$$
+$$\mathbb{V}ar \left( X \right) = 3 \cdot \frac{24}{36} \cdot \frac{12}{36} \cdot \frac{36 - 3}{36 - 1} = \frac{22}{35}.$$
+c. $$\mathbb{P} \left( {{3 - X} \geqslant 1} \right) = \mathbb{P} \left( {X \leqslant 2} \right) = F \left( 2 \right) = \frac{1279}{1785}.$$
+
+\begin{mybox}
+\textbf{Bài tập 2.95} (Sử dụng phân phối nhị thức xấp xỉ phân phối siêu bội)\\
+Một công ti sử dụng $800$ người đàn ông dưới $55$ tuổi. Giả sử $30 \%$ mang dấu hiệu trên nhiễm sắc thể nam biểu thị nguy cơ cao huyết áp.\\
+a. Nếu $10$ người đàn ông trong công ti được xét nghiệm dấu hiệu của nhiễm sắc thể này, xác suất có đúng một người đàn ông mang dấu hiệu đó với nhận xét số người được xét nghiệm $n = 10$ nhỏ hơn rất nhiều so với $N = 800?$\\
+b. Nếu $10$ người đàn ông trong công ti được xét nghiệm dấu hiệu của nhiễm sắc thể này, xác suất có nhiều hơn một người đàn ông mang dấu hiệu đó?
+\end{mybox}
+a. Gọi $X$ là số người có dấu hiệu trên nhiễm sắc thể nam biểu thị nguy cơ cao huyết áp.\\
+$X \sim H \left( {800, 240, 10} \right) \Rightarrow X \sim B \left( {10, 0.3} \right).$\\
+$$\mathbb{P} \left( {X = 1} \right) = C^1_{10} \left( {0.3} \right)^1 \left( {0.7} \right)^9 \approx 0.1211.$$
+b. $$\mathbb{P} \left( {X > 1} \right) = 1 - \mathbb{P} \left( {X = 0} \right) - \mathbb{P} \left( {X = 1} \right) \approx 0.8507.$$
+
+\begin{mybox}
+\textbf{Bài tập 2.98} Các nhà thiên văn học đếm số lượng các ngôi sao trong một thể tích không gian cho trước, được xem là biến ngẫu nhiên Poisson. Mật độ trong thiên hà Milky Way trong vùng lân cân với Hệ Mặt Trời của chúng ta là một ngôi sao trong $16$ năm ánh sáng.\\
+a. Xác suất để có từ $2$ ngôi sao trở lên trong $16$ năm ánh sáng.\\
+b. Cần bao nhiêu năm ánh sáng để xác suất có $1$ hoặc nhiều hơn ngôi sao lớn hơn $0.95.$
+\end{mybox}
+a. Gọi $X$ là số lượng ngôi sao trong một thể tích không gian cho trước.\\
+$X \sim P \left( {\lambda = 1} \right).$\\
+$$\mathbb{P} \left( {X \geqslant 2} \right) = 1 - \mathbb{P} \left( {X < 2} \right) = 1 -  \mathbb{P} \left( {X = 0} \right) - \mathbb{P} \left( {X = 1} \right) = 1 - \frac{{{1^0}{e^{ - 1}}}}{{0!}} - \frac{{{1^1}{e^{ - 1}}}}{{1!}} \approx 0.2642.$$
+b. $$\mathbb{P} \left( {X \geqslant 1} \right) > 0.95$$
+$$1 - \mathbb{P} \left( {X < 1} \right) > 0.95$$
+$$\mathbb{P} \left( {X = 0} \right) < 0.05$$
+$$e^{- \lambda } < 0.05$$
+$$ - \lambda < \ln \left( {0.05} \right)$$
+$$ \lambda > \ln \left( {20} \right)$$
+$$ \lambda > 2.9957$$
+Vậy cần ít nhất $3 \cdot 16 = 48$ để xác suất có $1$ hoặc nhiều ngôi soa lớn hơn $0.95.$
+
+\begin{mybox}
+\textbf{Bài tập 2.99} Số lỗ hổng trên tấm vải của nhà máy dệt được giả định là phân phối Poisson với trung bình $0.1$ lỗ trên một mét vuông vải. Xác suất để có:\\
+a. $2$ lỗ hổng trên $1 \text{ } \mathrm{m}^2$ vải.\\
+b. $1$ lỗ hổng trên $10 \text{ } \mathrm{m}^2$ vải.\\
+c. $0$ lỗ hổng trên $20 \text{ } \mathrm{m}^2$ vải.\\
+d. ít nhất $2$ lỗ hổng trên $10 \text{ } \mathrm{m}^2$ vải.
+\end{mybox}
+Gọi $X$ là số lỗ hổng trên tấm vải của nhà máy dệt.\\
+a. $X \sim P \left( {\lambda = 0.1} \right).$\\
+$$\mathbb{P} \left( {X = 2} \right) = \frac{e^{-0.1} \left( {0.1}^2 \right)}{2!} \approx 0.0045.$$
+b. $X \sim P \left( {\lambda = 0.1 \cdot 10 = 1} \right).$\\
+$$\mathbb{P} \left( {X = 1} \right) = \frac{e^{-1} \left( {1}^1 \right)}{1!} \approx 0.3679.$$
+c. $X \sim P \left( {\lambda = 0.1 \cdot 20 = 2} \right).$\\
+$$\mathbb{P} \left( {X = 0} \right) = \frac{e^{-2} \left( {2}^0 \right)}{0!} \approx 0.1353.$$
+d. $X \sim P \left( {\lambda = 0.1 \cdot 10 = 1} \right).$\\
+$$\mathbb{P} \left( {X \geqslant 2} \right) = 1 - \mathbb{P} \left( {X < 2} \right) = 1 - \mathbb{P} \left( {X = 0} \right) - \mathbb{P} \left( {X = 1} \right) \approx 0.2642 .$$
+
+\begin{mybox}
+\textbf{Bài tập 2.122} Số lượng các bản mạch bị lỗi mấu hàn tuân theo phân phối Poisson. Trong suốt một ngày tám giờ nào đó, một bảng mạch bị lỗi được tìm thấy.\\
+a. Tìm xác suất nó được sản xuất trong giờ đầu tiên hoạt động trong ngày đó.\\
+b. TÌm xác suất nó được sản xuất trong giờ cuối cùng hoạt động trong ngày đó.\\
+c. Biết rằng không có bảng mạch nào bị lỗi được sản xuất trong suốt bốn giờ hoạt động đầu tiên, tìm xác suất bảng mạch bị lỗi được sản xuất trong suốt giờ thứ năm.
+\end{mybox}
+Gọi $X$ (giờ) là thời gian tính từ lúc bắt đầu hoạt động mà bảng mạch bị lỗi được tìm thấy.\\
+$X \sim U \left[ {0, 8} \right].$\\
+Hàm mật độ xác suất của $X$ như sau:
+$$f \left( x \right) = 
+\begin{cases}
+	\frac{1}{8}, &\text{ khi } x \in \left[ {0, 8} \right]\\
+	0, &\text{ nơi khác}
+\end{cases}.
+$$
+Hàm phân phối xác suất của $X$ như sau:
+$$F \left( x \right) = 
+\begin{cases}
+	0, &\text{ khi } x < 0\\
+	\frac{x}{8}, &\text{ khi } x \in \left[ {0, 8} \right]\\
+	1, &\text{ khi } x > 8
+\end{cases}.
+$$
+a. $$\mathbb{P} \left( {X \leqslant 1} \right) = F \left( 1 \right) = \frac{1}{8}.$$
+b. $$\mathbb{P} \left( {7 < X \leqslant 8} \right) = F \left( 8 \right) - F \left( 7 \right) = \frac{1}{8}.$$
+c. $$\mathbb{P} \left( { \left. {4 < X \leqslant 5} \right| {4 < X < \leqslant 8}} \right) = \frac{\mathbb{P} \left( { 4 < X \leqslant 5 \cap 4 < X < \leqslant 8} \right)}{\mathbb{P} \left( {  4 < X < \leqslant 8 } \right)} $$
+$$ \frac{\mathbb{P} \left( { 4 < X \leqslant 5} \right)}{\mathbb{P} \left( {  4 < X < \leqslant 8 } \right)} $$
+$$= \frac{F \left( 5 \right) - F \left( 4 \right)}{F \left( 8 \right) - F \left( 4 \right)} = \frac{1}{4}.$$
+
+\begin{mybox}
+\textbf{Bài tập 2.133} Cường độ nén của các mẫu xi măng có thể được mô hình hóa bởi một phân phối chuẩn với giá trị trung bình $6000 \mathrm{\frac{kg}{cm^2}}$ và độ lệch chuẩn là $100 \mathrm{\frac{kg}{cm^2}}.$\\
+a. Tính xác suất để cường độ nén của mẫu nhỏ hơn $6250 \mathrm{\frac{kg}{cm^2}}.$\\
+b. Tính xác suất để cường độ nén của mẫu trong khoảng $5800 - 5900 \mathrm{\frac{kg}{cm^2}}.$\\
+c. Độ nén là bao nhiêu để có thể chiếm ít nhất $95 \%$ mẫu?
+\end{mybox}
+a. Gọi $X$ $\left( {\mathrm{\frac{kg}{cm^2}}} \right)$ là cường độ nén của mẫu xi măng.\\
+$X \sim N \left( {6000, 100^2} \right)$
+$$\mathbb{P} \left( {X < 6250} \right) = \mathbb{P} \left( {\frac{X - 6000}{100} < \frac{6250 - 6000}{100}} \right) = \mathbb{P} \left( {Z < 2.5} \right) = \Phi \left( {2.5} \right) \approx 0.9938.$$
+b. $$\mathbb{P} \left( {5800 \leqslant X \leqslant 5900} \right) = \mathbb{P} \left( {\frac{5800 - 6000}{100} \leqslant  \frac{X - 6000}{100} \leqslant \frac{5900 - 6000}{100}} \right)$$
+$$\mathbb{P} \left( {-2 \leqslant Z \leqslant -1} \right) = \Phi \left( {-1} \right) - Phi \left( {-2} \right) = Phi \left( 2 \right) - Phi \left( 1 \right) \approx 0.1359.$$
+c. $$Phi \left( z \right) \geqslant 0.95 \Leftrightarrow z \geqslant 1.65$$
+$$\Leftrightarrow \frac{x - 6000}{100} \geqslant 1.65 \Leftrightarrow x \geqslant 6165.$$ 
+
+\begin{mybox}
+\textbf{Bài tập 2.134} Thời gian cho đến khi cần sạc lại pin cho một máy tính xách tay trong điều kiện bình thường là phân phối chuẩn với trung bình $260$ phút và độ lệch chuẩn là $50$ phút.\\
+a. Xác suất pin sử dụng kéo dài hơn bốn giờ là bao nhiêu?\\
+b. Xác định thời gian sử dụng pin tại những \textit{giá trị phân vị,} là giá trị của $z$ sao cho $\mathbb{P} \left( {Z \leqslant z} \right),$ đạt $25 \%$ và $75 \%$?\\
+c. Xác định thời gian sử dụng pin tương ứng với xác suất ít nhất là $0.95.$\\
+\end{mybox}
+Gọi $X$ (phút) là thời gian sử dụng cho đến khi cần sạc lại pin.\\
+$X \sim N \left( {260, 50^2} \right).$\\
+a. $$\mathbb{P} \left( {X > 240} \right) = 1 - \mathbb{P} \left( {X \leqslant 240} \right) = 1 - \mathbb{P} \left( {\frac{X - 260}{50} \leqslant \frac{240 - 260}{50}} \right)$$ 
+$$= 1 - \mathbb{P} \left( {Z \leqslant -0.4} \right) = 1 - \Phi \left( {-0.4} \right) = \Phi \left( {0.4} \right) \approx 0.6554.$$
+b. $$\mathbb{P} \left( {X \leqslant x} \right) = \mathbb{P} \left( {\frac{X - 260}{50} \leqslant \frac{x - 260}{50}} \right) = \mathbb{P}\left( {Z  \leqslant \frac{x - 260}{50}} \right) = \Phi \left( {\frac{x - 260}{50}} \right).$$
+$$\Phi \left( {\frac{x - 260}{50}} \right) = 0.25 \Leftrightarrow \frac{x - 260}{50} = -0.68 \Leftrightarrow x = 226.$$
+$$\Phi \left( {\frac{x - 260}{50}} \right) = 0.75 \Leftrightarrow \frac{x - 260}{50} = 0.68 \Leftrightarrow x = 294.$$
+c. $$\Phi \left( {\frac{x - 260}{50}} \right) \geqslant 0.95 \Leftrightarrow \frac{x - 260}{50} \geqslant 1.65 \Leftrightarrow x \geqslant 342.5.$$
+
+\begin{mybox}
+\textbf{Bài tập 2.171} (bài này giống bài 2.95 ở trên ạ)
+\end{mybox}
+
+\begin{mybox}
+\textbf{Bài tập 2.172} Số lượng nội dung thay đổi cho một trang web tuân theo phân phối Poisson với một trung bình là $0.25$ mỗi ngày.\\
+a. Tính xác suất có ít nhất hai thay đổi trong một ngày.\\
+b. Tính xác suất trang web không thay đổi nội dung nào trong năm ngày.\\
+c. Tính xác suất có nhiều nhất hai thay đổi trong năm ngày.\\
+d. Quan sát trang web này trong $10$ ngày bất kỳ, tính xác suất có ít nhất $2$ ngày mà mỗi ngày có không quá ba thay đổi.
+\end{mybox}
+Gọi $X$ là số lượng nội dung thay đổi cho trang web đó.\\
+a. $X \sim P \left( {\lambda = 0.25} \right).$
+$$\mathbb{P} \left( {X \geqslant 2} \right) = 1 - \mathbb{P} \left( {X = 0} \right) - \mathbb{P} \left( {X = 1} \right) = 1 - \frac{e^{-0.25} \left( {0.25} \right)^0}{0!} - \frac{e^{-0.25} \left( {0.25} \right)^1}{1!} \approx 0.0265.$$
+b. $X \sim P \left( {\lambda = 0.25 \cdot 5 = 1.25} \right).$
+$$\mathbb{P} \left( {X = 0} \right) = \frac{e^{-1.25} \left( {1.25} \right)^0}{0!} = \approx 0.2865.$$
+c. $X \sim P \left( {\lambda = 0.25 \cdot 5 = 1.25} \right).$
+$$\mathbb{P} \left( {X \leqslant 2} \right) = \mathbb{P} \left( {X = 0} \right) + \mathbb{P} \left( {X = 1} \right) + \mathbb{P} \left( {X = 2} \right)$$ 
+$$= \frac{e^{-1.25} \left( {1.25} \right)^0}{0!} + \frac{e^{-1.25} \left( {1.25} \right)^1}{1!} + \frac{e^{-1.25} \left( {1.25} \right)^2}{2!} \approx 0.8685.$$
+d. Xét trong một ngày:
+$$\mathbb{P} \left( {X \leqslant 3} \right) = \mathbb{P} \left( {X = 0} \right) + \mathbb{P} \left( {X = 1} \right) + \mathbb{P} \left( {X = 2} \right) + \mathbb{P} \left( {X = 3} \right)$$ 
+$$= \frac{e^{-1.25} \left( {1.25} \right)^0}{0!} + \frac{e^{-1.25} \left( {1.25} \right)^1}{1!} + \frac{e^{-1.25} \left( {1.25} \right)^2}{2!} + \frac{e^{-1.25} \left( {1.25} \right)^3}{3!} \approx 0.9617.$$
+$$\mathbb{P} \left( {X > 3} \right) = 1 - 0.9617 = 0.0383.$$
+Xác suất có ít nhất $2$ ngày mà mỗi ngày có không quá $3$ thay đổi là:
+$$\sum\limits_{x = 2}^{10}{C^x_{10} \left( { \mathbb{P} \left( {X \leqslant 3} \right) } \right)^x \left( { \mathbb{P} \left( {X > 3} \right) } \right)^{10 - x}}$$
+$$ = \sum\limits_{x = 2}^{10}{C^x_{10} \left( { 0.9617} \right)^x \left( { 0.0383 } \right)^{10 - x}} \approx 1.$$ 
+
+\begin{mybox}
+\textbf{Bài tập 2.173} Các khiếm khuyết xảy ra trong nội thất bằng chất dẻo được sử dụng cho xe ô tô tuân theo phân phối Poisson với trung bình $0.02$ lỗ hổng trên mỗi panel.\\
+a. Nếu $50$ panel được kiểm tra, tính xác suất không có sai sót nào.\\
+b. Tính số lượng panel mong muốn cần được kiểm tra trước khi tìm ra lỗ hổng.\\
+c. Nếu $50$ panel được kiểm tra, tính xác suất số lượng các panel có một hoặc nhiều sai sót nhỏ hơn hoặc bằng $2.$
+\end{mybox}
+Gọi $X$ là số lượng khiếm khuyết xảy ra trong nội thất bằng chất dẻo được sử dụng cho xe ô tô.\\
+a. $X \sim P \left( {\lambda = 0.02 \cdot 50 = 1} \right).$
+$$\mathbb{P} \left( {X = 0} \right) = e^{-1} \approx 0.3679.$$
+b. Xét một panel riêng lẻ: xác suất để có ít nhất $1$ lỗ hổng là:
+$$\mathbb{P} \left( {X \geqslant 1} \right) = 1 - e^{-0.02} \approx 0.0198.$$
+$\frac{1}{0.0198} \approx 50.5$\\
+Vậy có $51$ panel mong muốn cần được kiểm tra trước khi phát hiện lỗ hổng.\\
+c. Gọi $Y$ là số lượng panel xuất hiện lỗ hổng. $Y \sim B \left( {50, 0.0198} \right).$
+$$P \left( {Y \leqslant 2} \right) = \sum\limits_{y = 0}^{2}{C^y_{50} \left( {0.0198} \right)^{y} \left( {0.9802} \right)^{50 - y}} \approx 0.9234.$$
+\end{document}
