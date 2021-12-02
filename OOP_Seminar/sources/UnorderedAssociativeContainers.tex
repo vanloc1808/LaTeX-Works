@@ -1,0 +1,206 @@
+\section{Unordered associative containers}
+Như đã nói trong phần \ref{contain}, Unordered associative containers cung cấp các cấu trúc dữ liệu chưa được sắp xếp sẵn, có thể được truy cập bằng bảng băm (hash table). Nhóm này gồm: \lstinline{unordered_set}, \lstinline{unordered_map}, \lstinline{unordered_multiset}, và \lstinline{unordered_multimap}.
+\subsection{unordered$\_$set}
+Lớp \lstinline{unordered_set} cung cấp một cấu trúc dữ liệu tương tự như \lstinline{set}, nghĩa là các phần tử là duy nhất, nhưng khác với \lstinline{set}, dữ liệu trong \lstinline{unordered_set} không có thứ tự (chèn vào một thứ tự nhưng lấy ra sẽ có thứ tự khác).\\
+Để sử dụng lớp \lstinline{unordered_set}, ta cần chỉ thị  \lstinline{#include <unordered_set>}.\\
+Lớp  \lstinline{unordered_set} được khai báo trong header  \lstinline{<unordered_set>} như sau: \cite{unset}
+\begin{lstlisting}
+template<
+    class Key,
+    class Hash = std::hash<Key>,
+    class KeyEqual = std::equal_to<Key>,
+    class Allocator = std::allocator<Key>
+> class unordered_set;
+namespace pmr {
+    template <class Key,
+              class Hash = std::hash<Key>,
+              class Pred = std::equal_to<Key>>
+    using unordered_set = std::unordered_set<Key, Hash, Pred,
+                                             std::pmr::polymorphic_allocator<Key>>;
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các hàm thành viên của \lstinline{unordered_set} hoàn toàn tương tự các hàm thành viên của \lstinline{set}, tuy nhiên có thể có sự khác nhau về độ phức tạp.\\
+Độ phức tạp của các hàm thành viên có thể tìm thấy tại \cite{unset}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <unordered_set>
+
+int main() {
+    std::unordered_set<std::string> s;
+    
+    s.insert("hello");
+    s.insert("world");
+    s.insert("today");
+    s.insert("is");
+    s.insert("a");
+    s.insert("sunny");
+    s.insert("Friday");
+
+    for (auto it : s) {
+        std::cout << it << "\n";
+    }
+    
+    /*
+    sunny
+    hello
+    world
+    today
+    Friday
+    is
+    a    
+    */
+}
+\end{lstlisting}
+\textbf{Lưu ý:} thứ tự xuất ra màn hình có thể khác so với ví dụ trên.
+
+\subsection{unordered$\_$multiset}
+Lớp \lstinline{unordered_multiset} cung cấp một cấu trúc dữ liệu tương tự như \lstinline{multiset}, nhưng khác với \lstinline{multiset}, dữ liệu trong \lstinline{unordered_multiset} không có thứ tự (chèn vào một thứ tự nhưng lấy ra sẽ có thứ tự khác.\\
+Để sử dụng lớp \lstinline{unordered_multiset}, ta cần chỉ thị \lstinline{#include <unordered_set>}.\\
+Lớp \lstinline{unordered_multiset} được khai báo trong header \lstinline{<unordered_set>} như sau: \cite{unmultiset}
+\begin{lstlisting}
+template<
+    class Key,
+    class Hash = std::hash<Key>,
+    class KeyEqual = std::equal_to<Key>,
+    class Allocator = std::allocator<Key>
+> class unordered_multiset;
+namespace pmr {
+    template <class Key,
+              class Hash = std::hash<Key>,
+              class Pred = std::equal_to<Key>>
+    using unordered_multiset = std::unordered_multiset<Key, Hash, Pred,
+                                   std::pmr::polymorphic_allocator<Key>>
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các hàm thành viên của \lstinline{unordered_multiset} hoàn toàn tương tự các hàm thành viên của \lstinline{multiset}, tuy nhiên có thể có sự khác nhau về độ phức tạp.\\
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{unormultiset}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <unordered_set>
+
+void printMulSet(std::unordered_multiset<int> mts) {
+    std::cout << "Unordered multiset: \n";
+    for (auto it = mts.begin(); it != mts.end(); it++) {
+        std::cout << *it << " ";
+    }
+    std::cout << "\n";
+}
+
+int main() {
+    std::unordered_multiset<int> mts({1, 2, 3, 4, 1, 2, 6, 7});
+    printMulSet(mts);
+    
+    return 0;
+    
+    //Unordered multiset: 7 6 4 3 2 2 1 1
+}
+\end{lstlisting}
+\subsection{unordered$\_$map}
+Lớp \lstinline{unordered_map} cung cấp một cấu trúc dữ liệu tương tự như \lstinline{map}, nghĩa là ánh xạ một khóa với một giá trị, nhưng khác với \lstinline{map}, dữ liệu trong \lstinline{unordered_map} không có thứ tự (chèn vào một thứ tự nhưng lấy ra sẽ có thứ tự khác.\\
+Để sử dụng lớp \lstinline{unordered_map}, ta cần chỉ thị \lstinline{#include <unordered_map>}.\\
+Lớp \lstinline{unordered_map} được khai báo trong header \lstinline{<unordered_map>} như sau: \cite{unmap}
+\begin{lstlisting}
+template<
+    class Key,
+    class T,
+    class Hash = std::hash<Key>,
+    class KeyEqual = std::equal_to<Key>,
+    class Allocator = std::allocator< std::pair<const Key, T> >
+> class unordered_map;
+namespace pmr {
+    template <class Key,
+              class T,
+              class Hash = std::hash<Key>,
+              class Pred = std::equal_to<Key>>
+    using unordered_map = std::unordered_map<Key, T, Hash, Pred,
+                              std::pmr::polymorphic_allocator<std::pair<const Key,T>>>;
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các hàm thành viên của \lstinline{unordered_map} hoàn toàn tương tự các hàm thành viên của \lstinline{map}, tuy nhiên có thể có sự khác nhau về độ phức tạp.\\
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{unmap}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <string>
+#include <unordered_map>
+
+int main() {
+    std::unordered_map<std::string, int> m;
+
+    m.insert(std::make_pair("ten", 1));
+    m.insert(std::make_pair("points", 2));
+    m.insert(std::make_pair("in", 3));
+    m.insert(std::make_pair("oop", 10));
+
+    for (auto x : m) {
+        std::cout << x.first << " " << x.second << "\n";
+    }
+
+    return 0;
+    /* 
+        oop 10
+        in 3
+        points 2
+        ten 1
+    */
+}
+\end{lstlisting}
+
+\subsection{unordered$\_$multimap}
+Lớp \lstinline{unordered_multimap} cung cấp một cấu trúc dữu liệu tương tự như \lstinline{multimap}, nhưng khác với \lstinline{multimap} ở chỗ dữ liệu trong \lstinline{unordered_multimap} chưa được sắp xếp.\\
+Để sử dụng lớp \lstinline{unordered_multimap}, ta cần chỉ thị \lstinline{#include <unordered_map>}.\\
+Lớp \lstinline{unordered_multimap} được khai báo trong header \lstinline{<unordered_map>} như sau: \cite{unmultimap}
+\begin{lstlisting}
+template<
+    class Key,
+    class T,
+    class Hash = std::hash<Key>,
+    class KeyEqual = std::equal_to<Key>,
+    class Allocator = std::allocator< std::pair<const Key, T> >
+> class unordered_multimap;
+namespace pmr {
+    template <class Key, class T,
+              class Hash = std::hash<Key>,
+              class Pred = std::equal_to<Key>>
+    using unordered_multimap = std::unordered_multimap<Key, T, Hash, Pred,
+                                   std::pmr::polymorphic_allocator<std::pair<const Key,T>>>;
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Cá hàm thành viên của \lstinline{unordered_multimap} hoàn toàn tương tự các hàm thành viên của \lstinline{multimap}, tuy nhiên có thể có sự khác nhau về độ phức tạp.\\
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{unmultimap}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <string>
+#include <unordered_map>
+
+void printMulMap(std::unordered_multimap<std::string, int> mtm) {
+    std::cout <<"Unordered multimap:\n";
+    for (auto it = mtm.begin(); it != mtm.end(); ++it) {
+        std::cout << it->first << "," << it->second << "\n";
+    }
+    std::cout << "\n";
+}
+
+int main() {
+    std::unordered_multimap<std::string, int> mtm({{"orange", 1000}, {"mango", 2000}, {"mango", 3000}});
+    mtm.insert(std::make_pair("apple", 5000));
+    mtm.insert(std::make_pair("mango", 4000));
+    printMulMap(mtm);
+    return 0;
+    /*
+        Unordered multimap:
+        apple,5000
+        orange,1000
+        mango,4000
+        mango,3000
+        mango,2000
+    */
+}
+\end{lstlisting}

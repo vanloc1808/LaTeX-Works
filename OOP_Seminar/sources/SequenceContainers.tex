@@ -1,0 +1,276 @@
+\section{Sequence containers}
+\label{seqcon}
+Như đã nói trong phần \ref{contain}, sequence containers lưu trữ các phần tử theo thứ tự giống với thứ tự chúng được đưa vào container. Sequence containers gồm: \lstinline{array}, \lstinline{vector}, \lstinline{list}, \lstinline{forward_list}, và \lstinline{deque}. 
+\subsection{array}
+Cấu trúc \lstinline{array} cung cấp container chứa một mảng tĩnh với số phần tử cố định. \\
+Để sử dụng cấu trúc \lstinline{array}, ta cần chỉ thị \lstinline{#include <array>}.\\
+Cấu trúc \lstinline{array} được khai báo trong header \lstinline{<array>} như sau:\cite{array}
+\begin{lstlisting}
+template<class T, std::size_t N>
+struct array;
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Implicitly-defined member functions: các constructor, destructor, toán tử gán.\\
+Các phương thức truy cập phần tử:
+\begin{itemize}
+    \item \lstinline{at(size_type pos)} : Trả về tham chiếu tới phần tử đối tượng thứ \lstinline{pos} (bắt đầu từ 0). Hàm sẽ ném ngoại lệ (throw exception) \lstinline{std::out_of_range } nếu như pos vượt quá phạm vi của mảng (\lstinline{pos >= N}).
+    \item \lstinline{operator[](size_type pos)} : Tương tự như trên nhưng không ném ngoại lệ.
+    \item \lstinline{front()}: Trả về tham chiếu tới phần tử đầu tiên.
+    \item \lstinline{back()}: Trả về tham chiếu tới phần tử cuối cùng.
+    \item \lstinline{data()}: Trả về constant pointer (\lstinline{T*}) của tới mảng nằm trong \lstinline{array}.
+\end{itemize}
+Các iterators như trong phần hình \ref{popite}.\\
+Các phương thức kiểm tra số lượng (capacity):
+\begin{itemize}
+    \item \lstinline{empty()}: trả về \lstinline{true} nếu mảng trống và \lstinline{false} nếu ngược lại.
+    \item \lstinline{size()}: trả về số lượng phần tử hiện tại của mảng.
+    \item \lstinline{max_size()}: trả về số lượng phần tử tối đa có thể có của mảng.
+\end{itemize}
+Một số phương thức khác:
+\begin{itemize}
+    \item \lstinline{fill(const T& value)}: gán toàn bộ giá trị của mảng bằng \lstinline{value}.
+    \item \lstinline{swap(array& other)}: thay đổi nội dung array này với array khác.
+\end{itemize}
+\textbf{Lưu ý:} Phải tạo mảng có kích thước lớn hơn 0, nếu không sẽ gây Undefined Behaviour  khi truy cập phần tử.\\
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{array}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <array>
+
+//default initialization (non-local = static storage)
+std::array<int, 3> global; //{0, 0, 0}
+
+int main() {
+    //default initialization (local = automatic storage)
+    std::array<int, 3> first; //{?, ?, ?}
+    
+    //initializer-list initializations
+    std::array<int, 3> second = {10, 20}; //{10, 20, 0}
+    std::array<int, 3> third = {1, 2, 3}; //{1, 2, 3}
+    
+    //copy initialization
+    std::array<int, 3> fourth(third); //copy
+    
+    return 0;
+}
+\end{lstlisting}
+\subsection{forward$\_$list}
+Lớp \lstinline{forward_list} triển khai kiểu dữ liệu danh sách liên kết đơn, hỗ trợ các thao tác chèn, xóa nhanh của phần tử ở bất cứ đâu trong container, tuân theo quy tắc RAII để đảm bảo chương trình không bị memory leak.Tuy nhiên không thể truy cập ngẫu nhiên trên container này được.\\
+Để sử dụng lớp \lstinline{forward_list}, ta cần chỉ thị \lstinline{#include <forward_list>}.\\
+Lớp \lstinline{forward_list} được khai báo trong header \lstinline{<forward_list>} như sau: \cite{forlist}
+\begin{lstlisting}
+template<class T, class Allocator = std::allocator<T>> 
+class forward_list;
+namespace pmr {
+    template <class T>
+    using forward_list = std::forward_list<T, std::pmr::polymorphic_allocator<T>>;
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các constructor, destructor, toán tử gán.\\
+Phương thức truy cập phần tử: \lstinline{front()}: trả về tham chiếu giá trị của HEAD trong DSLK đơn. \\
+Các iterators như trong phần hình \ref{popite}.\\
+Các phương thức kiểm tra số lượng (capacity):
+\begin{itemize}
+    \item \lstinline{empty()}: trả về \lstinline{true} nếu mảng trống và \lstinline{false} nếu ngược lại.
+    \item \lstinline{max_size()}: trả về số lượng phần tử tối đa có thể có của danh sách.
+\end{itemize}
+Các phương thức thao tác trên phần tử:
+\begin{itemize} 
+    \item \lstinline{insert_after(pos, (n), value)}: chèn \lstinline{n} giá trị \lstinline{value} vào sau vị trí iterator \lstinline{pos}, \lstinline{value} ở đây có thể là một giá trị hoặc là một\lstinline{initializer_list}, nếu không có tham số \lstinline{n} thì mặc định chèn 1 giá trị. Trả về iterator trỏ tới phần tử cuối cùng được thêm vào.
+    \item \lstinline{insert_after(pos, beginIt, endIt)}: chèn giá trị copy từ iterator \lstinline{beginIt} đến \lstinline{endIt} vào sau vị trí iterator \lstinline{pos}. Trả về iterator trỏ tới phần tử cuối cùng được thêm vào.
+    \item \lstinline{erase_after(pos)}: xoá phần tử phía sau vị trí iterator \lstinline{pos}, trả về iterator trỏ tới phần tử sau phần tử đã xoá.
+    \item \lstinline{erase_after(begin_pos, end_pos)}: xoá phần tử từ vị trí iterator \lstinline{begin_pos} đến trước \lstinline{end_pos}, trả về iterator trỏ tới \lstinline{end_pos}.
+    \item \lstinline{push_front(val)}: tương đương việc \lstinline{addHead} của DSLK đơn, đưa giá trị \lstinline{val} lên đầu.
+    \item \lstinline{pop_front()}: tương đương việc deleteHead của DSLK đơn, xoá giá trị cuối cùng của danh sách. Nếu danh sách đang rỗng thì sẽ gây Undefined Behavior.
+    \item \lstinline{swap(f)}: đổi chỗ các phần tử DSLK đơn hiện tại với DSLK đơn\lstinline{ f} (cùng kiểu).
+    \item \lstinline{remove(val)}: xoá toàn bộ các Node có giá trị là val trong DSLK đơn.
+    \item \lstinline{remove_if(f)}: xoá toàn bộ các Node có giá trị thoả điều kiện của function \lstinline{f}.
+\end{itemize}
+Các phương thức với DSLK đơn:
+\begin{itemize}
+    \item \lstinline{merge(l, comparator)}: chèn DSLK \lstinline{l} vào DSLK hiện tại, 2 danh sách này phải được sắp xếp từ trước, sau đó được chèn theo điều kiện của \lstinline{comparator} (mặc định là “<” cho tăng dần).
+    \item \lstinline{reverse()}: lật ngược toàn bộ DSLK.
+    \item \lstinline{unique()}: xoá các phần tử trùng nhau trong DSLK (giữ lại 1 phần tử).
+    \item \lstinline{sort()}: sắp xếp DSLK tăng dần.
+    \item \lstinline{clear()}: xóa toàn bộ các phần tử trong DSLK đơn.
+\end{itemize}
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cit{forlist}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <forward_list>
+
+int main() {
+    std::forward_list<int> first; //default: empty
+    std::forward_list<int> second(3, 77); //fill: 3 seventy-sevens
+    std::forward_list<int> third(second.begin(), second.end()); //range initialization
+    std::forward_list<int> fourth(third); //copy constructor
+    std::forward_list<int> fifth(std::move(fourth)); //move ctor. (fourth wasted)
+    std::forward_list<int> sixth = {3, 52, 25, 90}; //initializer_list constructor
+    
+    std::forward_list<int> mylist;
+    std::forward_list<int>::iterator it; //it -> ()
+    
+    it = mylist.insert_after(mylist.before_begin(), 10); //it -> (10)
+    it = mylist.insert_after(it, 2, 20); //10 20 (20)
+    std::array<int, 3> myarray = {11, 22, 33};
+    it = mylist.insert_after(it, myarray.begin(), myarray.end()); //10 20 30 11 22 (33)
+    it = mylist.begin(); //(10) 20 30 11 22 33
+    it = mylist.erase_after(it); //10 (30) 11 22 33
+    it = mylist.erase_after(it, mylist.end()); //10 30 ()
+    
+    return 0;
+}
+\end{lstlisting}
+
+\subsection{list}
+Lớp \lstinline{list}, triển khai kiểu dữ liệu danh sách liên kết đôi, có những ưu điểm so với \lstinline{std::forward_list<T>} nhưng tốn bộ nhớ hơn cho iterator hai chiều (bidirectional Iterator).\\
+Để sử dụng lớp \lstinline{list}, ta cần chỉ thị \lstinline{#include <list>}.\\
+Lớp \lstinline{list} được khai báo trong header \lstinline{<list>} như sau: \cite{list}
+\begin{lstlisting}
+template<class T, class Allocator = std::allocator<T>> 
+class list;
+namespace pmr {
+    template <class T>
+    using list = std::list<T, std::pmr::polymorphic_allocator<T>>;
+}
+\end{lstlisting}
+
+\subsubsection{Các hàm thành viên}
+Các constructor, destructor, toán tử gán.\\
+Các phương thức truy cập phần tử:
+\begin{itemize}
+    \item \lstinline{front()}: trả về tham chiếu giá trị của HEAD trong DSLK đôi.
+    \item \lstinline{back()}: trả về tham chiếu giá trị của TAIL trong DSLK đôi
+\end{itemize}
+Các iterators như trong phần hình \ref{popite}.\\
+Các phương thức kiểm tra số lượng (capacity):
+\begin{itemize}
+    \item \lstinline{empty()}: trả về \lstinline{true} nếu mảng trống và \lstinline{false} nếu ngược lại.
+    \item \lstinline{max_size()}: trả về số lượng phần tử tối đa có thể có của danh sách.
+\end{itemize}
+Các phương thức thao tác trên phần tử:
+\begin{itemize} 
+    \item \lstinline{push_front(val)},  \lstinline{pop_front()}: tương tự \lstinline{forward_list}.
+    \item \lstinline{push_back(val)}: tương đương việc \lstinline{addTail} của DSLK đôi, đưa giá trị \lstinline{val} về cuối danh sách.
+    \item \lstinline{pop_back()}: tương đương việc \lstinline{deleteTail} của DSLK đôi, xoá giá trị cuối cùng của danh sách. Nếu danh sách đang rỗng thì sẽ gây Undefined Behavior.
+    \item \lstinline{insert(pos, (n), value)}: chèn \lstinline{n} giá trị \lstinline{value} vào trước vị trí iterator \lstinline{pos}, \lstinline{value} ở đây có thể là một giá trị hoặc là một \lstinline{initializer_list}, nếu không có tham số \lstinline{n} thì mặc định chèn 1 giá trị. Trả về iterator trỏ tới phần tử đầu tiên được thêm vào.
+    \item \lstinline{insert(pos, beginIt, endIt)}: chèn giá trị copy từ iterator\lstinline{ beginIt} đến \lstinline{endIt} vào trước  vị trí iterator \lstinline{pos}. Trả về iterator trỏ tới phần tử đầu tiên được thêm vào.
+    \item \lstinline{erase(pos)}: xoá phần tử ở vị trí iterator \lstinline{pos}, trả về iterator trỏ tới phần tử sau phần tử đã xoá.
+    \item \lstinline{erase(begin_pos, end_pos)}: xoá phần tử từ vị trí iterator \lstinline{begin_pos} đến trước \lstinline{end_pos}, trả về iterator trỏ tới \lstinline{end_pos}.
+\end{itemize}
+Các phương thức với DSLK đôi: tương tự như \lstinline{forward_list}.\\
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{list}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <list>
+
+int main() {
+    std::list<int> mylist = {1, 2, 3, 4};
+    std::list<int>:: it;
+    
+    it = mylist.begin(); //(1) 2 3 4
+    it = mylist.insert(it, 10); //(10) 1 2 3 4
+    it++; //10 (1) 2 3 4
+    it = mylist.insert(it, 2, 3); //10 (3) 3 1 2 3 4
+    
+    return 0;
+}
+\end{lstlisting}
+
+\subsection{vector}
+Lớp \lstinline{vector} cung cấp mảng động với khả năng thay đổi số lượng phần tử tùy ý. Do là một associative container nên các phần tử của \lstinline{vector} được lưu trữ một cách tuần tự, theo thứ tự đúng với thứ tự được nhập vào.\\
+Để sử dụng lớp \lstinline{vector}, ta sử dụng chỉ thị \lstinline{#include <vector>}.\\
+Lớp \lstinline{vector} được khai báo trong header \lstinline{<vector>} như sau: \cite{anothervector}
+\begin{lstlisting}
+template<class T, class Allocator = std::allocator<T>> class vector;
+namespace pmr {
+    template <class T>
+    using vector = std::vector<T, std::pmr::polymorphic_allocator<T>>;
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các constructor, destructor, toán tử gán.\\
+Các phương thức truy cập phần tử: tương tự như \lstinline{array}.\\
+Các iterators như trong phần hình \ref{popite}.\\
+Các phương thức kiểm tra số lượng phần tử:
+\begin{itemize}
+    \item \lstinline{empty()} \lstinline{size()}, \lstinline{max_size()}: tương tự như \lstinline{array}.
+    \item \lstinline{capacity()}: trả về số phần tử nhiều nhất hiện tại mà vector có thể chứa mà không cần phải cấp phát lại.
+    \item \lstinline{shrink_to_fit()}:  giảm vùng nhớ bằng cách giải phóng những ô nhớ không sử dụng.
+\end{itemize}
+Các phương thức thao tác trên phần tử:
+\begin{itemize}
+    \item  \lstinline{push_back(val)}: thêm phần tử có giá trị \lstinline{val} vào vị trí cuối vào \lstinline{vector}.
+    \item \lstinline{pop_back()}: xoá phần tử cuối khỏi \lstinline{vector}.
+    \item \lstinline{insert()}, \lstinline{erase()}, \lstinline{clear()}: tương tự như các phần bên trên.
+\end{itemize}
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{vector}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> a;
+    for (int i = 0; i <= 10; i++) {
+        a.push_back(i);
+        std::cout << a[i] << " ";
+    }
+    //0 1 2 3 4 5 6 7 8 9 10
+    std::cout << "\n";
+    
+    int sum = 0;
+    for (auto it = a.begin(); it != a.end(); it++) {
+        if (*it % 2 == 0) {
+            sum += *it;
+        }
+    }
+    std::cout << "Sum of odd number: " << sum << "\n"; //25
+}
+\end{lstlisting}
+Do cách tạo và hủy của \lstinline{vector}, khi các phần tử trong \lstinline{vector} là các đối tượng phức tạp, việc gọi nhiều lần các constructor và destructor sẽ rất tốn kém. Các hướng giải quyết cho vấn đề này được đề cập ở \cite{tdtfit}.
+\subsection{Deque}
+Lớp \lstinline{deque}, viết tắt của double-ended queue (tạm dịch: hàng đợi kết thúc kép, hàng đợi hai đầu), là một cấu trúc dữ liệu mở rộng của hàng đợi, cho phép thêm và xóa các phần tử ở cả hai đầu.\\
+Để sử dụng lớp \lstinline{deque}, ta sử dụng chỉ thị \lstinline{#include <deque>}.\\
+Lớp \lstinline{deque} được khai báo trong header \lstinline{<deque>} như sau:\cite{deque}
+\begin{lstlisting}
+template<class T, class Allocator = std::allocator<T>> 
+class deque;
+namespace pmr {
+    template <class T>
+    using deque = std::deque<T, std::pmr::polymorphic_allocator<T>>;
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các constructor, destructor, toán tử gán.\\
+Các phương thức truy cập phần tử: tương tự như \lstinline{array}.\\
+Các iterators như trong phần hình \ref{popite}.\\
+Các phương thức kiểm tra số lượng phần tử:
+\begin{itemize}
+    \item \lstinline{empty()} \lstinline{size()}, \lstinline{max_size()}: tương tự như \lstinline{array}.
+    \item \lstinline{shrink_to_fit()}:  giảm vùng nhớ bằng cách giải phóng những ô nhớ không sử dụng.
+\end{itemize}
+Các phương thức thao tác trên phần tử:
+\begin{itemize}
+    \item \lstinline{push_back(val)}, \lstinline{pop_back()}: tương tự như \lstinline{vector}.
+    \item \lstinline{push_front(val)}: thêm phần tử có giá trị \lstinline{val} vào đầu \lstinline{deque}.
+    \item \lstinline{pop_front()}: xóa phần tử đầu khỏi \lstinline{deque}.
+    \item \lstinline{insert()}, \lstinline{erase()}, \lstinline{clear()}: tương tự như các phần bên trên.
+\end{itemize}
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{deque}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <deque>
+
+int main() {
+    std::deque<int> d; // 
+    d.push_front(8); // 8
+    d.push_front(18); //18 8
+    d.push_back(9); //18 8 9
+    d.push_back(20); //18 8 9 20
+    
+    return 0;
+}
+\end{lstlisting}

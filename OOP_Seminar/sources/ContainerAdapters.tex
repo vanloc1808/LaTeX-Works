@@ -1,0 +1,138 @@
+\section{Container adapters}
+Như đã nhắc đến trong phần \ref{contain}, các lớp thuộc nhóm này thực chất chỉ là wrappers của các containers trong phần \ref{seqcon}, nghĩa là các lớp này chỉ khai báo các phương thức xử lý đối với các phần tử trong container, còn phần thực thi bên dưới của phương thức thực chất là của các phương thức trong các sequence containers. Nhóm này gồm: \lstinline{stack}, \lstinline{queue}, \lstinline{priority_queue}.
+\subsection{stack}
+Lớp \lstinline{stack} cung cấp cấu trúc dữ liệu ngăn xếp, hỗ trợ lữu trữ và truy xuất các phần tử theo cơ chế của cấu trúc dữ liệu này, nghĩa là dạng vào sau - ra trước (Last In, First Out $-$ LIFO). \\
+Để sử dụng lớp \lstinline{stack}, ta sử dụng chỉ thị \lstinline{#include <stack>}.\\
+Lớp \lstinline{stack} được khai báo trong header \lstinline{<stack>} như sau: \cite{stack}
+\begin{lstlisting}
+template<class T, class Container = std::deque<T>> 
+class stack;
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các constructor, destructor, toán tử gán.\\
+Các phương thức truy cập phần tử: chỉ có phần tử ở đỉnh của ngăn xếp  có thể truy cập bằng phương thức \lstinline{top()}.\\
+Theo như \cite{stack}, lớp \lstinline{stack} không cung cấp các iterators.\\
+Các phương thức kiểm tra số lượng phần tử:
+\begin{itemize}
+    \item \lstinline{empty()}, \lstinline{size()}: tương tự như các containers trong phần \ref{seqcon}.
+\end{itemize}
+Các phương thức thao tác trên phần tử:
+\begin{itemize}
+    \item \lstinline{push(val)}: thêm một phần tử vào đỉnh của ngăn xếp.
+    \item \lstinline{pop()}: bỏ phần tử ở đỉnh của ngăn xếp.
+\end{itemize}
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{stack}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <stack>
+
+int main() {
+    std::stack<int> s;
+    for (int i = 0; i < 10; i++) {
+        s.push(i); 
+    }
+    
+    while (s.empty() == false) {
+        std::cout << s.top() << " ";
+        s.pop();
+    }
+    //9 8 7 6 5 4 3 2 1 0
+    return 0;
+}
+\end{lstlisting}
+\subsection{queue}
+Lớp \lstinline{queue} cung cấp cấu trúc dữ liệu hàng đợi, hỗ trợ lưu tru và truy xuất các phần tử theo cơ chế của cấu trúc dữ liệu này, nghĩa là theo cơ chế vào trước - ra trước (First In, First Out $-$ FIFO). Nhưng ta chỉ có thêm phần tử vào một đầu và lấy phần tử ra ở đầu còn lại, có thể nhận thấy rằng đây là một trường hợp đặc biệt của \lstinline{deque}.\\
+Để sử dụng lớp \lstinline{queue}, ta sử dụng chỉ thị \lstinline{#include <queue>}.\\
+Lớp \lstinline{queue} được khai báo trong header \lstinline{<queue>} như sau: \cite{queue}
+\begin{lstlisting}
+template<class T, class Container = std::deque<T>> 
+class queue;
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các constructor, destructor, toán tử gán.\\
+Các phương thức truy cập phần tử:
+\begin{itemize}
+    \item \lstinline{front()}: lấy phần tử ở đầu hàng đợi (theo kiểu tham chiếu).
+    \item \lstinline{back()}: lấy phần tử mới thêm vào cuối hàng đợi (theo kiểu tham chiếu).
+\end{itemize}
+Theo như \cite{queue}, lớp \lstinline{queue} không cung cấp các iterators.\\
+Các phương thức kiểm tra số lượng phần tử:
+\begin{itemize}
+    \item \lstinline{empty()}, \lstinline{size()}: tương tự như các containers trong phần \ref{seqcon}.
+\end{itemize}
+Các phương thức thao tác trên phần tử:
+\begin{itemize}
+    \item \lstinline{push(val)}: thêm một phần tử vào cuối hàng đợi.
+    \item \lstinline{pop()}: bỏ phần tử ở đầu hàng đợi.
+\end{itemize}
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{queue}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <queue>
+
+int main() {
+    std::queue<int> q;
+    for (int i = 0; i < 10; i++) {
+        q.push(i); 
+    }
+    
+    std::cout << q.back() << "\n"; //9
+    std::cout << q.front() << "\n"; //0
+    
+    while (q.empty() == false) {
+        std::cout << q.front() << " ";
+        q.pop();
+    }
+    //0 1 2 3 4 5 6 7 8 9
+    return 0;
+}
+\end{lstlisting}
+\subsection{priority$\_$queue}
+Lớp \lstinline{priority_queue} cung cấp cấu trúc dữ liệu hàng đợi có độ ưu tiên, cung cấp các thao tác tìm kiếm với chi phí hằng số cho phần tử có độ ưu tiên cao nhất.\\
+Để sử dụng lớp \lstinline{priority_queue}, ta sử dụng chỉ thị \lstinline{#include <queue>}.\\
+Lớp \lstinline{priority_queue} được khai báo trong header \lstinline{<queue>} như sau: \cite{pqueue}
+\begin{lstlisting}
+template<class T, 
+class Container = std::vector<T>, 
+class Compare=std::less<typename Container::value_type>
+> class priority_queue;
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các constructor, destructor, toán tử gán.\\
+Các phương thức truy cập phần tử: tương tự như ngăn xếp, chỉ có phần tử ở đỉnh của hàng đợi ưu tiên  có thể truy cập bằng phương thức \lstinline{top()}.\\
+Theo như \cite{pqueue}, lớp \lstinline{priority_queue} không cung cấp các iterators.\\
+Các phương thức kiểm tra số lượng phần tử:
+\begin{itemize}
+    \item \lstinline{empty()}, \lstinline{size()}: tương tự như các containers trong phần \ref{seqcon}.
+\end{itemize}
+Các phương thức thao tác trên phần tử:
+\begin{itemize}
+    \item \lstinline{push(val)}: thêm một phần tử vào hàng đợi có độ ưu tiên và sắp xếp lại thứ tự ưu tiên của các phần tử.
+    \item \lstinline{pop()}: bỏ phần tử ở đỉnh của hàng đợi ưu tiên.
+\end{itemize}
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{pqueue}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <queue>
+
+int main() {
+    std::priority_queue<int> p;
+    p.push(1);
+    p.push(5);
+    p.push(30);
+    p.push(10);
+    p.push(20);
+    
+    std::cout << p.top() << "\n"; //30
+    while (p.empty() != false) {
+        std::cout << p.top();
+        p.pop();
+    }
+    //30 20 10 5 1
+    
+    return 0;
+}
+\end{lstlisting}

@@ -1,0 +1,203 @@
+\section{Associative containers}
+Như đã nhắc đến trong phần \ref{contain}, các lớp thuộc nhóm Associative containers gồm các phần tử được lưu trữ tự động theo một thứ tự nào đó được định nghĩa sẵn (ví dụ như tăng dần hay giảm dần).Nhóm này gồm: \lstinline{set}, \lstinline{map}, \lstinline{multiset}, \lstinline{multimap}, \lstinline{hash_set}, \lstinline{hash_map}, \lstinline{hash_multiset}, và \lstinline{hash_multimap}. \cite{tdtfit} Trong khuôn khổ chuyên đề này, chúng em chỉ trình bày \lstinline{set}, \lstinline{map}, \lstinline{multiset}, và \lstinline{multimap}.\\
+\subsection{set}
+Lớp \lstinline{set} cung cấp một cấu trúc dữ liệu cho phép lưu trữ tập hợp các phần tử cùng kiểu dữ liệu theo một thứ tự nhất định, trong đó các phần tử là duy nhất .Ví dụ, mảng có thể lưu trữ các phần tử trùng nhau như \lstinline{1, 2, 3, 1, 2, 2, 3, 3, 3}, nhưng \lstinline{set} chỉ có thể lưu các phần tử khác nhau: \lstinline{1, 2, 3}.\\
+Trong một \lstinline{set}, giá trị của một phần tử cũng là khóa (key) nhận diện nó. Giá trị của một phần tử trong \lstinline{set} không thể thay đổi, nhưng có thể \lstinline{insert} giá trị mới và \lstinline{remove} giá trị trong \lstinline{set}.
+Các phần tử trong một \lstinline{set} thường được sắp xếp theo một trật tự yếu nghiêm ngặt (strict weak ordering) được xác định bởi các thành phần so sánh  của nó (its internal comparison object). \cite{otherset}\\
+Để sử dụng lớp \lstinline{set}, ta cần chỉ thị \lstinline{#include <set>}.\\
+Lớp \lstinline{set} được khai báo trong header \lstinline{<set>} như sau: \cite{set}
+\begin{lstlisting}
+template<
+    class Key, 
+    class Compare = std::less<Key>, 
+    class Allocator = std::allocator<Key>
+> class set;
+namespace pmr {
+    template <class Key, class Compare = std::less<Key>>
+    using set = std::set<Key, Compare, std::pmr::polymorphic_allocator<Key>>;
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các constructor, destructor, toán tử gán.\\
+Các phương thức truy cập phần tử: theo như \cite{set}, lớp \lstinline{set} không hỗ trọ việc truy cập phần tử.\\
+Các iterators như trong phần hình \ref{popite}.\\
+Các phương thức kiểm tra số lượng phần tử: \lstinline{empty()} \lstinline{size()}, \lstinline{max_size()}: tương tự như \lstinline{array}.\\
+Các phương thức thao tác trên phần tử:
+\begin{itemize} 
+    \item \lstinline{insert(val)}: chèn phần tử có giá trị \lstinline{val} vào \lstinline{set} nếu chưa có giá trị \lstinline{val} trong \lstinline{set}.
+    \item \lstinline{erase(val)}: xóa phần tử có giá trị \lstinline{val} khỏi \lstinline{set}.
+    \item \lstinline{find(val)}: trả về một iterator trỏ đến vị trí của giá trị \lstinline{val} (nếu có) trong \lstinline{set}, nếu không có trỏ đến \lstinline{end()}.
+    \item \lstinline{count(val)}: trả về số lượng của giá trị \lstinline{val}  trong \lstinline{set}, do mỗi phần tử trong \lstinline{set} là duy nhất nên hàm này chỉ trả về giá trị 0 hoặc 1.
+\end{itemize}
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{set}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <set>
+ 
+int main() {
+    std::set<int> s;
+    s.insert(1);
+    s.insert(2);
+    s.insert(3);
+    s.insert(1);
+ 
+    std::cout << s.count(1) << "\n"; // 1
+    s.erase(1);
+    std::cout << s.count(1) << "\n"; // 0
+}
+\end{lstlisting}
+
+\subsection{multiset}
+Lớp \lstinline{multiset} là một cấu trúc dữ liệu tương tự như \lstinline{set}, nghĩa là lưu trữ  tập hợp các phần tử cùng kiểu dữ liệu theo một thứ tự nhất địnp, nhưng khác với \lstinline{set}, \lstinline{multiset} cho phép các phần tử trùng nhau cùng tồn tại.\\
+Để sử dụng lớp \lstinline{multiset}, ta sử dụng chỉ thị \lstinline{#include <set>}.\\
+Lớp \lstinline{multiset} được khai báo trong header \lstinline{<set>} như sau: \cite{multiset}
+\begin{lstlisting}
+template<
+    class Key,
+    class Compare = std::less<Key>, 
+    class Allocator = std::allocator<Key>
+    > class multiset;
+namespace pmr {
+    template <class Key, class Compare = std::less<Key>>
+    using multiset = std::multiset<Key, Compare,
+                                   std::pmr::polymorphic_allocator<Key>>;
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các hàm thành viên của lớp \lstinline{multiset} hoàn toàn tương tự của lớp \lstinline{set}, ngoại trừ một vài điểm khác sau đây:
+\begin{itemize}
+    \item \lstinline{insert(val)}: cho phép chèn \lstinline{val} nếu \lstinline{val} đã có sẵn trong \lstinline{set}.
+    \item \lstinline{erase(val)}: xóa \textbf{\textit{tất cả}} phần tử có giá trị \lstinline{val} khỏi \lstinline{set}.
+    \item \lstinline{count(val)}: giá trị trả về của hàm này có thể lớn hơn 1.
+\end{itemize}
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <set>
+ 
+int main() {
+    std::multiset<int> s = {2, 4, 4, 4, 6, 6, 6, 6, 6};
+ 
+    for (auto x : s) {
+        std::cout << x << " appears " << s.count(x) << " times\n";
+    }
+    /*
+    2 appears 1 times
+    4 appears 3 times
+    4 appears 3 times
+    4 appears 3 times
+    6 appears 5 times
+    6 appears 5 times
+    6 appears 5 times
+    6 appears 5 times
+    6 appears 5 times
+    */
+}
+\end{lstlisting}
+
+\subsection{map}
+Lớp \lstinline{map}, hay còn được gọi là \lstinline{Dictionary} trong một số ngôn ngữ lập trình như C$\#$ hay Python, là một cấu trúc dữ liệu ánh xạ giữa một khóa (key value) sang giá trị của khóa đó (mapped value), tương tự như mảng.
+Nhưng khác với mảng, key của \lstinline{map} không nhất thiết phải là một số nguyên mà có thể là bất kỳ một kiểu dữ liệu nào.\\
+Trong một \lstinline{map}, key value thường được dùng để xác định duy nhất phần tử của map đó. \\
+Các phần tử trong một map thường được sắp xếp theo một trật tự yếu nghiêm ngặt (strict weak ordering) được xác định bởi các thành phần so sánh của nó (its internal comparison object). \cite{map}\\
+Để sử dụng lớp \lstinline{map}, ta sử dụng chỉ thị \lstinline{#include <map>}.\\
+Lớp \lstinline{map} được khai báo trong header  \lstinline{<map>} như sau: \cite{othermap}
+\begin{lstlisting}
+template<
+    class Key,
+    class T,
+    class Compare = std::less<Key>,
+    class Allocator = std::allocator<std::pair<const Key, T> >
+> class map;
+namespace pmr {
+    template <class Key, class T, class Compare = std::less<Key>>
+    using map = std::map<Key, T, Compare,
+                         std::pmr::polymorphic_allocator<std::pair<const Key,T>>>
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các constructor, destructor, toán tử gán.\\
+Các phương thức truy cập phần tử: hàm \lstinline{at} tương tự bên trên, toán tử \lstinline{[]} cho phép truy xuất tới phần tử với khóa của nó.\\
+Các iterators như trong phần hình \ref{popite}.\\
+Các phương thức kiểm tra số lượng phần tử: \lstinline{empty()} \lstinline{size()}, \lstinline{max_size()}: tương tự như \lstinline{array}.\\
+Các phương thức thao tác trên phần tử:
+\begin{itemize}
+    \item \lstinline{insert()}: hỗ trợ chèn phần tử vào \lstinline{map} theo nhiều cách khác nhau.
+    \item \lstinline{erase()}: xóa phần tử khỏi \lstinline{map}.
+    \item \lstinline{count()}: trả về số lượng phần tử với một key xác định, tương tự như \lstinline{set}, hàm này chỉ trả về 0 hoặc 1.
+\end{itemize}
+Độ phức tạp của các hàm thành viên có thể được tìm thấy tại \cite{map}.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <string>
+#include <map>
+ 
+int main() {
+    std::map<std::string, int> m;
+    m["banana"] = 1;
+    m["apple"] = 2;
+    m["orange"] = 3;
+    m["pear"] = 4;
+    m["grape"] = 5;
+    m["banana"]++;
+ 
+    for (auto x : m) {
+        std::cout << x.first << " " << x.second << "\n";
+    }
+    
+    /*
+    apple 2
+    banana 2
+    grape 5
+    orange 3
+    pear 4
+    */
+}
+\end{lstlisting}
+Ta nhận thấy trong ví dụ này, các phần tử được sắp xếp tăng dần theo giá trị \lstinline{key}.
+
+\subsection{multimap}
+Lớp \lstinline{multimap} cung cấp  một cấu trúc dữ liệu tương tự như \lstinline{map}, nhưng các phần tử khác nhau có thể có cùng giá trị khóa (key value).\\
+Để sử dụng lớp \lstinline{multimap},  ta cần chỉ thị \lstinline{#include <map>}.\\
+Lớp \lstinline{multimap} được khai báo trong header  \lstinline{<map>} như sau: \cite{multimap}
+\begin{lstlisting}
+template<
+    class Key,
+    class T,
+    class Compare = std::less<Key>,
+    class Allocator = std::allocator<std::pair<const Key, T> >
+> class multimap;
+namespace pmr {
+    template <class Key, class T, class Compare = std::less<Key>>
+    using multimap = std::multimap<Key, T, Compare,
+                                  std::pmr::polymorphic_allocator<std::pair<const Key,T>>>;
+}
+\end{lstlisting}
+\subsubsection{Các hàm thành viên}
+Các hàm thành viên của lớp \lstinline{multimap} hoàn toàn tương tự của lớp \lstinline{map}, ngoại trừ việc không thể truy xuất bằng toán tử \lstinline{[]} do nhiều phần tử có thể có cùng giá trị khóa.
+\subsubsection{Ví dụ}
+\begin{lstlisting}
+#include <iostream>
+#include <string>
+#include <map>
+ 
+int main() {
+    std::multimap<std::string, int> m;
+    m.insert(std::pair<std::string, int>("banana", 1));
+    m.insert(std::pair<std::string, int>("banana", 2));
+    m.insert(std::pair<std::string, int>("banana", 3));
+ 
+    for (auto x : m) {
+        std::cout << x.first << " " << x.second << "\n";
+    }
+ 
+    return 0;
+    /*
+    banana 1
+    banana 2
+    banana 3
+    */
+}
+\end{lstlisting}
