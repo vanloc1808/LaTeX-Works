@@ -1,0 +1,435 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cases} 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{diagbox}
+\pagestyle{fancy}
+\pagestyle{empty}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Nguyễn Văn Lộc}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\usepackage{tikz,tkz-euclide}
+\usetikzlibrary{calc,intersections,patterns}
+%\usetkzobj{all}
+\begin{document}
+    \fancyhf{}
+    \lhead{}
+    \chead{}
+    \rhead{}
+    \cfoot{}
+    \rfoot{\thepage}
+    \lfoot{}
+    \pagestyle{fancy}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \begin{mybox}
+    \textbf{Họ và tên:} Nguyễn Văn Lộc\\
+    \textbf{MSSV:} 20120131\\
+    \textbf{Lớp:} 20CTT1
+    \end{mybox}
+    \begin{center}
+    \fontsize{16}{14}\selectfont
+    \textbf{Bài tập môn Xác suất thống kê}\\
+    \textbf{Chương 5: Lý thuyết mẫu $-$ Lý thuyết ước lượng}
+    \end{center}
+    
+\begin{mybox}
+\textbf{Bài tập 4.20} Giả sử tuổi thọ của bóng đèn do một công ty sản xuất xấp xỉ phân phối chuẩn với độ lệch chuẩn là $40$ giờ. Một mẫu $30$ bóng đèn cho thấy tuổi thọ trung bình là $780$ giờ.\\
+a. Hãy tìm khoảng tin cậy $96\%$ cho tuổi thọ trung bình của tất cả bóng đèn do công ty này sản xuất.\\
+b. Nếu muốn sái số ước lượng không quá $10$ giờ thì phải quan sát ít nhất bao nhiêu bóng đèn?
+\end{mybox}
+\textbf{Lời giải.}\\
+a. Ta đã biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước lớn $\left( {n = 30} \right).$
+$$z = \frac{\overline{x} - \mu}{\frac{\sigma}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline{x} - z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}, {\overline{x} + z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}}} \right].$$
+Tra bảng phân phối Gauss: $z_{1 - \frac{\alpha}{2}} = z_{0.98} = 2.055.$\\
+Vậy khoảng tin cậy $96\%$ cho tham số $\mu$ là:
+$$\left[ {764.9924, 795.0076} \right].$$
+b. Sai số ước lượng:
+$$e = z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}.$$
+$$e \leqslant E \Leftrightarrow n \geqslant {\left( {\frac{{{z_{1 - \frac{\alpha }{2}}} \cdot \sigma}}{E}} \right)^2} \approx 67.5684$$
+Vậy để sai số ước lượng không vượt quá $E$ thì phải quan sát ít nhất $68$ trường hợp.
+
+\begin{mybox}
+\textbf{Bài tập 4.21} Một máy sản xuất ra các ống kim loại có dạng hình trụ. Một mẫu gồm các ống kim loại được chọn ra để khảo sát với các đường kính thu được là: $1.01; 0.97; 1.03; 1.04; 0.99; 0.98; 0.99; 1.01$ và $1.03$ $\mathrm{cm}.$\\
+a. Tìm khoảng tin cậy $99\%$ cho đường kính trung bình của ống kim loại được sản xuất từ máy này, giả sử đường kính của ống kim loại xấp xỉ phân phối chuẩn.\\
+b. Nếu muốn sai số ước lượng không quá $0.0005$ inch với độ tin cậy $95\%$ thì phải quan sát ít nhất bao nhiêu sản phẩm?
+\end{mybox}
+\textbf{Lời giải.}\\
+a. $n = 9.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 1.0056.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 6.0278 \cdot 10^{-4}.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 0.0246.$\\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 9 < 30} \right).$
+$$t = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Tra bảng phân phối Student: $t_{1 - \frac{\alpha }{2}}^{n - 1} = 3.3554.$\\
+Vậy khoảng tin cậy $99\%$ cho tham số $\mu$ là:
+$$\left[ {0.9781, 1.0331} \right].$$
+b. $0.0005$ inch = $0.00127 \mathrm{cm}.$\\ 
+Giả sử phải quan sát nhiều nhất là $30$ sản phẩm. Sai số ước lượng:
+$$e = t_{1 - \frac{\alpha }{2}}^{n - 1} \cdot \frac{s}{{\sqrt n }}$$
+$$e \leqslant E \Leftrightarrow n \geqslant {\left( {\frac{{t_{1 - \frac{\alpha }{2}}^{29} \cdot s}}{e}} \right)^2} \approx 1569.4025 > 30.$$
+Vậy phải quan sát nhiều hơn $30$ sản phẩm. Khi đó:
+$$e = z_{1 - \frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}}.$$
+$$e \leqslant E \Leftrightarrow n \geqslant {\left( {\frac{{{z_{1 - \frac{\alpha }{2}}} \cdot s}}{E}} \right)^2} \approx 1441.3681$$
+Vậy để sai số ước lượng không vượt quá $E$ thì phải quan sát ít nhất $1442$ trường hợp.
+
+\begin{mybox}
+\textbf{Bài tập 4.22} Một mẫu ngẫu nhiên của $100$ chủ sở hữu ô tô ở bang Virginia cho thấy rằng một chiếc ô tô được lái trung bình $23500 \mathrm{km}$ mỗi năm với độ lệch tiêu chuẩn là $3900 \mathrm{km}.$ Giả sử số $\mathrm{km}$ ô tô đi được là biến ngẫu nhiên có phân phối chuẩn. Tìm khoảng tin cậy $99\%$ cho số $\mathrm{km}$ ô tô lăn bánh trung bình mỗi năm ở Virginia.
+\end{mybox}
+\textbf{Lời giải.} Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước lớn $\left( {n = 100 > 30} \right).$
+$$z = \frac{\overline{x} - \mu}{\frac{\sigma}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline{x} - z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}, {\overline{x} + z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}}} \right].$$
+Tra bảng phân phối Gauss: $z_{1 - \frac{\alpha}{2}} = z_{0.995} = 2.575.$\\
+Vậy khoảng tin cậy $99\%$ cho tham số $\mu$ là:
+$$\left[ {22495.75, 24504.25} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 4.23}  Giả sử năng lượng của thanh chocolate là biến ngẫu nhiên có phân phối chuẩn. Một mẫu ngẫu nhiên gồm $10$ thanh chocolate của một thương hiệu nào đó cho thấy năng lượng trung bình là $230$ calo mỗi thanh, với độ lệch chuẩn là $15$ calo. Xây dựng một khoảng tin cậy $99\%$ cho con số calo trung bình thực sự của thương hiệu này.
+\end{mybox}
+\textbf{Lời giải.} Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 10 < 30} \right).$
+$$t = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Tra bảng phân phối Student: $t_{1 - \frac{\alpha }{2}}^{n - 1} = 3.2498.$\\
+Vậy khoảng tin cậy $99\%$ cho tham số $\mu$ là:
+$$\left[ {214.5848, 245.4152} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 4.28} Cường độ nén của bê tông đang được thử nghiệm bởi một kỹ sư dân dụng. Anh ta kiểm tra $12$ mẫu vật và thu được dữ liệu sau đây
+$$2216 \text{ } 2237 \text{ }  2249 \text{ }  2204 \text{ }  2225 \text{ }  2301$$
+$$2281 \text{ } 2263 \text{ } 2318 \text{ } 2255 \text{ } 2275 \text{ } 2295$$
+Xây dựng khoảng tin cậy $95\%$ cho cường độ nén trung bình.
+\end{mybox}
+\textbf{Lời giải.} \\
+$n = 12.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 2259.9167.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 1265.1742.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 35.5693.$\\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 12 < 30} \right).$
+$$t = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Tra bảng phân phối Student: $t_{1 - \frac{\alpha }{2}}^{n - 1} = 2.2010.$\\
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {2237.3169, 2282.5165} \right].$$   
+
+\begin{mybox}
+\textbf{Bài tập 4.29} Một máy sản xuất các thanh kim loại được sử dụng trong một hệ thống treo ô tô. Một mẫu ngẫu nhiên gồm $15$ que được chọn để đo đường kính. Dữ liệu kết quả (tính bằng millimeter) như sau:
+$$8.24 \text{ } 8.25 \text{ } 8.20 \text{ } 8.23 \text{ } 8.24 \text{ } 8.21 \text{ } 8.26$$
+$$8.26 \text{ } 8.20 \text{ } 8.25 \text{ } 8.23 \text{ } 8.19 \text{ } 8.28 \text{ } 8.24$$
+Xác định khoảng tin cậy $90\%$ cho đường kính trung bình.
+\end{mybox}
+\textbf{Lời giải.} \\
+$n = 14.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 8.2343.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 6.8791 \cdot 10^{-4}.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 0.0262.$\\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 14 < 30} \right).$
+$$t = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Tra bảng phân phối Student: $t_{1 - \frac{\alpha }{2}}^{n - 1} = 1.7709.$\\
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {8.2219,8.2467} \right].$$   
+
+\begin{mybox}
+\textbf{Bài tập 4.30} Đo lượng cholesterol (đơn vị $\mathrm{mg}\%$) cho một số người, ta được
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+$X$ & 150-160 & 160-170 & 170-180 & 180-190 & 190-200 & 200-210 \\ 
+\hline 
+Số người & 2 & 4 & 5 & 6 & 4 & 3 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+a. Tính trung bình mẫu và độ lệch chuẩn mẫu.\\
+b. Một mẫu thứ nhì $Y$ có $30$ người cho trung bình $180 \mathrm{mg}\%$ và độ lệch chuẩn $16 \mathrm{mg}\%.$ Nhập hai mẫu lại, tính trung bình và độ lệch chuẩn của mẫu nhập.
+\end{mybox}
+\textbf{Lời giải.} Ta lấy giá trị của mỗi khoảng là giá trị trung bình của khoảng đó. Ta được:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+$X$ & 155 & 165 & 175 & 185 & 195 & 205 \\ 
+\hline 
+Số người & 2 & 4 & 5 & 6 & 4 & 3 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+a. $n = 24$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i = 1}^n {{x_i}}  \approx 181.25.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 224.4565.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 14.9819.$\\
+b. Trung bình mẫu nhập:
+$$\widehat{z} = \frac{\widehat{x} \cdot n_1 + \widehat{y} \cdot n_2}{n_1 + n_2} \approx 180.5556.$$
+Phương sai mẫu nhập:
+$$s_z^2 = \frac{\left( {n_1 - 1} \right )s_x^2 + \left( {n_2 - 1} \right )s_y^2}{n_1 + n_2 - 2} \approx 242.0481.$$
+Độ lệch chuẩn mẫu nhập:
+$$s_z \approx 15.5579.$$
+
+\begin{mybox}
+\textbf{Bài tập 4.47} Đo đường kính của một chi tiết máy do một máy tiện tự động sản xuất, ta ghi nhận được số liệu như sau:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+$X$ & 12.00 & 12.05 & 12.10 & 12.15 & 12.20 & 12.25 & 12.30 & 12.35 & 12.40 \\ 
+\hline 
+$N$ & 2 & 3 & 7 & 9 & 10 & 8 & 6 & 5 & 3 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+với $N$ chỉ số trường hợp tính theo từng giá trị của $X$ ($\mathrm{mm}$).\\
+a. Tính trung bình mẫu và độ lệch chuẩn của mẫu.\\
+b. Ước lượng đường kính trung binh $\mu$ ở độ tin cậy $0.95$.\\
+c. Nếu muốn sai số ước lượng không quá $E = 0.02 \mathrm{mm}$ ở độ tin cậy $0.95$ thì phải quan sát ít nhất mấy trường hợp?
+\end{mybox} 
+\textbf{Lời giải.} \\
+a. $n = 53$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i = 1}^n {{x_i}}  \approx 12.2066.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 0.0106.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 0.1029.$\\
+b. Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước lớn $\left( {n = 53 > 30} \right).$
+$$z = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline{x} - z_{1 - \frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}}, {\overline{x} + z_{1 - \frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}}}} \right].$$
+Tra bảng phân phối Gauss: $z_{1 - \frac{\alpha}{2}} = z_{0.975} = 1.96.$\\
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {12.2032, 12.2100} \right].$$
+c. Sai số ước lượng là:
+$$e = z_{1 - \frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}}.$$
+$$e \leqslant E \Leftrightarrow n \geqslant {\left( {\frac{{{z_{1 - \frac{\alpha }{2}}} \cdot s}}{E}} \right)^2} \approx 101.6911$$
+Vậy để sai số ước lượng không vượt quá $E$ thì phải quan sát ít nhất $102$ trường hợp.
+
+\begin{mybox}
+\textbf{Bài tập 4.48} Quan sát chiều cao $X$ ($\mathrm{mm}$) của một số người, ta ghi nhận: 
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+$X$ & 140-145 & 145-150 & 150-155 & 155-160 & 160-165 & 165-170 \\ 
+\hline 
+Số người & 1 & 3 & 7 & 9 & 5 & 2 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+a. Tính trung bình mẫu và phương sai mẫu.\\
+b. Ước lượng trung bình và phương sai của tổng thể ở độ tin cậy $0.95.$
+\end{mybox}
+\textbf{Lời giải.} Ta lấy giá trị của mỗi khoảng là giá trị trung bình của khoảng đó. Ta được:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+$X$ & 142.5 & 147.5 & 152.5 & 157.5 & 162.5 & 167.5 \\ 
+\hline 
+Số người & 1 & 3 & 7 & 9 & 5 & 2 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+a. $n = 27.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 156.2037.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 37.6781.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 6.1382.$\\
+b. Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 27 < 30} \right).$
+$$t = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Tra bảng phân phối Student: $t_{1 - \frac{\alpha }{2}}^{n - 1} = 2.0555.$\\
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {153.7755, 158.6319} \right].$$
+Khoảng tin cậy $1 - \alpha$ cho phương sai tổng thể $\sigma^2$ là:
+$$\left[ {\frac{{\left( {n - 1} \right){S^2}}}{{\chi _{\frac{\alpha }{2},n - 1}^2}},\frac{{\left( {n - 1} \right){S^2}}}{{\chi _{1 - \frac{\alpha }{2},n - 1}^2}}} \right].$$
+Khoảng tin cậy $95\%$ cho tham số $\sigma^2$ là:
+$$\left[ {23.3674, 70.7621} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 4.49} Đem cân một số trái cây vừa thu hoạch, ta được kết quả sau:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+$X$ & 200-210 & 210-220 & 220-230 & 230-240 & 240-250 \\ 
+\hline 
+Số trái & 12 & 17 & 20 & 18 & 15 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+a. Tìm khoảng ước lượng của trọng lượng trung bình của trái cây với độ tin cậy $0.95$ và $0.99.$\\
+b. Nếu muốn sai số ước lượng không quá $E = 2 \mathrm{g}$ ở độ tin cậy $99\%$ thì phải quan sát ít nhất bao nhiêu trái?
+\end{mybox}
+\textbf{Lời giải.}\\
+a.  Ta lấy giá trị của mỗi khoảng là giá trị trung bình của khoảng đó. Ta được:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+$X$ & 205 & 215 & 225 & 235 & 245 \\ 
+\hline 
+Số trái & 12 & 17 & 20 & 18 & 15 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+$n = 82.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 225.8537.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 175.8055.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 13.2592.$\\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước lớn $\left( {n = 82 > 30} \right).$
+$$z = \frac{\overline{x} - \mu}{\frac{\sigma}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline{x} - z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}, {\overline{x} + z_{1 - \frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}}} \right].$$
+Tra bảng phân phối Gauss: $z_{1 - \frac{\alpha}{2}} = z_{0.975} = 1.96.$\\
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {222.9838, 228.7236} \right].$$
+Tra bảng phân phối Gauss: $z_{1 - \frac{\beta}{2}} = z_{0.995} = 2.575.$\\
+Vậy khoảng tin cậy $99\%$ cho tham số $\mu$ là:
+$$\left[ {222.0833, 229.6241} \right].$$
+b. Sai số ước lượng:
+$$e = z_{1 - \frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}}.$$
+$$e \leqslant E \Leftrightarrow n \geqslant {\left( {\frac{{{z_{1 - \frac{\alpha }{2}}} \cdot s}}{E}} \right)^2} \approx 291.4266$$
+Vậy để sai số ước lượng không vượt quá $E$ thì phải quan sát ít nhất $292$ trường hợp.
+
+\begin{mybox}
+\textbf{Bài tập 4.50} Người ta đo $\mathrm{Na}^+$ trên một số người và ghi nhận lại kết quả như sau:
+$$129, 132, 140, 141, 138, 143, 133, 137, 140, 143, 138, 140$$
+a. Tính trung bình mẫu và phương sai mẫu.\\
+b. Ước lượng trung bình và phương sai của tổng thể ở độ tin cậy $0.95.$\\
+c. Nếu muốn sai số ước lượng trung bình không quá $E = 1$ với độ tin cậy $0.95$ thì phải quan sát mẫu gồm ít nhất mấy người?
+\end{mybox}
+\textbf{Lời giải.}\\
+a. $n = 12.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 137.8333.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 19.4242.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 4.4073.$\\
+b. Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 10 < 30} \right).$
+$$t = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}}.$$
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Tra bảng phân phối Student: $t_{1 - \frac{\alpha }{2}}^{n - 1} = 2.2010.$\\
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {135.0333, 140.6336} \right].$$
+Khoảng tin cậy $1 - \alpha$ cho phương sai tổng thể $\sigma^2$ là:
+$$\left[ {\frac{{\left( {n - 1} \right){S^2}}}{{\chi _{\frac{\alpha }{2},n - 1}^2}},\frac{{\left( {n - 1} \right){S^2}}}{{\chi _{1 - \frac{\alpha }{2},n - 1}^2}}} \right].$$
+Khoảng tin cậy $95\%$ cho tham số $\sigma^2$ là:
+$$\left[ {9.7475, 55.9922} \right].$$
+
+c.  Giả sử phải quan sát nhiều nhất là $30$ sản phẩm. Sai số ước lượng:
+$$e = t_{1 - \frac{\alpha }{2}}^{n - 1} \cdot \frac{s}{{\sqrt n }}$$
+$$e \leqslant E \Leftrightarrow n \geqslant {\left( {\frac{{t_{1 - \frac{\alpha }{2}}^{29} \cdot s}}{e}} \right)^2} \approx 81.2488 > 30.$$
+Vậy phải quan sát nhiều hơn $30$ sản phẩm. Khi đó:
+$$e = z_{1 - \frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}}.$$
+$$e \leqslant E \Leftrightarrow n \geqslant {\left( {\frac{{{z_{1 - \frac{\alpha }{2}}} \cdot s}}{E}} \right)^2} \approx 74.6204$$
+Vậy để sai số ước lượng không vượt quá $E$ thì phải quan sát ít nhất $75$ trường hợp.
+
+\begin{mybox}
+\textbf{Bài tập 4.55} Trong số $1000$ trường hợp ung thư phổi được lựa chọn ngẫu nhiên, $823$ trường hợp tử vong trong vòng $10$ năm.\\
+a. Tìm khoảng tin cậy $95\%$ cho tỉ lệ tử vong do ung thư phổi.\\
+b. Sử dụng ước lượng điểm của $p$ thu được từ mẫu trên, hỏi cỡ mẫu tối thiểu để sai số khi ước lượng giá trị thực của $p$ nhỏ hơn $0.03$ với độ tin cậy $95\%?$\\
+c. Không sử dụng ước lượng điểm của $p$ thu được từ mẫu trên, hỏi mẫu phải lớn đến mức nào nếu ta muốn, với độ tin cậy ít nhất $95\%,$ sai số khi ước lượng giá trị thực của $p$ nhỏ hơn $0.03?$ 
+\end{mybox}
+\textbf{Lời giải.}\\
+a. $$ \widehat{p} = \frac{823}{1000}.$$
+$$n\widehat{p} = 823 \geqslant 5, n \left( {1 - \widehat{p}} \right) \geqslant 5.$$
+Tra bảng Gauss: $z_{1 - \frac{\alpha}{2}} = 1.96.$\\
+Khoảng tin cậy $1 - \alpha$ cho tỉ lệ tổng thể là:
+$$\left[ {\widehat{p} - z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}, \widehat{p} + z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}} \right].$$
+Khoảng tin cậy $95\%$ cho tỉ lệ tử vong do ung thư phổi là:
+$$\left[ {0.7993, 0.8467} \right].$$
+b. Dung sai:
+$$\varepsilon = z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}$$
+$$\varepsilon \leqslant E \Leftrightarrow n \geqslant \frac{{{{\left( {{z_{1 - \frac{\alpha }{2}}}} \right)}^2}\widehat p\left( {1 - \widehat p} \right)}}{{{E^2}}} \approx 621.7886$$
+Vậy phải kiểm tra ít nhất $622$ trường hợp.
+
+\begin{mybox}
+\textbf{Bài tập 4.56} Một mẫu ngẫu nhiên gồm $50$ mũ bảo hiểm được sử dụng bởi người đi xe máy và người lái xe đua ô tô đã được thử nghiệm va chạm, và $18$ trong số những chiếc mũ bảo hiểm đã bị thiệt hại.\\
+a. Tìm khoảng tin cậy $95\%$ cho tỉ lệ mũ bảo hiểm loại này sẽ cho thấy thiệt hại từ thử nghiệm này.\\
+b. Sử dụng ước lượng điểm của $p$ thu được từ mẫu trên, hỏi cỡ mẫu tối thiểu để sai số khi ước lượng giá trị thực của $p$ nhỏ hơn $0.02$ với độ tin cậy $95\%?$\\
+c. Không sử dụng ước lượng điểm của $p$ thu được từ mẫu trên, hỏi mẫu phải lớn đến mức nào nếu ta muốn, với độ tin cậy ít nhất $95\%,$ sai số khi ước lượng giá trị thực của $p$ nhỏ hơn $0.02?$ 
+\end{mybox}
+\textbf{Lời giải.}\\
+a. $$ \widehat{p} = \frac{18}{50}.$$
+$$n\widehat{p} \geqslant 5, n \left( {1 - \widehat{p}} \right) \geqslant 5.$$
+Tra bảng Gauss: $z_{1 - \frac{\alpha}{2}} = 1.96.$\\
+Khoảng tin cậy $1 - \alpha$ cho tỉ lệ tổng thể là:
+$$\left[ {\widehat{p} - z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}, \widehat{p} + z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}} \right].$$
+Khoảng tin cậy $95\%$ cho tỉ lệ mũ bảo hiểm sẽ bị thiệt hại là:
+$$\left[ {0.2270, 0.4930} \right].$$
+b. Dung sai:
+$$\varepsilon = z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}$$
+$$\varepsilon \leqslant E \Leftrightarrow n \geqslant \frac{{{{\left( {{z_{1 - \frac{\alpha }{2}}}} \right)}^2}\widehat p\left( {1 - \widehat p} \right)}}{{{E^2}}} \approx 2212.7616$$
+Vậy phải kiểm tra ít nhất $2213$ trường hợp.
+
+\begin{mybox}
+\textbf{Bài tập 4.58} Một nghiên cứu sẽ được thực hiện về tỉ lệ gia đình có ít nhất hai tivi. Một mẫu được yêu cầu lớn đến mức nào nếu chúng tôi muốn tự tin rằng sai số khi ước tính số lượng này nhỏ hơn $0.017$ với độ tin cậy $99\%?$
+\end{mybox}
+\textbf{Lời giải.}\\ 
+Tra bảng Gauss ta được: $z_{1 - \frac{\alpha}{2}} = z_{0.995} = 2.575.$\\
+Để sai số ước lượng $\varepsilon \leqslant \varepsilon_0$ thì ta chọn $n$ thỏa mãn:
+$$n \geqslant \frac{{0.25{{\left( {{z_{1 - \frac{\alpha }{2}}}} \right)}^2}}}{{\varepsilon _0^2}} \approx 5735.8348.$$
+Vậy để sai số nhỏ hơn $0.017$ với độ tin cậy $99\%$ thì ta phải kiểm tra ít nhất $5736$ trường hợp.
+
+\begin{mybox}
+\textbf{Bài tập 4.59} Trong số liệu từ cuộc bầu cử tổng thống năm 2004, một bang quan trọng là bang Ohio đã cho kết quả sau đây: đã có $2020$ người trả lời trong các cuộc thăm dò xuất cảnh và $768$ là sinh viên tốt nghiệp đại học. Trong số các sinh viên tốt nghiệp đại học có $412$ bầu cho George Bush. Xây dựng khoảng tin cậy $95\%$ cho tỉ lệ sinh viên tốt nghiệp đại học bầu cho George Bush.
+\end{mybox}
+\textbf{Lời giải.} 
+$$\widehat{p} = \frac{412}{768} = \frac{103}{192}.$$
+$$n \widehat{p} \geqslant 5, n \left( {1 - \widehat{p}} \right) \geqslant 5.$$
+Tra bảng Gauss ta được: $z_{1 - \frac{\alpha}{2}} = z_{0.975} = 1.96.$\\
+Khoảng tin cậy $1 - \alpha$ cho tỉ lệ tổng thể là:
+$$\left[ {\widehat{p} - z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}, \widehat{p} + z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}} \right].$$
+Khoảng tin cậy $95\%$ cho tỉ lệ sinh viên tốt nghiệp đại học bầu cho George Bush là:
+$$\left[ {0.5012, 0.5717} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 4.60} Một loại thuốc mới đem điều trị cho $50$ người bị bệnh B, kết quả có $40$ người khỏi bệnh.\\
+a. Ước lượng tỉ lệ khỏi bệnh $p$ nếu dùng thuốc đó điều trị với độ tin cậy $0.95$ và độ tin cậy $0.99.$\\
+b. Nếu muốn sai số ước lượng không quá $0.02$ ở độ tin cậy $0.95$ thì phải quan sát ít nhất mấy trường hợp?
+\end{mybox}
+\textbf{Lời giải.}\\
+a.
+$$\widehat{p} = \frac{40}{50} = \frac{4}{5}.$$
+$$n \widehat{p} \geqslant 5, n \left( {1 - \widehat{p}} \right) \geqslant 5.$$
+Khoảng tin cậy $1 - \alpha$ cho tỉ lệ tổng thể là:
+$$\left[ {\widehat{p} - z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}, \widehat{p} + z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}} \right].$$
+Tra bảng Gauss ta được: $z_{1 - \frac{\alpha}{2}} = z_{0.975} = 1.96.$\\
+Khoảng tin cậy $95\%$ cho tỉ lệ sinh viên tốt nghiệp đại học bầu cho George Bush là:
+$$\left[ {0.6891, 0.9109} \right].$$
+Tra bảng Gauss ta được: $z_{1 - \frac{\beta}{2}} = z_{0.995} = 2.575.$\\
+Khoảng tin cậy $95\%$ cho tỉ lệ sinh viên tốt nghiệp đại học bầu cho George Bush là:
+$$\left[ {0.6543, 0.0.9457} \right].$$
+b. Để sai số ước lượng $\varepsilon \leqslant \varepsilon_0$ thì ta chọn $n$ thỏa mãn:
+$$n \geqslant \frac{{0.25{{\left( {{z_{1 - \frac{\alpha }{2}}}} \right)}^2}}}{{\varepsilon _0^2}} \approx 2401.$$
+Vậy để sai số nhỏ hơn $0.02$ với độ tin cậy $95\%$ thì ta phải kiểm tra ít nhất $2402$ trường hợp.
+
+\begin{mybox}
+\textbf{Bài tập 4.61} Một loại bệnh có tỉ lệ tử vong là $0.01.$ Muốn chứng tỏ một loại thuốc có hiệu nghiệm (nghĩa là hạ thấp được tỉ lệ tử vong nhỏ hơn $0.005$) ở độ tin cậy $0.95$ thì phải thử thuốc đó trên ít nhất bao nhiêu người?
+\end{mybox}
+\textbf{Lời giải.} Tra bảng Gauss ta được: $z_{1 - \frac{\alpha}{2}} = z_{0.975} = 1.96.$\\
+Để sai số ước lượng $\varepsilon \leqslant \varepsilon_0$ thì ta chọn $n$ thỏa mãn:
+$$n \geqslant \frac{{0.25{{\left( {{z_{1 - \frac{\alpha }{2}}}} \right)}^2}}}{{\varepsilon _0^2}} \approx 38416.$$
+Vậy để sai số nhỏ hơn $0.005$ với độ tin cậy $95\%$ thì ta phải kiểm tra ít nhất $38417$ trường hợp.
+\end{document}
