@@ -1,0 +1,385 @@
+\section{So sánh $\mu$ với một số}
+\begin{mybox}
+\textbf{Bài tập 5.29} Một hệ thống tên lửa phản lực sử dụng động cơ đẩy nhiên liệu rắn. Tốc độ cháy của nhiên liệu rắn là một đặc trưng quan trọng của động cơ. Thông số kỹ thuật yêu cầu tốc độ cháy trung bình của nhiên liệu là $50 \mathrm{{{cm} \mathord{\left/
+ {\vphantom {{cm} s}} \right.
+ \kern-\nulldelimiterspace} s}}.$ Các kỹ sư biết rằng độ lệch chuẩn của tốc độ cháy là $2 \mathrm{{{cm} \mathord{\left/
+ {\vphantom {{cm} s}} \right.
+ \kern-\nulldelimiterspace} s}}.$ Những kỹ sư kiểm nghiệm xác định xác suất của sai lầm loại I hoặc mức ý nghĩa $\alpha = 0.05$ và chọn cỡ mẫu là $n = 25$ với trung bình mẫu tốc độ cháy là $\overline{x} = 51.3 \mathrm{{{cm} \mathord{\left/
+ {\vphantom {{cm} s}} \right.
+ \kern-\nulldelimiterspace} s}}.$ Kết luận rút ra như thế nào?
+\end{mybox}   
+\textbf{Lời giải.} Gọi $\mu$ là tốc độ cháy trung bình của thanh nhiên liệu.\\
+Ta đã biết $\sigma^2.$\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu = 50\\
+H_1: \text{ } \mu \ne 50
+\end{cases} $ \\
+$$z = \frac{\overline{x} - 50}{\frac{\sigma}{\sqrt{n}}} = 3.25.$$
+Tra bảng Gauss: $z_{1 - \frac{\alpha}{2}}  = z_{0.975} = 1.96.$\\
+Do $\left| z \right| > z_{1 - \frac{\alpha}{2}}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $0.05.$\\
+Vậy ta kết luận: với độ tin cậy $95\%$ thì tốc độ cháy trung bình của thanh nhiên liệu không phải là $50 \mathrm{{{cm} \mathord{\left/
+ {\vphantom {{cm} s}} \right.
+ \kern-\nulldelimiterspace} s}}.$
+ 
+\begin{mybox}
+\textbf{Bài tập 5.30} Nhiệt độ nước trung bình hạ lưu từ ống thấp xả giải nhiệt của nhà máy điện không được lớn hơn $100 ^\circ \mathrm{F}.$ Kinh nghiệm quá khứ đã chỉ ra rằng độ lệch chuẩn của nhiệt độ là $2 ^\circ \mathrm{F}.$ Nhiệt độ nước được đo trên chín ngày được lựa chọn ngẫu nhiên, và nhiệt độ trung bình được tìm thấy là $98 ^\circ \mathrm{F}.$\\
+a. Có bằng chứng gì cho ta thấy nhiệt độ nước có thể chấp nhận được hay không với mức ý nghĩa $0.05?$\\
+b. Tính $p-$giá trị của kiểm định.\\
+c. Tính xác suất chấp nhận giả thuyết $H_0$ với $\alpha = 0.05$ nếu nhiệt độ trung bình thực sự của nước là $104 ^\circ \mathrm{F}.$
+\end{mybox}
+\textbf{Lời giải.}\\
+a. Gọi $\mu$ là nhiệt độ nước trung bình hạ lưu từ ống thấp xả giải nhiệt của nhà máy.\\
+Ta đã biết $\sigma^2.$\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu \leqslant 100\\
+H_1: \text{ } \mu > 100
+\end{cases} $ \\
+$$z = \frac{\overline{x} - 100}{\frac{\sigma}{\sqrt{n}}} = -3.$$
+Tra bảng Gauss: $z_{1 - \alpha} = z_{0.95} = 1.645.$\\
+Do $z \leqslant z_{1 - \frac{\alpha}{2}}$ nên ta không đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $0.05.$\\
+Vậy ta kết luận: với độ tin cậy $95\%$ thì nhiệt độ nước có thể chấp nhận được.\\
+b.
+$$p-\text{giá trị} = 1 - \Phi \left( z \right) = 1 - \Phi \left( {-3} \right) = \Phi \left( 3 \right) = 0.9987.$$
+c.  (?)
+
+\begin{mybox}
+\textbf{Bài tập 5.31} Một nhà sản xuất làm trục khuỷu (crankshafts) cho động cơ ô tô. Mức độ mòn của trục khuỷu sau $100000$ dặm ($0.0001$ inch) là quan tâm vì nó có thể có ảnh hưởng đến thời hạn bảo hành. Một mẫu ngẫu nhiên của $n = 15$ trục được kiểm tra và $\overline{x} = 2.78.$ Biết rằng $\sigma = 0.9$ và thường được giả định có phân phối chuẩn.\\
+a. Kiểm định $H_0: \text{ } \mu = 3$ với đối thuyết $H_1: \text{ } \mu \ne 3$ với mức ý nghĩa $\alpha = 0.05.$\\
+b. Độ mạnh của kiểm định nếu $\mu = 3.25.$\\
+c. Cỡ mẫu phải là bao nhiêu để nhận thấy giá trị trung bình đúng là $3.75$ nếu ta muốn độ mạnh của kiểm định ít nhất $0.9.$
+\end{mybox}
+\textbf{Lời giải.}\\
+a. $$z = \frac{\overline{x} - 3}{\frac{\sigma}{\sqrt{n}}} \approx -0.9467 .$$
+Tra bảng Gauss ta được: $z_{1 - \frac{\alpha}{2}}  = z_{0.975} = 1.96.$\\
+Do $\left| z \right| \leqslant z_{1 - \frac{\alpha}{2}}$ nên ta không đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $0.05.$\\
+b. $$\beta  = 1 - \Phi \left( { - \left| {\frac{{\mu  - {\mu _0}}}{{\frac{\sigma }{{\sqrt n }}}}} \right|} \right) = \Phi \left( {\left| {\frac{{\mu  - {\mu _0}}}{{\frac{\sigma }{{\sqrt n }}}}} \right|} \right) \approx 0.8577.$$
+Độ mạnh kiểm định: $1 - \beta \approx 0.1423.$\\
+c. $$n = \frac{{{{\left( {{z_{1 - \frac{\alpha }{2}}} + {z_{1 - \beta }}} \right)}^2}{\sigma ^2}}}{{{\delta ^2}}} \approx 15.1632.$$
+Vậy cỡ mẫu ít nhất phải là $16.$
+
+\begin{mybox}
+\textbf{Bài tập 5.34} Tuổi thọ của pin được xem như có phân phối xấp xỉ phân phối chuẩn với độ lệch chuẩn $\sigma = 1.25$ giờ. Một mẫu ngẫu nhiên gồm $10$ viên pin có tuổi thọ trung bình là $\overline{x} = 40.5$ giờ, $\alpha = 0.05.$\\
+a. Có thêm bằng chứng gì để hỗ trợ cho tuyên bố rằng tuổi thọ của pin không vượt quá $40$ giờ?\\
+b. Tính $p-\text{giá trị}$ cho phép kiểm định ở câu trên.\\
+c. Tính xác suất của sai lầm loại II hay sai số $\beta$ nếu tuổi thọ trung bình đúng của pin là $42$ giờ.\\
+d. Cỡ mẫu phải bao nhiêu để sai số $\beta$ không vượt quá $0.01$ nếu tuổi thọ trung bình đúng của pin là $44$ giờ.
+\end{mybox}
+\textbf{Lời giải.}\\
+a. Gọi $\mu$ là tuổi thọ trung bình của pin.\\ 
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu \leqslant 40\\
+H_1: \text{ } \mu > 40
+\end{cases} $ \\
+$$z = \frac{\overline{x} - 40}{\frac{\sigma}{\sqrt{n}}} = 1.2649.$$
+Tra bảng Gauss: $z_{1 - \alpha} = z_{0.95} = 1.645.$\\
+Do $z \leqslant z_{1 - \frac{\alpha}{2}}$ nên ta không đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $0.05.$\\
+Vậy ta kết luận: với độ tin cậy $95\%$ thì tuổi thọ của pin không vượt quá $40$ giờ.\\
+b. $p-\text{giá trị} = 1 - \Phi \left( z \right) = 1 - \Phi \left( {1.2649} \right) = 0.1038.$\\
+c. $$\beta  = 1 - \Phi \left( { - \left| {\frac{{\mu  - {\mu _0}}}{{\frac{\sigma }{{\sqrt n }}}}} \right|} \right) = \Phi \left( {\left| {\frac{{\mu  - {\mu _0}}}{{\frac{\sigma }{{\sqrt n }}}}} \right|} \right) \approx 0.0001$$
+d. $$n = \frac{{{{\left( {{z_{1 - \frac{\alpha }{2}}} + {z_{1 - \beta }}} \right)}^2}{\sigma ^2}}}{{{\delta ^2}}} \approx 1.0252.$$
+Vậy cỡ mẫu ít nhất phải là $2.$
+
+\begin{mybox}
+\textbf{Bài tập 5.35} Các kỹ sư nghiên cứu độ bền sức kéo của một hợp kim được sử dụng làm trục của gậy đúng golf biết rừng độ bền xấp xỉ phân phối chuẩn với $\sigma = 60$ psi. Một mẫu ngẫu nhiên gồm $12$ mẫu vật có trung bình độ bền là $3450$ psi.\\
+a. Kiểm định giả thuyết rằng trung bình độ bền là $3500$ psi với $\alpha = 0.01.$\\
+b. Tính mức ý nghĩa nhỏ nhất khi bạn đưa ra kết luận bác bỏ giả thuyết $H_0.$\\
+c. Tính xác suất của sai lầm loại II hay sai số $\beta$ nếu giá trị trung bình thật là $3470.$\\
+d. Giả sử ta muốn bác bỏ giả thuyết $H_0$ với xác suất ít nhất $0.8$ khi trung bình thật là $\mu = 3500$ thì cỡ mẫu phải là bao nhiêu?\\
+e. Giải thích thêm cho kết luận ở phàn trên bằng cách sử dụng khoảng tin cậy của $\mu.$
+\end{mybox}
+\textbf{Lời giải.} \\
+a. Gọi $\mu$ là độ bền trung bình của gậy đánh golf.\\
+Ta đã biết $\sigma^2.$\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu = 3500\\
+H_1: \text{ } \mu \ne 3500
+\end{cases} $ \\
+$$z = \frac{\overline{x} - 3500}{\frac{\sigma}{\sqrt{n}}} \approx -2.8868.$$
+Tra bảng Gauss: $z_{1 - \frac{\alpha}{2}}  = z_{0.995} = 2.575.$\\
+Do $\left| z \right| > z_{1 - \frac{\alpha}{2}}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $0.01.$\\
+Vậy ta kết luận: với độ tin cậy $99\%$ thì độ bền trung bình của gậy đánh golf không phải là $3500.$\\
+b. $$p-\text{giá trị} = 2\left( {1 - \Phi \left( {\left| z \right|} \right)} \right) \approx 0.0038.$$
+c. $$\beta  = 1 - \Phi \left( { - \left| {\frac{{\mu  - {\mu _0}}}{{\frac{\sigma }{{\sqrt n }}}}} \right|} \right) = \Phi \left( {\left| {\frac{{\mu  - {\mu _0}}}{{\frac{\sigma }{{\sqrt n }}}}} \right|} \right) \approx 0.9573.$$
+
+\begin{mybox}
+\textbf{Bài tập 5.47} Một bài viết trong \textit{Growth: A Journal Devoted to Problems of Normal and Abnormal Growth} ("Comparison of Measured and Estimated Fat-Free Weight, Fat, Potassium and Nitrogen of Growing Guinea Pigs", Vol. 46, No. 4, 1982, pp. 306-321) trình bày kết quả của một nghiên cứu đo trọng lượng cơ thể (tính bằng gam) đối với lợn Guinea khi sinh.
+$$421.0 \text{ } 452.6 \text{ }456.1 \text{ } 494.6 \text{ } 373.8$$
+$$90.5 \text{ } 110.7 \text{ } 96.4 \text{ } 81.7 \text{ } 102.4$$
+$$241.0 \text{ } 296.0 \text{ } 317.0 \text{ } 290.9 \text{ } 256.5$$
+$$447.8 \text{ } 687.6 \text{ } 705.7 \text{ } 879.0 \text{ } 88.8$$
+$$296.0 \text{ } 273.0 \text{ } 268.0 \text{ } 227.5 \text{ } 279.3$$
+$$258.5 \text{ } 296.0$$
+a. Kiểm định giả thuyết trọng lượng trung bình là $300$ gram với $\alpha = 0.05.$ Tính $p-\text{giá trị}.$\\
+b. Giải thích thêm kết luận ở phần trên bằng cách sử dụng khoảng tin cậy của $\mu.$
+\end{mybox}
+\textbf{Lời giải.}\\
+a. $n = 27.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 325.4963.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 39515.6865.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 198.7855.$\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu = 300\\
+H_1: \text{ } \mu \ne 300
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 27 < 30} \right).$
+$$t = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx 0.6665.$$
+Tra bảng Student, ta được: $t_{n - 1}^{1 - \frac{\alpha}{2}} = 2.0555.$
+Do $\left| t \right| \leqslant t_{n - 1}^{1 - \frac{\alpha}{2}}$ nên ta chưa đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy ta kết luận: trọng lượng trung bình là $300$ gram với độ tin cậy $95\%.$\\
+b. Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {246.8724, 404.1202} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 5.48} Một bài báo năm 1992 trên Tạp chí Hiệp hội Y khoa Ho Kỳ ("A Critical Appraisal of $98.6$ Degrees F, the Upper Limit of the Normal Body Temperature, and Other Legacies of Carl Reinhold August Wunderlich") đã báo cáo nhiệt độ cơ thể, giới tính và nhịp tim cho một số đối tượng. Nhiệt độ cơ thể cho $25$ đối tượng nữ như sau: $97.8 \text{ } 97.2 \text{ } 97.4 \text{ } 97.6 \text{ } 97.8 \text{ } 97.9 \text{ }$  $98.0 \text{ } 98.0 \text{ } 98.0 \text{ } 98.1 \text{ } 98.2 \text{ } 98.3 \text{ } 98.3 \text{ } 98.4 \text{ } 98.4 \text{ } 98.4 \text{ }$ $98.5 \text{ } 98.6 \text{ } 98.6 \text{ } 98.7 \text{ } 98.8 \text{ } 98.8 \text{ } 98.9 \text{ } 98.9 \text{ } 99.0.$\\
+a. Kiểm tra giả thuyết $H_0: \mu = 98.6$ có đối thuyết $H_1: \mu \ne 98.6$ với $\alpha = 0.05.$ Tính $p-\text{giá trị}.$\\
+b. Giải thích thêm cho kết luận ở phần trên bằng cách sử dụng khoảng tin cậy của $\mu.$
+\end{mybox}
+\textbf{Lời giải.} \\
+a. $n = 25.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 98.264.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 0.2324.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 0.4821.$\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu = 98.6\\
+H_1: \text{ } \mu \ne 98.6
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 27 < 30} \right).$
+$$t = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx -3.4848.$$
+Tra bảng Student, ta được: $t_{n - 1}^{1 - \frac{\alpha}{2}} = 2.0639.$
+Do $\left| t \right| > t_{n - 1}^{1 - \frac{\alpha}{2}}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+b. Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {98.0650, 98.4630} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 5.49} Hàm lượng natri của hai mươi hộp bắp hữu cơ $300$ gram được xác định. Dữ liệu (tính bằng miligam) như sau: $131.15 \text{ } 130.69 \text{ } 130.91 \text{ } 129.54 \text{ } $ $129.64 \text{ } 128.77 \text{ } 130.72 \text{ } 128.33 \text{ } 128.24 \text{ } 129.65 \text{ } 130.14 \text{ } 129.29 \text{ } 128.71$ $129.00 \text{ } 129.39 \text{ } 130.42 \text{ } 129.53 \text{ } 130.12 \text{ } 129.78 \text{ } 130.92.$\\
+a. Bạn hãy kiểm định giá trị trung bình có khác $130$ milligram với $\alpha = 0.05.$ Tính $p-\text{giá trị}.$\\
+b. Giải thích thêm cho kết luận ở phần trên bằng cách sử dụng khoảng tin cậy của $\mu.$
+\end{mybox}
+\textbf{Lời giải.} \\
+a. $n = 20.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 129.747.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 0.7681.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 0.8764.$\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu = 130\\
+H_1: \text{ } \mu \ne 130
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 20 < 30} \right).$
+$$t = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx -1.2910.$$
+Tra bảng Student, ta được: $t_{n - 1}^{1 - \frac{\alpha}{2}} = 2.0930.$
+Do $\left| t \right| \leqslant t_{n - 1}^{1 - \frac{\alpha}{2}}$ nên ta chưa đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+b. Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {129.3368, 130.1572} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 5.50} Đo cholesterol (đơn vị $\mathrm{mg}\%$ cho một nhóm người, ta ghi nhận lại được
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+$X$ & 150-160 & 160-170 & 170-180 & 180-190 & 190-200 & 200-210 \\ 
+\hline 
+Số người & 3 & 9 & 11 & 3 & 2 & 1 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+a. Tính trung bình mẫu và độ lệch chuẩn mẫu.\\
+b. Tìm khoảng ước lượng cho trung bình cholesterol trong dân số với độ tin cậy $0.95.$\\
+c. Có tài liệu cho biết lượng cholesterol trung bình là $175\mathrm{mg}\%.$ Giá trị này có phù hợp với mẫu quan sát không? (kết luận với $\alpha = 0.05$).
+\end{mybox}
+\textbf{Lời giải.}\\
+Ta lấy giá trị của mỗi khoảng là giá trị trung bình của khoảng đó. Ta được:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+$X$ & 155 & 165 & 175 & 185 & 195 & 205 \\ 
+\hline 
+Số người & 3 & 9 & 11 & 3 & 2 & 1 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+$n = 29.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 173.2759.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 143.3498.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 11.9729.$\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu = 175\\
+H_1: \text{ } \mu \ne 175
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 20 < 30} \right).$
+$$t = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx -0.7755.$$
+Tra bảng Student, ta được: $t_{n - 1}^{1 - \frac{\alpha}{2}} = 2.0484.$
+Do $\left| t \right| \leqslant t_{n - 1}^{1 - \frac{\alpha}{2}}$ nên ta chưa đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Khoảng tin cậy $1 - \alpha$ cho tham số $\mu$ là:
+$$\left[ {\overline x  - t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }},\overline x  + t_{1 - \frac{\alpha }{2}}^{n - 1}\frac{s}{{\sqrt n }}} \right].$$
+Vậy khoảng tin cậy $95\%$ cho tham số $\mu$ là:
+$$\left[ {168.7217, 177.8301} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 5.51} Một máy đóng gói các sản phẩm có khối lượng $1 \mathrm{kg}.$ Nghi ngờ máy hoạt động không bình thường, người ta chọn ra một mẫu ngẫu nhiên gồm $100$ sản phẩm thì thấy như sau:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Khối lượng & $0.95$ & $0.97$ & $0.99$ & $1.01$ & $1.03$ & $1.05$ \\ 
+\hline 
+Số gói  & 9 & 31 & 40 & 15 & 3 & 2 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+Với mức ý nghĩa $0.05,$ hãy kết luận về nghi ngờ trên.
+\end{mybox}
+\textbf{Lời giải.}\\
+$n = 100.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 0.9856.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 4.3297 \cdot 10^{-4}.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 0.0208.$\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu = 1\\
+H_1: \text{ } \mu \ne 1
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước lớn $\left( {n = 100 \geqslant 30} \right).$
+$$z = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx -6.9231.$$
+Tra bảng Gauss, ta được: $z_{1 - \frac{\alpha}{2}} = 1.96.$\\
+Do $\left| z \right| > z_{1 - \frac{\alpha}{2}}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$
+
+\begin{mybox}
+\textbf{Bài tập 5.52} Quan sát số hoa hồng bán ra trong một ngày của một cửa hàng bán hoa sau một thời gian, người ta ghi được số liệu sau:
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+Số hoa hồng (đóa) & 12 & 13 & 15 & 16 & 17 & 18 & 19 \\ 
+\hline 
+Số ngày & 3 & 2 & 7 & 7 & 3 & 2 & 1 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+a. Tìm ước lượng điểm của số hoa hồng trung bình bán được trong một ngày.\\
+b. Sau khi tính toán, ông chủ cửa hàng nói rằng nếu trung bình một ngày không bán được $15$ đóa hoa thì chẳng thà đóng cửa còn hơn. Dựa vào số liệu trên, anh (chị) hãy kết luận giúp ông chủ cửa hàng xem có nên tiếp tục bán hay không ở mức ý nghĩa $0.05.$\\
+c. Giả sử những ngày bán được từ $13$ đến $17$ đóa hồng là những ngày "bình thường". Hãy ước lượng tỉ lệ của những ngày bình thường của cửa hàng ở độ tin cậy $90\%.$ (Giả thiết rằng số hoa bán ra trong ngày có phân phối chuẩn).
+\end{mybox}
+\textbf{Lời giải.}\\
+a. $n = 25.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 15.4.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 3.5.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 1.8708.$\\
+b. Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu \geqslant 15\\
+H_1: \text{ } \mu < 15
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 25 < 30} \right).$
+$$t = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx 1.0691.$$
+Tra bảng Student, ta được: $t_{n - 1}^{1 - \alpha} = 1.7109.$
+Do $ t \geqslant -t_{n - 1}^{1 - \alpha}$ nên ta chưa đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy ông chủ nên tiếp tục bán với mức ý nghĩa $0.05.$\\
+c. 
+$$\widehat{p} = \frac{19}{25}.$$
+Tra bảng Gauss ta được: $z_{1 - \frac{\alpha}{2}} = z_{0.95} = 1.645.$\\
+Dung sai: $\varepsilon  = {z_{1 - \frac{\alpha }{2}}}\sqrt {\frac{{\widehat p\left( {1 - \widehat p} \right)}}{n}}  \approx 0.14.$
+Khoảng tin cậy $90\%$ cho tỉ lệ của những ngày bình thường là: 
+$$\left[ {0.62, 0.9} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 5.54} Đối với người Việt Nam, lượng huyết sắc tố trung bình là $138.3 {g \mathord{\left/
+ {\vphantom {g l}} \right.
+ \kern-\nulldelimiterspace} l}.$ Khám cho $80$ công nhân ở nhà máy có tiếp xúc hóa chất, thấy huyết sắc tố trung bình là $120 {g \mathord{\left/
+ {\vphantom {g l}} \right.
+ \kern-\nulldelimiterspace} l},$ $s = 15 {g \mathord{\left/
+ {\vphantom {g l}} \right.
+ \kern-\nulldelimiterspace} l}.$ Từ kết quả trên, có thể kết luận lượng huyết sắc tố trung bình của công nhân nhà máy hóa chất này thấp hơn mức chung không?
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu \geqslant 138.3\\
+H_1: \text{ } \mu < 138.3
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước lớn $\left( {n = 80 \geqslant 30} \right).$
+$$z = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx -10.9120.$$
+Tra bảng Gauss, ta được: $z_{1 - \alpha} = 1.645.$\\
+Do $z < z_{1 - \alpha}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy lượng huyết sắc tố trung bình của công nhân nhà máy hóa chất này thấp hơn mức chung với độ tin cậy $95\%.$
+
+\begin{mybox}
+\textbf{Bài tập 5.55} Trong một báo cáo nghiên cứu, Richard H. Weindruch của Trường Y khoa UCLA công bố rằng một con chuột với tuổi thọ trung bình $32$ tháng sẽ sống đến khoảng $40$ tháng khi $40\%$ lượng calory trong khẩu phần ăn được thay bằng vitamin và protein. Có bằng chứng nào để tin rằng $\mu < 40$ hay không nếu $64$ con chuột được cho ăn khẩu phần này có tuổi thọ trung bình $38$ tháng với độ lệch chuẩn $5.8$ tháng? Sử dụng $p-\text{giá trị}$ trong kết luận của bạn.
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu \geqslant 40\\
+H_1: \text{ } \mu < 40
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước lớn $\left( {n = 64 \geqslant 30} \right).$
+$$z = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx -2.7586.$$
+$$p-\text{giá trị} = \Phi \left( z \right) = 0.0029$$
+$\alpha = 0.05 \geqslant p-\text{giá trị}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%$ thì ta kết luận $\mu < 40.$
+
+\begin{mybox}
+\textbf{Bài tập 5.59} Kiểm định giả thuyết rằng dung tích trung bình của các bình chứa dầu nào đó là $10$ lít nếu dung tích của một mẫu ngẫu nhiên $10$ bình chứa là $10.2 \text{ } 9.7 \text{ } 10.1 \text{ } 10.3 \text{ } 10.1$ $9.8 \text{ } 9.9 \text{ } 10.4 \text{ } 10.3 \text{ } 9.8.$ Sử dụng mức ý nghĩa $0.01$ và giả sử rằng phân phối của dung tích là chuẩn.
+\end{mybox}
+\textbf{Lời giải.}\\
+$n = 10.$\\
+Trung bình mẫu:
+$\overline x  = \frac{1}{n}\sum\limits_{i =1 1}^n {{x_i}}  \approx 10.06.$\\
+Phương sai mẫu: $s_x^2 = \frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{x_i} - \overline x } \right)}^2}}  \approx 0.0604.$\\
+Độ lệch chuẩn mẫu: ${s_x} \approx 0.2459.$\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu = 10\\
+H_1: \text{ } \mu \ne 10
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 10 < 30} \right).$
+$$t = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx 0.7716.$$
+Tra bảng Student, ta được: $t_{n - 1}^{1 - \frac{\alpha}{2}} = 3.2498.$
+Do $\left| t \right| \leqslant t_{n - 1}^{1 - \frac{\alpha}{2}}$ nên ta chưa đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.01.$\\
+Vậy với độ tin cậy $99\%$ thì dung tích trung bình của các bình chứa dầu là $10$ lít.
+
+\begin{mybox}
+\textbf{Bài tập 5.60} Chiều cao trung bình của nữ sinh năm nhất tại một trường đại học theo lịch sử là $165.5 \mathrm{cm}$ với độ lệch chuẩn $6.9\mathrm{cm}.$ Có lý do để tin rằng có sự thay đổi về chiều cao trung bình hay không nếu một mẫu ngẫu nhiên $50$ nữ sinh năm nhất hiện nay có chiều cao trung bình $165.2 \mathrm{cm}?$ Sử dụng $p-\text{giá trị}$ trong kết luận của bạn. Giả sử rằng độ lệch chuẩn giữ nguyên không đổi.
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu = 162.5\\
+H_1: \text{ } \mu \ne 162.5
+\end{cases} $ \\
+Ta đã biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước lớn $\left( {n = 50 \geqslant 30} \right).$
+$$z = \frac{\overline{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}} \approx 2.7670.$$
+Tra bảng Gauss, ta được: $z_{1 - \frac{\alpha}{2}} = 1.96.$\\
+Do $\left| z \right| > z_{1 - \frac{\alpha}{2}}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%$ thì ta có thể kết luận chiều cao trung bình đã thay đổi.
+
+\begin{mybox}
+\textbf{Bài tập 5.61} Người ta công bố rằng các ô tô được lái trung bình hơn $20000 \mathrm{km}$ mỗi năm. Để kiểm định công bố này, $100$ chủ sở hữu ô tô được chọn ngẫu nhiên được yêu cầu ghi lại số kilometer mà họ đi. Bạn có đồng ý với công bố này không nếu mẫu ngẫu nhiên cho thấy trung bình là $23500 \mathrm{km}$ và độ lệch chuẩn là $3900 \mathrm{km}?$ Sử dụng $p-\text{giá trị}$ trong kết luận của bạn.
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu \geqslant 20000\\
+H_1: \text{ } \mu < 20000
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước lớn $\left( {n = 100 \geqslant 30} \right).$
+$$z = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx 8.9744.$$
+$$p-\text{giá trị} = \Phi \left( z \right) \geqslant 0.9998$$
+$\alpha = 0.05 < p-\text{giá trị}$ nên ta chưa đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%,$ ta có thể đồng ý với công bố rằng các ô tô được lái trung bình hơn $20000 \mathrm{km}$ mỗi năm.
+
+\begin{mybox}
+\textbf{Bài tập 5.62} Theo một nghiên cứu về chế độ ăn uống, hàm lượng muối ăn cao có thể liên quan đến loét, ung thư dạ dày và đau nửa đầu. Nhu cầu cơ thể về muối chỉ là $220 \mathrm{mg}$ mỗi ngày, lượng này bị vượt quá trong hầu hết các khẩu phần ăn của các loại ngũ cốc ăn liền. Nếu một mẫu ngẫu nhiên $20$ khẩu phần tương tự của một loại ngũ cốc nào đó có hàm lượng muối trung bình $244 \mathrm{mg}$ và độ lệch chuẩn $24.5 \mathrm{mg},$ thì điều này có cho thấy tại mức ý nghĩa $0.05$ tằng hàm lượng muối trung bình cho một khẩu phần ăn của loại ngũ cốc này là lớn hơn $220 \mathrm{mg}$ hay không? Giả sử phân phối của hàm lượng muối là chuẩn?
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: \text{ } \mu \leqslant 220\\
+H_1: \text{ } \mu > 220
+\end{cases} $ \\
+Ta chưa biết phương sai tổng thể $\left( {\sigma^2} \right)$ và mẫu có kích thước nhỏ $\left( {n = 20 < 30} \right).$
+$$t = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}} \approx 4.3809.$$
+Tra bảng Student ta được: $t_{n - 1}^{1 - \alpha}  = 1.7291.$\\
+Do $t > t_{n - 1}^{1 - \alpha}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%$ thì ta có thể kết luận hàm lượng muối trung bình cho một khẩu phần ăn của loại ngũ cốc này là lớn hơn $220 \mathrm{mg}.$

@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cases} 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{diagbox}
+\pagestyle{fancy}
+\pagestyle{empty}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Nguyễn Văn Lộc}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\usepackage{tikz,tkz-euclide}
+\usetikzlibrary{calc,intersections,patterns}
+%\usetkzobj{all}
+\begin{document}
+    \fancyhf{}
+    \lhead{}
+    \chead{}
+    \rhead{}
+    \cfoot{}
+    \rfoot{\thepage}
+    \lfoot{}
+    \pagestyle{fancy}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \begin{mybox}
+    \textbf{Họ và tên:} Nguyễn Văn Lộc\\
+    \textbf{MSSV:} 20120131\\
+    \textbf{Lớp:} 20CTT1
+    \end{mybox}
+    \begin{center}
+    \fontsize{16}{14}\selectfont
+    \textbf{Bài tập môn Xác suất thống kê}\\
+    \textbf{Chương 6: Kiểm định giả thuyết thống kê}
+    \end{center}
+    
+\input{CompareMuWithANumber}
+\input{CompareTwoMus}
+\section{So sánh $p$ với một số}
+
+
+
+
+%\input{ComparePWithANumber}
+%\input{CompareTwoPs}
+\end{document}
