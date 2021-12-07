@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2021.3.16)  7 DEC 2021 20:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2021.3.16)  7 DEC 2021 21:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Chapter5.tex
-(./Chapter5.tex
+**Chapter4.tex
+(./Chapter4.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
@@ -1520,8 +1520,9 @@ ons.tex)
 (c:/Disk D/texlive/2012/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersec
 tions.code.tex
 \pgf@intersect@solutions=\count309
-)) (./Chapter5.aux)
-\openout1 = `Chapter5.aux'.
+))
+No file Chapter4.aux.
+\openout1 = `Chapter4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
@@ -1537,7 +1538,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
-
 (c:/Disk D/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count310
@@ -1604,171 +1604,113 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package mdframed Info: Not enough space on this page on input line 45.
-(./CompareMuWithANumber.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 49.
 
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
+(Font)              size <17.28> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 49.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 49.
 (c:/Disk D/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+LaTeX Font Info:    Try loading font information for U+msb on input line 49.
 
 (c:/Disk D/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 1.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 49.
 
 (c:/Disk D/texlive/2012/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 11--17
 
- []
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 49.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--37
-
+Underfull \hbox (badness 1067) in paragraph at lines 71--74
+\T5/cmr/m/n/12 gçm c¡c èng kim lo¤i ^^_÷ñc chån ra ^^_º kh£o s¡t vîi c¡c ^^_÷ín
+g k½nh thu ^^_÷ñc l :
  []
 
 [1
 
 {c:/Disk D/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
-
- []
+Package mdframed Info: Not enough space on this page on input line 110.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 90--97
-
- []
-
-Package mdframed Info: Box was splittet wrong
-(mdframed)              on input line 114.
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 160--163
-\T5/cmr/bx/n/12 B i tªp 5.49 \T5/cmr/m/n/12 H m l÷ñng na-tri cõa hai m÷ìi hëp b
-­p húu cì
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--163
-\OT1/cmr/m/n/12 300$ \T5/cmr/m/n/12 gram ^^_÷ñc x¡c ^^_ành. Dú li»u (t½nh b¬ng 
-miligam) nh÷ sau:
- []
-
-
-Underfull \hbox (badness 6047) in paragraph at lines 160--163
-\OT1/cmr/m/n/12 131\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 15[]130\OML/cmm/m/it/12 :\
-OT1/cmr/m/n/12 69[]130\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 91[]129\OML/cmm/m/it/12
- :\OT1/cmr/m/n/12 54[]$ $129\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 64[]128\OML/cmm/m
-/it/12 :\OT1/cmr/m/n/12 77[]130\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 72[]128\OML/cm
-m/m/it/12 :\OT1/cmr/m/n/12 33[]128\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 24[]129\OML
-/cmm/m/it/12 :\OT1/cmr/m/n/12 65[]130\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 14[]129\
-OML/cmm/m/it/12 :\OT1/cmr/m/n/12 29[]128\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 71$
- []
+Package mdframed Info: Not enough space on this page on input line 110.
+Package mdframed Info: Not enough space on this page on input line 144.
+ [3]
+Package mdframed Info: Not enough space on this page on input line 144.
+ [4]
+Package mdframed Info: Not enough space on this page on input line 242.
+ [5]
+Package mdframed Info: Not enough space on this page on input line 242.
 
 
 Package mdframed Warning: You got a bad break
 (mdframed)                you have to change it manually
 (mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 197.
+(mdframed)                or something else on input line 283.
 
-Package mdframed Info: Box was splittet wrong
-(mdframed)              on input line 197.
+[6]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 283.
+
+[7]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                you have to change it manually
 (mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 197.
+(mdframed)                or something else on input line 353.
 
-[5] [6]
-Package mdframed Info: Not enough space on this page on input line 300.
- [7]
-Package mdframed Info: Not enough space on this page on input line 300.
- [8]
-Package mdframed Info: Not enough space on this page on input line 375.
- [9]
-Package mdframed Info: Not enough space on this page on input line 375.
-) (./CompareTwoMus.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--15
-
- []
-
-Package mdframed Info: Not enough space on this page on input line 26.
-[10]
-Package mdframed Info: Not enough space on this page on input line 26.
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--55
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 65--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--90
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 120--124
-
- []
-
+[8]
 
 Package mdframed Warning: You got a bad break
-(mdframed)                you have to change it manually
-(mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 133.
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 353.
 
-[13]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 170.
+[9] [10] [11] (./Chapter4.aux)
 
- (c:/Disk D/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 170.
- [14])
-[15] (./Chapter5.aux) ) 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+ ) 
 Here is how much of TeX's memory you used:
- 28046 strings out of 493488
- 588477 string characters out of 3141742
- 725581 words of memory out of 3000000
- 30675 multiletter control sequences out of 15000+200000
- 19694 words of font info for 54 fonts, out of 3000000 for 9000
+ 28023 strings out of 493488
+ 588114 string characters out of 3141742
+ 724581 words of memory out of 3000000
+ 30664 multiletter control sequences out of 15000+200000
+ 18057 words of font info for 55 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,12n,74p,985b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-<c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmex10.pfb><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsf
-onts/cmextra/cmex8.pfb><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi12.pfb><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi6.pfb><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr6.pfb><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pf
-b><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
-.pfb><c:/Disk D/texlive/2012/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb><c:/Di
-sk D/texlive/2012/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb><c:/Disk D/texlive
-/2012/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on Chapter5.pdf (15 pages, 200884 bytes).
+ 63i,12n,74p,831b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+<c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+<c:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c
+:/Disk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/D
+isk D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Disk
+ D/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Disk D/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/Disk D/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Disk D/texlive/
+2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Disk D/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Disk D/texlive/2012/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Disk D/texlive/20
+12/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb><c:/Disk D/texlive/2012/texmf-di
+st/fonts/type1/vntex/vnr/vnr12.pfb>
+Output written on Chapter4.pdf (11 pages, 159797 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

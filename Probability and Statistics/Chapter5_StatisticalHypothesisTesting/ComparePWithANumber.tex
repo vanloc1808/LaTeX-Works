@@ -1,0 +1,110 @@
+\section{So sánh $p$ với một số}
+\begin{mybox}
+\textbf{Bài tập 5.78} Một bài báo trên tạp chí Fortune (ngày 21 tháng 9 năm 1992) tuyên bố rằng gần một nửa số kỹ sư tiếp tục học bậc học sau đại học, cuối cùng nhận được bằng thạc sĩ hoặc tiến sĩ. Dữ liệu từ bài viết trong Engineering Horizons (mùa xuân 1990) cho thấy rằng $117$ trong số $484$ sinh viên tốt nghiệp ngành kỹ thuật có kế hoạch học sau đại học.\\
+a. Dữ liệu từ Engineering Horizons có phù hợp với yêu cầu của Fortune không? Sử dụng $\alpha = 0.05$ để đưa ra kết luận của bạn. Tìm $p-\text{giá trị}$ cho kiểm định trên.\\
+b. Giải thích thêm cho kết luận trên bằng khoảng tin cậy cho $p.$
+\end{mybox}
+\textbf{Lời giải.}\\
+a. Giả thuyết: $\begin{cases}
+H_0: p = 0.5\\
+H_1: p \ne 0.5
+\end{cases}$\\
+$$\widehat{p} = \frac{117}{484}.$$
+$$z = \frac{{\widehat p - {p_0}}}{{\sqrt {\frac{{{p_0}\left( {1 - {p_0}} \right)}}{n}} }} \approx  - 11.364.$$
+Tra bảng Gauss ta được: $z_{1 - \frac{\alpha}{2}} = 1.96.$\\
+Do $\left| {z} \right| > z_{1 - \frac{\alpha}{2}}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy ta kết luận rằng dữ liệu từ Engineering Horizons không phù hợp với yêu cầu của Fortune với độ tin cậy $95\%$.\\
+b. Khoảng tin cậy $1 - \alpha$ cho tỉ lệ tổng thể là:
+$$\left[ {\widehat{p} - z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}, \widehat{p} + z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}} \right].$$
+Khoảng tin cậy $95\%$ của tỉ lệ sinh viên có kế hoạch học sau đại học là:
+$$\left[ {0.2036, 0.2800} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 5.79} Một nhà nghiên cứu tuyên bố rằng ít nhất $10\%$ của tất cả các mũ bảo hiểm bóng chày có lỗi sản xuất có thể gây thương tích cho người đội. Một mẫu $200$ mũ bảo hiểm cho thấy $16$ mũ bảo hiểm chứa các khuyết tật như vậy.\\
+a. Mẫu này có ủng hộ tuyên bố của nhà nghiên cứu không?\\
+b. Giải thích thêm cho kết luận trên bằng khoảng tin cậy cho $p.$
+\end{mybox}
+\textbf{Lời giải.}\\
+a. Giả thuyết: $\begin{cases}
+H_0: p \geqslant 0.1\\
+H_1: p < 0.1
+\end{cases}$\\
+$$\widehat{p} = \frac{16}{200} = 0.08.$$
+$$z = \frac{{\widehat p - {p_0}}}{{\sqrt {\frac{{{p_0}\left( {1 - {p_0}} \right)}}{n}} }} \approx  -0.9428.$$
+Tra bảng Gauss ta được: $z_{1 - \alpha} = 1.645.$\\
+Do $z \geqslant - z_{1 - \alpha}$ nên ta không đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy ta kết luận rằng mẫu này ủng hộ cho tuyên bố của nhà nghiên cứu với độ tin cậy $95\%.$\\
+b. Khoảng tin cậy $1 - \alpha$ cho tỉ lệ tổng thể là:
+$$\left[ {\widehat{p} - z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}, \widehat{p} + z_{1 - \frac{\alpha}{2}} \cdot \sqrt{\frac{\widehat{p} \left( {1 - \widehat{p}} \right)}{n}}} \right].$$
+Khoảng tin cậy $95\%$ của tỉ lệ sinh viên có kế hoạch học sau đại học là:
+$$\left[ {0.0484, 0.1116} \right].$$
+
+\begin{mybox}
+\textbf{Bài tập 5.80} Quảng cáo pin của một hãng sản xuất điện thoại di động cho rằng pin sẽ hoạt động liên tục $48$ giờ, với một lần sạc pin đúng kỹ thuật. Một nghiên cứu về $5000$ pin được thực hiện và $15$ pin ngừng hoạt động trước $48$ giờ. Những kết quả thử nghiệm này có ủng hộ cho tuyên bố rằng dưới $0.2\%$ pin của công ti sẽ có thời gian hoạt động không như quảng cáo với một lần sạc pin đúng kỹ thuật không? Sử dụng kiểm định giả thuyết trên với $\alpha = 0.01.$
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p \geqslant \frac{1}{500}\\
+H_1: p < \frac{1}{500}
+\end{cases}$\\
+$$\widehat{p} = \frac{15}{5000} = \frac{3}{1000}.$$
+$$z = \frac{{\widehat p - {p_0}}}{{\sqrt {\frac{{{p_0}\left( {1 - {p_0}} \right)}}{n}} }} \approx 1.5827.$$
+Tra bảng Gauss ta được: $z_{1 - \alpha} = 2.325.$\\
+Do $z \geqslant - z_{1 - \alpha}$ nên ta chưa đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.01.$\\
+Vậy với độ tin cậy $99\%$ thì ta kết luận rằng kết quả thử nghiệm này không ủng hộ cho tuyên bố của công ty.
+
+\begin{mybox}
+\textbf{Bài tập 5.85} Một thiết bị radar mới đang được xem xét cho một hệ thống phòng thủ tên lửa. Hệ thống được kiểm tra bằng cách thử nghiệm với phi cơ trong đó việc tiêu diệt hay không tiêu diệt được mô phỏng. Nếu trong $300$ phép thử, $250$ lần bị tiêu diệt, thì chấp nhận hay bác bỏ, tại mức ý nghĩa $0.04,$ công bố rằng xác suất tiêu diệt của hệ thống mới thấp hơn xác suất $0.8$ của thiết bị đang dùng.  
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p \geqslant 0.8\\
+H_1: p < 0.8
+\end{cases}$\\
+$$\widehat{p} = \frac{250}{300} = \frac{5}{6}.$$
+$$z = \frac{{\widehat p - {p_0}}}{{\sqrt {\frac{{{p_0}\left( {1 - {p_0}} \right)}}{n}} }} \approx 1.4434.$$
+Tra bảng Gauss ta được: $z_{1 - \alpha} = 1.75.$\\
+Do $z \geqslant - z_{1 - \alpha}$ nên ta không đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.04.$\\
+Vậy với độ tin cậy $96\%$ thì ta bác bỏ công bố rằng xác suất tiêu diệt của hệ thống mới thấp hơn xác suất $0.8$ của thiết bị đang dùng.  
+
+\begin{mybox}
+\textbf{Bài tập 5.86} Người ta tin rằng ít nhất $60\%$ cư dân trong một khu vực ủng hộ hợp đồng sáp nhập của một thành phố lân cận. Kết luận nào được rút ra nếu chỉ $110$ người trong một mẫu $200$ cử tri ủng hộ hợp đồng? Sử dụng mức ý nghĩa $0.05.$
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p \geqslant 0.6\\
+H_1: p < 0.6
+\end{cases}$\\
+$$\widehat{p} = \frac{110}{200} = \frac{11}{20} = 0.55.$$
+$$z = \frac{{\widehat p - {p_0}}}{{\sqrt {\frac{{{p_0}\left( {1 - {p_0}} \right)}}{n}} }} \approx -1.4434.$$
+Tra bảng Gauss ta được: $z_{1 - \alpha} = 1.645.$\\
+Do $z \geqslant - z_{1 - \alpha}$ nên ta không đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%$ thì ta bác bỏ tuyên bố rằng ít nhất $60\%$ cư dân trong một khu vực ủng hộ hợp đồng sáp nhập của một thành phố lân cận.
+
+\begin{mybox}
+\textbf{Bài tập 5.87} Một công ti dầu lửa công bố rằng một phần năm căn hộ trong một thành phố nào đó được sưởi ấm bằng dầu lửa. Hỏi ta có lý do để tin rằng có ít hơn một phần năm được sưởi ấm bằng dầu lửa không nếu, trong một mẫu ngẫu nhiên $1000$ căn hộ trong thành phố này, có $136$ căn được sưởi ấm bằng dầu lửa? Sử dụng $p-\text{giá trị}$ trong kết luận của bạn. Mức ý nghĩa $\alpha = 0.05.$
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p \geqslant 0.2\\
+H_1: p < 0.2
+\end{cases}$\\
+$$\widehat{p} = \frac{136}{1000} = \frac{17}{125} = 0.136.$$
+$$z = \frac{{\widehat p - {p_0}}}{{\sqrt {\frac{{{p_0}\left( {1 - {p_0}} \right)}}{n}} }} \approx -5.0596.$$
+Tra bảng Gauss ta được: $z_{1 - \alpha} = 1.645.$\\
+Do $z < - z_{1 - \alpha}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%$ thì ta kết luận rằng tuyên bố này là không đáng tin.
+
+\begin{mybox}
+\textbf{Bài tập 5.88} Ở một trường cao đẳng nào đó, người ta ước tính rằng trên $25\%$ sinh viên chạy xe đạp đi học. Đây có phải là một ước tính hợp lệ nếu trong trong một mẫu ngẫu nhiên $90$ sinh viên cao đẳng, có $28$ sinh viên được thấy đi xe đạp đi học? Sử dụng mức ý nghĩa $0.05.$
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p \leqslant 0.2\\
+H_1: p > 0.2
+\end{cases}$\\
+$$\widehat{p} = \frac{28}{90} = \frac{14}{45} \approx 0.3111.$$
+$$z = \frac{{\widehat p - {p_0}}}{{\sqrt {\frac{{{p_0}\left( {1 - {p_0}} \right)}}{n}} }} \approx 2.6352.$$
+Tra bảng Gauss ta được: $z_{1 - \alpha} = 1.645.$\\
+Do $z > z_{1 - \alpha}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%$ thì tuyên bố rằng trên $25\%$ sinh viên chạy xe đạp đi học là đúng.
