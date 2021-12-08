@@ -1,1 +1,97 @@
 \section{So sánh $p_1$ và $p_2$}
+\begin{mybox}
+\textbf{Bài tập 5.128} Một mẫu ngẫu nhiên gồm $500$ cư dân trưởng thành của Quận Maricopa chỉ ra rằng $385$ ủng hộ việc tăng giới hạn tốc độ đường cao tốc lên $75$ dặm một giờ, và một mẫu khác gồm $400$ cư dân trưởng hành của Hạt Pima đã chỉ ra rằng $267$ ủng hộ giới hạn tốc độ tăng lên. Những dữ liệu này cho thấy có sự khác biệt trong việc hỗ trợ tăng giới hạn tốc độ cho cư dân của hai quận? Sử dụng $\alpha = 0.05.$ $p-\text{giá trị}$ cho kiểm định này là bao nhiêu?
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p_1 = p_2\\
+H_1: p_1 \ne p_2
+\end{cases}$\\
+$$\widehat{p_1} = \frac{385}{500} = \frac{77}{100}.$$
+$$\widehat{p_2} = \frac{267}{400}.$$
+$$\widehat{p} = \frac{385 + 267}{500 + 400} = \frac{163}{225}.$$
+$$z = \frac{{\widehat {{p_1}} - \widehat {{p_2}}}}{{\sqrt {\widehat p\left( {1 - \widehat p} \right)\left( {\frac{1}{{{n_1}}} + \frac{1}{{{n_2}}}} \right)} }} \approx 3.4198.$$
+Tra bảng Gauss ta được: $z_{1 - \frac{\alpha}{2}} = 1.96.$\\
+Do $\left| z \right| > z_{1 - \frac{\alpha}{2}}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$
+$$p-\text{giá trị} = 2 \left( {1 - \Phi \left( {\left| z \right|} \right)} \right) = 6 \cdot 10^{-4}.$$
+Vậy với độ tin cậy $95\%,$ ta kết luận rằng có sự khác biệt trong việc ủng hộ tăng giới hạn tốc độ cho cư dân của hai quận.
+
+\begin{mybox}
+\textbf{Bài tập 5.129} Ô nhiễm không khí có liên quan đến việc giảm cân ở trẻ sơ sinh. Trong một nghiên cứu được công bố trên Tạp chí của Hiệp hội Y khoa Hoa Kỳ, các nhà nghiên cứu đã kiểm tra tỉ lệ trẻ sơ sinh nhẹ cân được sinh ra từ các bà mẹ tiếp xúc với liều lượng bồ hóng và tro nặng trong vụ tấn công của Trung tâm Thương mại Thế giới ngày 11/9/2001. Có $182$ đứa bé sinh ra từ những bà mẹ này, $15$ đứa được xếp loại có trọng lượng thấp. Trong số $2300$ trẻ sinh ra trong cùng một khoảng thời gian ở New York ở một bệnh viên khác, $92$ đứa được phân loại là có trọng lượng thấp. Có bằng chứng nào cho thấy các bà mẹ tiếp xúc ô nhiễm có tỉ lệ trẻ sơ sinh nhẹ cân cao hơn không? Mức ý nghĩa $\alpha = 0.05.$
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p_1 \leqslant p_2\\
+H_1: p_1 > p_2
+\end{cases}$\\
+$$\widehat{p_1} = \frac{15}{182}.$$
+$$\widehat{p_2} = \frac{92}{2300} = \frac{1}{25}.$$
+$$\widehat{p} = \frac{15 + 92}{182 + 2300} = \frac{107}{2482}.$$
+$$z = \frac{{\widehat {{p_1}} - \widehat {{p_2}}}}{{\sqrt {\widehat p\left( {1 - \widehat p} \right)\left( {\frac{1}{{{n_1}}} + \frac{1}{{{n_2}}}} \right)} }} \approx 2.7122.$$
+Tra bảng Gauss ta được: $z_{1 - \alpha} = 1.645.$\\
+Do $z > z_{1 - \alpha}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%$ thì ta kết luận các bà mẹ tiếp xúc ô nhiễm có tỉ lệ trẻ sơ sinh nhẹ cân cao hơn.
+
+\begin{mybox}
+\textbf{Bài tập 5.130} Tạp chí Y học New England đã báo cáo một thử nghiệm để đánh giá hiệu quả của phẫu thuật trên những người đàn ông được chẩn đoán mắc bệnh ung thư tuyến tiền liệt. Một nửa số mẫu ngẫu nhiên của $695$ (là $347$) nam giới trong nghiên cứu đã phẫu thuật và $18$ người trong số họ cuối cùng đã chết vì ung thư tuyến tiền liệt so với $31$ trong tổng số $348$ người không phẫu thuật. Có bằng chứng nào cho thấy rằng phẫu thuật giảm tỉ lệ những người chết vì ung thư tuyến tiền liệt không? Mức ý nghĩa $\alpha = 0.05.$
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p_1 \geqslant p_2\\
+H_1: p_1 < p_2
+\end{cases}$\\
+$$\widehat{p_1} = \frac{18}{347}.$$
+$$\widehat{p_2} = \frac{31}{348}.$$
+$$\widehat{p} = \frac{18 + 31}{695} = \frac{49}{695}.$$
+$$z = \frac{{\widehat {{p_1}} - \widehat {{p_2}}}}{{\sqrt {\widehat p\left( {1 - \widehat p} \right)\left( {\frac{1}{{{n_1}}} + \frac{1}{{{n_2}}}} \right)} }} \approx -1.9158.$$
+Tra bảng Gauss ta được: $z_{1 - \alpha} = 1.645.$\\
+Do $z < - z_{1 - \alpha}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%,$ ta kết luận phẫu thuật giảm tỉ lệ những người chết vì ung thư tuyến tiền liệt.
+
+\begin{mybox}
+\textbf{Bài tập 5.133} Trong một nghiên cứu để ước tính tỉ lệ cư dân trong một thành phố nào đó và vùng ngoại ô của nó ủng hộ việc xây dựng nhà máy năng lượng hạt nhân, người ta thấy rằng $63$ trong $100$ cư dân thành thị ủng hộ việc xây dựng trong khi chỉ $59$ trong $125$ cư dân ngoại ô là ủng hộ. Có sự khác biệt có ý nghĩa nào giữa tỉ lệ cư dân thành thị và ngoại ô ủng hộ việc xây dựng nhà máy hạt nhân hay không? Sử dụng $p-\text{giá trị}.$
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p_1 = p_2\\
+H_1: p_1 \ne p_2
+\end{cases}$\\
+$$\widehat{p_1} = \frac{63}{100}.$$
+$$\widehat{p_2} = \frac{59}{125}.$$
+$$\widehat{p} = \frac{63 + 59}{100 + 125} = \frac{122}{225}.$$
+$$z = \frac{{\widehat {{p_1}} - \widehat {{p_2}}}}{{\sqrt {\widehat p\left( {1 - \widehat p} \right)\left( {\frac{1}{{{n_1}}} + \frac{1}{{{n_2}}}} \right)} }} \approx 2.3637.$$
+$$p-\text{giá trị} = 2 \left( {1 - \Phi \left( {\left| z \right|} \right)} \right) = 0.0182.$$
+Do $\alpha > p-\text{giá trị}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%,$ ta kết luận rằng có sự khác biệt giữa tỉ ljee cư dân thành thị và ngoại ô ủng hộ việc xây dựng nhà máy hạt nhân này.
+
+\begin{mybox}
+\textbf{Bài tập 5.134} Trong một nghiên cứu về khả năng sinh con của những phụ nữ đã kết hôn được thực hiện bởi Martin O'Connell và Carolyn C. Rogers cho Cục Điều tra Dân số vào năm 1979, hai nhóm phụ nữ không con tuổi từ $25$ đến $29$ được chọn ngẫu nhiên, và mỗi nhóm được hỏi xem cô ấy cuối cùng đã lên kế hoạch có em bé hay không. Một nhóm được chọn từ những người vợ đã kết hôn trong vòng hai năm và nhóm kia được chọn từ những người vợ đã kết hôn trong vòng năm năm. Giả sử rằng $240$ trong $300$ người vợ đã kết hôn trong vòng hai năm đã lên kế hoạch có em bé so với $288$ trong $400$ người vợ đã kết hôn năm năm. Ta có thể kết luận rằng tỉ lệ người vợ đã kết hôn trong vòng hai năm đã lên kế hoạch có em bé là cao hơn một cách có ý nghĩa so với tỉ lệ người vợ đã kết hôn năm năm không? Sử dụng $p-\text{giá trị}.$
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p_1 \leqslant p_2\\
+H_1: p_1 > p_2
+\end{cases}$\\
+$$\widehat{p_1} = \frac{240}{300} = 0.8.$$
+$$\widehat{p_2} = \frac{288}{400} = \frac{18}{25}.$$
+$$\widehat{p} = \frac{240 + 288}{300 + 400} = \frac{132}{175}.$$
+$$z = \frac{{\widehat {{p_1}} - \widehat {{p_2}}}}{{\sqrt {\widehat p\left( {1 - \widehat p} \right)\left( {\frac{1}{{{n_1}}} + \frac{1}{{{n_2}}}} \right)} }} \approx 2.4330.$$
+$$p-\text{giá trị} = 2 \left( {1 - \Phi \left( {\left| z \right|} \right)} \right) = 0.0075.$$
+Do $\alpha > p-\text{giá trị}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%$ thì ta kết luận tỉ lệ người vợ đã kết hôn trong vòng hai năm đã lên kế hoạch có em bé là cao hơn một cách có ý nghĩa so với tỉ lệ người vợ đã kết hôn năm năm.
+
+\begin{mybox}
+\textbf{Bài tập 5.135} Một cộng đồng đô thị muốn chỉ ra rằng tỉ lệ bị ung thư vú cao hơn ở khu vực nông thôn (mức PCB tìm thấy cao hơn trong đất của cộng đồng đô thị). Nếu người ta thấy có $20$ trong $200$ phụ nữ trưởng thành ở cộng đồng đô thị bị ung thư vú và $10$ trong $150$ phụ nữ trưởng thành ở cộng đồng nông thôn bị ung thư vú thì ta có thể kết luận tại mức ý nghĩa $\alpha = 0.05$ rằng ung thư vú là phổ biến hơn trong cộng đồng đô thị hay không?
+\end{mybox}
+\textbf{Lời giải.}\\
+Giả thuyết: $\begin{cases}
+H_0: p_1 \leqslant p_2\\
+H_1: p_1 > p_2
+\end{cases}$\\
+$$\widehat{p_1} = \frac{20}{200} = \frac{1}{10}.$$
+$$\widehat{p_2} = \frac{10}{150} = \frac{1}{15}.$$
+$$\widehat{p} = \frac{20 + 10}{200 + 150} = \frac{3}{35}.$$
+$$z = \frac{{\widehat {{p_1}} - \widehat {{p_2}}}}{{\sqrt {\widehat p\left( {1 - \widehat p} \right)\left( {\frac{1}{{{n_1}}} + \frac{1}{{{n_2}}}} \right)} }} \approx 1.1024.$$
+Tra bảng Gauss ta được: $z_{1 - \alpha} = 1.645.$\\
+Do $z \leqslant z_{1 - \alpha}$ nên chưa đủ cơ sở để bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$\\
+Vậy với độ tin cậy $95\%$ thì ta chưa thể kết luận rằng ung thư vú là phổ biến hơn trong cộng đồng đô thị.

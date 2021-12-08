@@ -52,28 +52,5 @@ innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
 \input{CompareMuWithANumber}
 \input{ComparePWithANumber}
 \input{CompareTwoMus}
-\section{So sánh $p_1$ và $p_2$}
-\begin{mybox}
-\textbf{Bài tập 5.128} Một mẫu ngẫu nhiên gồm $500$ cư dân trưởng thành của Quận Maricopa chỉ ra rằng $385$ ủng hộ việc tăng giới hạn tốc độ đường cao tốc lên $75$ dặm một giờ, và một mẫu khác gồm $400$ cư dân trưởng hành của Hạt Pima đã chỉ ra rằng $267$ ủng hộ giới hạn tốc độ tăng lên. Những dữ liệu này cho thấy có sự khác biệt trong việc hỗ trợ tăng giới hạn tốc độ cho cư dân của hai quận? Sử dụng $\alpha = 0.05.$ $p-\text{giá trị}$ cho kiểm định này là bao nhiêu?
-\end{mybox}
-\textbf{Lời giải.}\\
-Giả thuyết: $\begin{cases}
-H_0: p_1 = p_2\\
-H_1: p_1 \ne p_2
-\end{cases}$\\
-$$\widehat{p_1} = \frac{385}{500} = \frac{77}{100}.$$
-$$\widehat{p_2} = \frac{267}{400}.$$
-$$\widehat{p} = \frac{385 + 267}{500 + 400} = \frac{163}{225}.$$
-$$z = \frac{{\widehat {{p_1}} - \widehat {{p_2}}}}{{\sqrt {\widehat p\left( {1 - \widehat p} \right)\left( {\frac{1}{{{n_1}}} + \frac{1}{{{n_2}}}} \right)} }} \approx 3.4198.$$
-Tra bảng Gauss ta được: $z_{1 - \frac{\alpha}{2}} = 1.96.$\\
-Do $\left| z \right| > z_{1 - \frac{\alpha}{2}}$ nên ta bác bỏ $H_0$ với mức ý nghĩa $\alpha = 0.05.$
-$$p-\text{giá trị} = 2 \left( {1 - Phi \left( {\left| z \right|} \right)} \right) = 6 \cdot 10^{-4}.$$
-Vậy với độ tin cậy $95\%,$ ta kết luận rằng có sự khác biệt trong việc hỗ trợ tăng giới hạn tốc độ cho cư dân của hai quận.
-
-
-
-
-
-
-%\input{CompareTwoPs}
+\input{CompareTwoPs}
 \end{document}
