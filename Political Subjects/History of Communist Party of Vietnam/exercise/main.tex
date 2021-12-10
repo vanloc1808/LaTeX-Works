@@ -1,0 +1,97 @@
+\documentclass[a4paper]{article}
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amssymb}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+\usepackage{array}
+\usepackage{cases}
+\usepackage{listings}
+\usepackage{tabulary}
+\usepackage{color}
+\usepackage{float} 
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{perpage}
+\MakePerPage{footnote}
+\usepackage{minitoc}
+\pgfplotsset{compat=1.5}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows, calc}
+\usepackage{fancyhdr}
+\usepackage[
+    backend=biber,
+    style=numeric,
+    natbib=true,
+    url=true, 
+    doi=true,
+    eprint=false,
+    sorting=nyt
+]{biblatex}
+\addbibresource{refs.bib}
+\pagestyle{fancy}
+\pagestyle{empty}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=C++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\renewcommand{\listfigurename}{Danh sách hình}
+\renewcommand{\listtablename}{Tables}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Nguyễn Văn Lộc}
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\begin{document}
+%Order of compilation (on TexMaker): F6 (pdfLaTex) -> F11 (BibTex) -> F6 (pdfLaTex) -> F7 (view pdf)
+\fancyhf{}
+\lhead{Bài tập môn học Lịch sử Đảng Cộng sản Việt Nam}
+\chead{}
+\rhead{}
+\cfoot{\thepage}
+\rfoot{}
+\lfoot{}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\input{sources/Cover}
+\input{sources/Introduction}
+\newpage
+\tableofcontents
+\newpage
+\input{sources/Content1}
+\input{sources/Content2}
+\input{sources/Content3}
+\input{sources/Content4}
+\newpage
+\input{sources/Conclusion}
+
+\newpage
+\section{Tài liệu tham khảo}
+\printbibliography[type = book, title = {Sách}]
+\printbibliography[type = article, title = {Bài báo}]
+\printbibliography[type = misc, title = {Internet}]
+\end{document}
